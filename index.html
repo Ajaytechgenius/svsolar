@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SVSOLAR — Rooftop Solar in Sikar, Rajasthan | PM Surya Ghar Subsidy up to ₹78,000</title>
-<meta name="description" content="MNRE-empanelled rooftop solar installer in Sikar, Rajasthan. We handle your entire PM Surya Ghar Muft Bijli Yojana subsidy application — up to ₹78,000 back, and up to 300 units free electricity every month.">
+<meta name="description" content="Rooftop solar installer in Sikar, Rajasthan. We guide you through the entire PM Surya Ghar Muft Bijli Yojana subsidy application — up to ₹78,000 back, and up to 300 units free electricity every month.">
 
 <!--
   ============================================================
@@ -46,6 +46,22 @@
   "priceRange": "₹₹"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is the site visit and quote actually free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the roof assessment, system sizing, and quotation cost nothing and carry no obligation to proceed."}},
+    {"@type": "Question", "name": "What if my roof isn't strong enough for panels?", "acceptedAnswer": {"@type": "Answer", "text": "Our site visit includes a structural check. Most RCC rooftops in Sikar handle standard mounting without reinforcement; if yours needs extra support, we flag it and price it upfront."}},
+    {"@type": "Question", "name": "Can I get the subsidy if I live in a rented house?", "acceptedAnswer": {"@type": "Answer", "text": "The PM Surya Ghar subsidy is linked to the electricity connection and typically requires the applicant to be the registered consumer, with the property owner's consent for installation."}},
+    {"@type": "Question", "name": "What happens if a panel or inverter fails after installation?", "acceptedAnswer": {"@type": "Answer", "text": "Panels typically carry a manufacturer performance warranty of around 25 years, and inverters around 5–10 years depending on brand. An Annual Maintenance Contract is also available."}},
+    {"@type": "Question", "name": "How long does the whole process take?", "acceptedAnswer": {"@type": "Answer", "text": "Most homes go from application to power generation in roughly 4–6 weeks, depending mainly on DISCOM feasibility approval timelines."}},
+    {"@type": "Question", "name": "Is the government subsidy guaranteed once I apply?", "acceptedAnswer": {"@type": "Answer", "text": "No — it is approved by MNRE and the DISCOM based on eligibility, documentation, ALMM-listed panels, and installation by an empanelled vendor."}},
+    {"@type": "Question", "name": "Does solar keep working during a power cut?", "acceptedAnswer": {"@type": "Answer", "text": "A standard on-grid system shuts off automatically during outages for safety. A battery backup add-on is available for those who want power during outages too."}},
+    {"@type": "Question", "name": "Can I finance this instead of paying upfront?", "acceptedAnswer": {"@type": "Answer", "text": "Several nationalised banks offer collateral-free solar loans for systems under PM Surya Ghar Muft Bijli Yojana; current rates and limits are confirmed during the site visit."}}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -60,9 +76,9 @@
     <nav class="nav__links" id="navLinks">
       <a href="#why">Why Solar</a>
       <a href="#subsidy">Subsidy</a>
+      <a href="#calculator">Calculator</a>
       <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -108,7 +124,7 @@
   </svg>
 
   <div class="hero__inner">
-    <p class="eyebrow eyebrow--light hero-anim" style="--d:0">MNRE-Empanelled Solar Partner · Sikar, Rajasthan</p>
+    <p class="eyebrow eyebrow--light hero-anim" style="--d:0">Rooftop Solar Installer · Sikar, Rajasthan</p>
     <h1 class="hero__title">
       <span class="hero-anim" style="--d:1">Turn Rajasthan's Sunshine Into</span>
       <span class="hero-anim hero__title--accent" style="--d:2">Zero Electricity Bills.</span>
@@ -127,7 +143,7 @@
       <span class="dot" aria-hidden="true"></span>
       <span><strong>4.2 MW+</strong> Installed</span>
       <span class="dot" aria-hidden="true"></span>
-      <span>MNRE Empanelled Vendor</span>
+      <span>Free, No-Obligation Quotes</span>
     </div>
   </div>
 
@@ -189,8 +205,47 @@
 
     <div class="subsidy-footer reveal">
       <p>Subsidy is typically disbursed to your bank account within 30–45 days of commissioning. Figures shown follow current PM Surya Ghar guidelines and may be revised by MNRE — we confirm the exact figure with every quote. Official portal: <span class="nowrap">pmsuryaghar.gov.in</span></p>
-      <a href="#contact" class="btn btn--gold">We Handle 100% of the Paperwork →</a>
+      <a href="#contact" class="btn btn--gold">We Guide You Through the Paperwork →</a>
     </div>
+  </div>
+</section>
+
+<!-- ================= CALCULATOR ================= -->
+<section class="section section--cream" id="calculator">
+  <div class="container">
+    <p class="eyebrow reveal">Instant Estimate</p>
+    <h2 class="section__title reveal">See Your Own Numbers</h2>
+    <p class="section__lead reveal">Move the slider to your approximate monthly electricity bill — this is a rough guide, not a quote. Your exact system size, subsidy, and payback are confirmed during your free site visit.</p>
+
+    <div class="calc reveal">
+      <div class="calc__input">
+        <label for="calcBill">Approx. monthly electricity bill</label>
+        <div class="calc__bill-value"><span>₹</span><span id="calcBillDisplay">3,000</span></div>
+        <input type="range" id="calcBill" min="500" max="15000" step="100" value="3000">
+        <div class="calc__range-labels"><span>₹500</span><span>₹15,000</span></div>
+      </div>
+
+      <div class="calc__results">
+        <div class="calc__result">
+          <span class="calc__result-label">Recommended System</span>
+          <span class="calc__result-value" id="calcKw">3 kW</span>
+        </div>
+        <div class="calc__result calc__result--gold">
+          <span class="calc__result-label">Estimated Govt. Subsidy</span>
+          <span class="calc__result-value" id="calcSubsidy">₹78,000</span>
+        </div>
+        <div class="calc__result">
+          <span class="calc__result-label">Cost After Subsidy</span>
+          <span class="calc__result-value" id="calcNetCost">₹1,17,000</span>
+        </div>
+        <div class="calc__result">
+          <span class="calc__result-label">Estimated Payback</span>
+          <span class="calc__result-value" id="calcPayback">~4.5 years</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="calc__disclaimer reveal">Assumes a blended tariff of ~₹7/unit, ~4 units generated per kW per day (typical for Rajasthan's high solar irradiance), and an installed cost of ~₹65,000/kW before subsidy — all figures vary by roof, shading, equipment choice, and your actual DISCOM tariff. This is an indicative planning tool, not a quotation. <a href="#contact">Get your exact numbers →</a></p>
   </div>
 </section>
 
@@ -209,7 +264,7 @@
       <div class="service-card reveal">
         <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="16" y1="15" x2="32" y2="15" stroke="currentColor" stroke-width="1.6"/><line x1="16" y1="22" x2="32" y2="22" stroke="currentColor" stroke-width="1.6"/><line x1="16" y1="29" x2="26" y2="29" stroke="currentColor" stroke-width="1.6"/><path d="M28 34l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>Subsidy &amp; DISCOM Paperwork</h3>
-        <p>We register your PM Surya Ghar application and liaise directly with your local DISCOM on your behalf.</p>
+        <p>We guide your PM Surya Ghar application and help you liaise with your local DISCOM.</p>
       </div>
       <div class="service-card reveal">
         <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="2" fill="none"/><path d="M24 15v9l6 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
@@ -244,15 +299,15 @@
     <ol class="process-list">
       <li class="process-step reveal">
         <span class="process-step__num">01</span>
-        <div><h3>Free Site Visit &amp; Roof Assessment</h3><p>Our engineer studies your roof, shading, and electricity bill to size the right system.</p></div>
+        <div><h3>Free Site Visit &amp; Roof Assessment</h3><p>Our team studies your roof, shading, and electricity bill to size the right system.</p></div>
       </li>
       <li class="process-step reveal">
         <span class="process-step__num">02</span>
-        <div><h3>Subsidy Application Filed</h3><p>We register you on the PM Surya Ghar portal and submit paperwork to your local DISCOM on your behalf.</p></div>
+        <div><h3>Subsidy Application Support</h3><p>We help you register on the PM Surya Ghar portal and prepare the documentation your local DISCOM requires.</p></div>
       </li>
       <li class="process-step reveal">
         <span class="process-step__num">03</span>
-        <div><h3>Design &amp; Installation</h3><p>MNRE-grade panels and inverter installed by our certified crew, typically within 5–7 days.</p></div>
+        <div><h3>Design &amp; Installation</h3><p>Quality panels and inverter installed by our team, typically within 5–7 days.</p></div>
       </li>
       <li class="process-step reveal">
         <span class="process-step__num">04</span>
@@ -311,6 +366,80 @@
       </blockquote>
     </div>
     <p class="testimonial-disclaimer reveal">Illustrative reviews — replace with feedback from your own customers once you have installations completed.</p>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section section--cream" id="faq">
+  <div class="container">
+    <p class="eyebrow reveal">Common Questions</p>
+    <h2 class="section__title reveal">Before You Decide</h2>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Is the site visit and quote actually free?</span>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a"><p>Yes — the roof assessment, system sizing, and quotation cost nothing and carry no obligation to proceed.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>What if my roof isn't strong enough for panels?</span>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a"><p>Our site visit includes a structural check. Most RCC rooftops in Sikar handle standard mounting without reinforcement; if yours needs extra support, we'll flag it and price it upfront before you commit to anything.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Can I get the subsidy if I live in a rented house?</span>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a"><p>The PM Surya Ghar subsidy is linked to the electricity connection and typically requires the applicant to be the registered consumer, with the property owner's consent for installation. If you're renting, talk to us and we'll check your specific eligibility.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>What happens if a panel or inverter fails after installation?</span>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a"><p>Panels typically carry a manufacturer performance warranty of around 25 years, and inverters around 5–10 years depending on brand. We also offer an Annual Maintenance Contract for regular checks and faster response if something needs attention.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>How long does the whole process take?</span>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a"><p>Most homes go from application to power generation in roughly 4–6 weeks — this depends mainly on DISCOM feasibility approval timelines, which are outside our control but which we track closely on your behalf.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Is the government subsidy guaranteed once I apply?</span>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a"><p>No — it's approved by MNRE/your DISCOM based on eligibility, correct documentation, ALMM-listed panels, and installation by an empanelled vendor. We handle the paperwork carefully to avoid the most common rejection reasons, but final approval is a government decision, not ours.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Does solar keep working during a power cut?</span>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a"><p>A standard on-grid system shuts off automatically during outages for safety, same as most rooftop solar in India. If you want power during outages too, ask us about our battery backup add-on.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Can I finance this instead of paying upfront?</span>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a"><p>Several nationalised banks offer collateral-free solar loans for systems under PM Surya Ghar. Rates and limits change, so we'll point you to current options during your site visit rather than quote a number here that may be outdated.</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -384,7 +513,7 @@
         <svg class="nav__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="24" r="9" fill="currentColor"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="20" y1="4" x2="20" y2="8"/><line x1="6" y1="24" x2="2" y2="24"/><line x1="38" y1="24" x2="34" y2="24"/><line x1="10.5" y1="14.5" x2="7.5" y2="11.5"/><line x1="29.5" y1="14.5" x2="32.5" y2="11.5"/></g></svg>
         <span>SV<em>SOLAR</em></span>
       </a>
-      <p class="footer__tag">MNRE-empanelled rooftop solar installer serving Sikar &amp; Rajasthan.</p>
+      <p class="footer__tag">Rooftop solar installer serving Sikar &amp; Rajasthan.</p>
     </div>
     <nav class="footer__links">
       <a href="#why">Why Solar</a>
@@ -395,7 +524,7 @@
     </nav>
   </div>
   <div class="container footer__bottom">
-    <p>© <span id="year"></span> SVSOLAR. All rights reserved.</p>
+    <p>© <span id="year"></span> SVSOLAR. All rights reserved. · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Disclaimer</a></p>
     <p>Government scheme details sourced from pmsuryaghar.gov.in — please verify current rates before purchase decisions.</p>
   </div>
 </footer>
