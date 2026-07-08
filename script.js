@@ -158,6 +158,91 @@ if (
   document.querySelectorAll('canvas.hero__pattern').forEach(initDotGrid);
 }
 
+/* ---------- Subsidy & savings calculator ---------- */
+const calcBill = document.getElementById('calcBill');
+if (calcBill) {
+  const AVG_TARIFF = 7;       // ₹ per unit, blended estimate
+  const GEN_PER_KW_DAY = 4;   // units generated per kW per day
+  const COST_PER_KW = 65000;  // ₹ installed cost per kW, before subsidy
+  const RING_RADIUS = 92;
+  const RING_CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
+
+  const tenureButtons = document.querySelectorAll('.calc__tenure-btn');
+  let selectedYears = 5;
+
+  function calcSubsidyAmount(kw) {
+    let subsidy = Math.min(kw, 2) * 30000;
+    if (kw > 2) subsidy += Math.min(kw - 2, 1) * 18000;
+    return Math.min(subsidy, 78000);
+  }
+
+  function formatINR(n) {
+    return '₹' + Math.round(n).toLocaleString('en-IN');
+  }
+
+  function updateCalc() {
+    const bill = parseInt(calcBill.value, 10);
+    document.getElementById('calcBillDisplay').textContent = bill.toLocaleString('en-IN');
+
+    const monthlyUnits = bill / AVG_TARIFF;
+    const dailyUnits = monthlyUnits / 30;
+    let kw = dailyUnits / GEN_PER_KW_DAY;
+    kw = Math.max(1, Math.min(10, Math.round(kw * 2) / 2));
+
+    const subsidy = calcSubsidyAmount(kw);
+    const systemCost = kw * COST_PER_KW;
+    const netCost = Math.max(systemCost - subsidy, 0);
+    const monthlySavings = Math.min(bill, monthlyUnits * AVG_TARIFF);
+    const cumulativeSavings = monthlySavings * 12 * selectedYears;
+    const covered = subsidy + cumulativeSavings;
+    const coveragePct = systemCost > 0 ? Math.min(100, (covered / systemCost) * 100) : 0;
+
+    document.getElementById('calcKw').textContent = `${kw} kW`;
+    document.getElementById('calcSubsidy').textContent = formatINR(subsidy);
+    document.getElementById('calcNetCost').textContent = formatINR(netCost);
+    document.getElementById('calcCumSavings').textContent = formatINR(cumulativeSavings);
+    document.getElementById('calcYearsLabel').textContent = `By year ${selectedYears}`;
+    document.getElementById('calcCoveragePct').textContent = `${Math.round(coveragePct)}%`;
+
+    const ringFill = document.getElementById('calcRingFill');
+    const offset = RING_CIRCUMFERENCE * (1 - coveragePct / 100);
+    ringFill.style.strokeDasharray = RING_CIRCUMFERENCE;
+    ringFill.style.strokeDashoffset = offset;
+  }
+
+  calcBill.addEventListener('input', updateCalc);
+  tenureButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      tenureButtons.forEach((b) => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+      selectedYears = parseInt(btn.dataset.years, 10);
+      updateCalc();
+    });
+  });
+
+  updateCalc();
+}
+
+/* ---------- FAQ accordion ---------- */
+document.querySelectorAll('.faq-item').forEach((item) => {
+  const btn = item.querySelector('.faq-item__q');
+  const panel = item.querySelector('.faq-item__a');
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+    panel.style.maxHeight = isOpen ? panel.scrollHeight + 'px' : null;
+  });
+});
+window.addEventListener('resize', () => {
+  document.querySelectorAll('.faq-item.is-open .faq-item__a').forEach((panel) => {
+    panel.style.maxHeight = panel.scrollHeight + 'px';
+  });
+});
+
 /* ---------- Lead form → pre-filled WhatsApp message ---------- */
 // Set your WhatsApp number below in the format 91XXXXXXXXXX (no + or spaces)
 const WHATSAPP_NUMBER = '917727852619';

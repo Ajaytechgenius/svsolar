@@ -215,33 +215,53 @@
   <div class="container">
     <p class="eyebrow reveal">Instant Estimate</p>
     <h2 class="section__title reveal">See Your Own Numbers</h2>
-    <p class="section__lead reveal">Move the slider to your approximate monthly electricity bill — this is a rough guide, not a quote. Your exact system size, subsidy, and payback are confirmed during your free site visit.</p>
+    <p class="section__lead reveal">Set your bill and a timeline — watch how much of your investment gets covered by the subsidy plus your savings. A planning guide, not a quote.</p>
 
     <div class="calc reveal">
-      <div class="calc__input">
-        <label for="calcBill">Approx. monthly electricity bill</label>
-        <div class="calc__bill-value"><span>₹</span><span id="calcBillDisplay">3,000</span></div>
-        <input type="range" id="calcBill" min="500" max="15000" step="100" value="3000">
-        <div class="calc__range-labels"><span>₹500</span><span>₹15,000</span></div>
+      <div class="calc__controls">
+        <div class="calc__field">
+          <label for="calcBill">Approx. monthly electricity bill</label>
+          <div class="calc__bill-value"><span>₹</span><span id="calcBillDisplay">3,000</span></div>
+          <input type="range" id="calcBill" min="500" max="15000" step="100" value="3000">
+          <div class="calc__range-labels"><span>₹500</span><span>₹15,000</span></div>
+        </div>
+
+        <div class="calc__field">
+          <label>Track coverage over</label>
+          <div class="calc__tenure" id="calcTenure" role="tablist">
+            <button class="calc__tenure-btn" data-years="3" role="tab">3 yrs</button>
+            <button class="calc__tenure-btn is-active" data-years="5" role="tab" aria-selected="true">5 yrs</button>
+            <button class="calc__tenure-btn" data-years="10" role="tab">10 yrs</button>
+            <button class="calc__tenure-btn" data-years="15" role="tab">15 yrs</button>
+          </div>
+        </div>
+
+        <div class="calc__stats">
+          <div class="calc__stat">
+            <span class="calc__stat-label">System Size</span>
+            <span class="calc__stat-value" id="calcKw">3 kW</span>
+          </div>
+          <div class="calc__stat calc__stat--gold">
+            <span class="calc__stat-label">Govt. Subsidy</span>
+            <span class="calc__stat-value" id="calcSubsidy">₹78,000</span>
+          </div>
+          <div class="calc__stat">
+            <span class="calc__stat-label">Net Investment</span>
+            <span class="calc__stat-value" id="calcNetCost">₹1,17,000</span>
+          </div>
+        </div>
       </div>
 
-      <div class="calc__results">
-        <div class="calc__result">
-          <span class="calc__result-label">Recommended System</span>
-          <span class="calc__result-value" id="calcKw">3 kW</span>
+      <div class="calc__visual">
+        <svg class="calc__ring" viewBox="0 0 220 220">
+          <circle class="calc__ring-track" cx="110" cy="110" r="92"></circle>
+          <circle class="calc__ring-fill" id="calcRingFill" cx="110" cy="110" r="92"></circle>
+        </svg>
+        <div class="calc__ring-center">
+          <span class="calc__ring-percent" id="calcCoveragePct">0%</span>
+          <span class="calc__ring-caption">of investment covered</span>
         </div>
-        <div class="calc__result calc__result--gold">
-          <span class="calc__result-label">Estimated Govt. Subsidy</span>
-          <span class="calc__result-value" id="calcSubsidy">₹78,000</span>
-        </div>
-        <div class="calc__result">
-          <span class="calc__result-label">Cost After Subsidy</span>
-          <span class="calc__result-value" id="calcNetCost">₹1,17,000</span>
-        </div>
-        <div class="calc__result">
-          <span class="calc__result-label">Estimated Payback</span>
-          <span class="calc__result-value" id="calcPayback">~4.5 years</span>
-        </div>
+        <p class="calc__visual-footer"><span id="calcYearsLabel">By year 5</span> · cumulative savings <strong id="calcCumSavings">₹0</strong></p>
       </div>
     </div>
 
@@ -379,7 +399,9 @@
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
           <span>Is the site visit and quote actually free?</span>
-          <span class="faq-item__icon" aria-hidden="true"></span>
+          <span class="faq-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
         </button>
         <div class="faq-item__a"><p>Yes — the roof assessment, system sizing, and quotation cost nothing and carry no obligation to proceed.</p></div>
       </div>
@@ -387,7 +409,9 @@
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
           <span>What if my roof isn't strong enough for panels?</span>
-          <span class="faq-item__icon" aria-hidden="true"></span>
+          <span class="faq-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
         </button>
         <div class="faq-item__a"><p>Our site visit includes a structural check. Most RCC rooftops in Sikar handle standard mounting without reinforcement; if yours needs extra support, we'll flag it and price it upfront before you commit to anything.</p></div>
       </div>
@@ -395,7 +419,9 @@
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
           <span>Can I get the subsidy if I live in a rented house?</span>
-          <span class="faq-item__icon" aria-hidden="true"></span>
+          <span class="faq-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
         </button>
         <div class="faq-item__a"><p>The PM Surya Ghar subsidy is linked to the electricity connection and typically requires the applicant to be the registered consumer, with the property owner's consent for installation. If you're renting, talk to us and we'll check your specific eligibility.</p></div>
       </div>
@@ -403,7 +429,9 @@
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
           <span>What happens if a panel or inverter fails after installation?</span>
-          <span class="faq-item__icon" aria-hidden="true"></span>
+          <span class="faq-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
         </button>
         <div class="faq-item__a"><p>Panels typically carry a manufacturer performance warranty of around 25 years, and inverters around 5–10 years depending on brand. We also offer an Annual Maintenance Contract for regular checks and faster response if something needs attention.</p></div>
       </div>
@@ -411,7 +439,9 @@
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
           <span>How long does the whole process take?</span>
-          <span class="faq-item__icon" aria-hidden="true"></span>
+          <span class="faq-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
         </button>
         <div class="faq-item__a"><p>Most homes go from application to power generation in roughly 4–6 weeks — this depends mainly on DISCOM feasibility approval timelines, which are outside our control but which we track closely on your behalf.</p></div>
       </div>
@@ -419,7 +449,9 @@
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
           <span>Is the government subsidy guaranteed once I apply?</span>
-          <span class="faq-item__icon" aria-hidden="true"></span>
+          <span class="faq-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
         </button>
         <div class="faq-item__a"><p>No — it's approved by MNRE/your DISCOM based on eligibility, correct documentation, ALMM-listed panels, and installation by an empanelled vendor. We handle the paperwork carefully to avoid the most common rejection reasons, but final approval is a government decision, not ours.</p></div>
       </div>
@@ -427,7 +459,9 @@
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
           <span>Does solar keep working during a power cut?</span>
-          <span class="faq-item__icon" aria-hidden="true"></span>
+          <span class="faq-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
         </button>
         <div class="faq-item__a"><p>A standard on-grid system shuts off automatically during outages for safety, same as most rooftop solar in India. If you want power during outages too, ask us about our battery backup add-on.</p></div>
       </div>
@@ -435,7 +469,9 @@
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
           <span>Can I finance this instead of paying upfront?</span>
-          <span class="faq-item__icon" aria-hidden="true"></span>
+          <span class="faq-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
         </button>
         <div class="faq-item__a"><p>Several nationalised banks offer collateral-free solar loans for systems under PM Surya Ghar. Rates and limits change, so we'll point you to current options during your site visit rather than quote a number here that may be outdated.</p></div>
       </div>
@@ -515,16 +551,22 @@
       </a>
       <p class="footer__tag">Rooftop solar installer serving Sikar &amp; Rajasthan.</p>
     </div>
-    <nav class="footer__links">
-      <a href="#why">Why Solar</a>
-      <a href="#subsidy">Subsidy</a>
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="footer__nav-group">
+      <nav class="footer__links">
+        <a href="#why">Why Solar</a>
+        <a href="#subsidy">Subsidy</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <nav class="footer__legal-links">
+        <a href="privacy.html">Privacy Policy <span aria-hidden="true">→</span></a>
+        <a href="terms.html">Terms &amp; Disclaimer <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>
   </div>
   <div class="container footer__bottom">
-    <p>© <span id="year"></span> SVSOLAR. All rights reserved. · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Disclaimer</a></p>
+    <p>© <span id="year"></span> SVSOLAR. All rights reserved.</p>
     <p>Government scheme details sourced from pmsuryaghar.gov.in — please verify current rates before purchase decisions.</p>
   </div>
 </footer>
