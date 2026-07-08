@@ -167,9 +167,12 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.1;margin:
 }
 .hero__pattern{
   position:absolute;inset:0;
+  display:block;
+  width:100%;height:100%;
   background-image:radial-gradient(rgba(201,150,44,.16) 1px, transparent 1px);
   background-size:26px 26px;
   mask-image:linear-gradient(180deg, transparent, rgba(0,0,0,.7) 40%, transparent 85%);
+  -webkit-mask-image:linear-gradient(180deg, transparent, rgba(0,0,0,.7) 40%, transparent 85%);
   pointer-events:none;
 }
 .hero__sun{
@@ -324,7 +327,7 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.1;margin:
 .testimonial-disclaimer{margin-top:26px;font-size:12.5px;color:var(--slate-500);}
 
 /* ---------- Final CTA ---------- */
-.final-cta{overflow:hidden;text-align:left;}
+.final-cta{position:relative;overflow:hidden;text-align:left;}
 .final-cta__inner{position:relative;max-width:640px;}
 .final-cta .section__lead{color:#B9C3D4;}
 
@@ -378,6 +381,17 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.1;margin:
   transition:transform .3s var(--ease);
 }
 .wa-float:hover{transform:scale(1.08);}
+
+/* ---------- Content protection (deterrent, not real security) ---------- */
+body{-webkit-user-select:none;user-select:none;}
+.lead-form input,.lead-form select,.lead-form textarea,.contact-info,.contact-info *{
+  -webkit-user-select:text;user-select:text;
+}
+img,svg{-webkit-user-drag:none;user-drag:none;}
+
+/* ---------- Interactive dot-grid (canvas draws on top of the static
+   .hero__pattern background below, so non-JS / touch / reduced-motion
+   visitors still see the plain static grid as a graceful fallback) ---------- */
 
 /* ---------- Scroll reveal ---------- */
 .reveal{
