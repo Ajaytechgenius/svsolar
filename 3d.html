@@ -3,462 +3,189 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3D Solar Panel Preview | SVSOLAR — Shree Vinayak Solar Agency</title>
-<meta name="description" content="Explore our premium solar panel in interactive 3D. Move your cursor or tilt your phone to see it come alive.">
-<link rel="canonical" href="https://svsolar.online/3d.html">
-<link rel="icon" href="/icon-192.png" type="image/png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>3D Solar Experience | SVSOLAR</title>
+<meta name="description" content="Experience premium interactive 3D solar panel technology by Shree Vinayak Solar Agency.">
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  :root{
-    --navy-950:#050b17;
-    --navy-900:#0a1330;
-    --navy-800:#101c40;
-    --navy-700:#182852;
-    --gold-500:#d9a94c;
-    --gold-400:#e8c579;
-    --gold-glow: rgba(217,169,76,0.35);
-    --text-light:#f3f2ec;
-    --text-muted:#a8b0c4;
-  }
+:root{
+  --navy:#0b1220;
+  --navy-light:#111a2e;
+  --gold:#d4af37;
+  --gold-light:#ffdf70;
+  --gray:#9aa4b2;
+}
 
-  *{ margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box}
 
-  html, body{
-    height:100%;
-    background: radial-gradient(ellipse at 50% -10%, var(--navy-800) 0%, var(--navy-950) 60%);
-    color: var(--text-light);
-    font-family:'Manrope', sans-serif;
-    overflow-x:hidden;
-  }
+body{
+  font-family:'Manrope',sans-serif;
+  background:radial-gradient(circle at top,var(--navy-light),var(--navy));
+  color:white;
+  height:100vh;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
 
-  /* ===== Ambient background ===== */
-  .bg-glow{
-    position:fixed;
-    top:-250px;
-    left:50%;
-    transform:translateX(-50%);
-    width:1000px;
-    height:1000px;
-    background: radial-gradient(circle, var(--gold-glow) 0%, transparent 65%);
-    filter: blur(50px);
-    animation: pulse 7s ease-in-out infinite;
-    pointer-events:none;
-    z-index:0;
-  }
-  @keyframes pulse{
-    0%,100%{ opacity:0.4; transform:translateX(-50%) scale(1); }
-    50%{ opacity:0.7; transform:translateX(-50%) scale(1.1); }
-  }
+/* Animated Glow Background */
+.sun-glow{
+  position:absolute;
+  top:-200px;
+  left:50%;
+  transform:translateX(-50%);
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle,rgba(212,175,55,0.35) 0%,transparent 70%);
+  border-radius:50%;
+  animation:pulse 6s infinite ease-in-out;
+  z-index:-1;
+}
 
-  .bg-dots{
-    position:fixed;
-    inset:0;
-    background-image: radial-gradient(rgba(217,169,76,0.12) 1.5px, transparent 1.5px);
-    background-size: 34px 34px;
-    mask-image: radial-gradient(ellipse at center, black 0%, transparent 80%);
-    pointer-events:none;
-    z-index:0;
-  }
+@keyframes pulse{
+  0%,100%{transform:translateX(-50%) scale(1);}
+  50%{transform:translateX(-50%) scale(1.1);}
+}
 
-  /* Floating light particles */
-  .particle{
-    position:fixed;
-    bottom:-20px;
-    width:4px;
-    height:4px;
-    background: var(--gold-400);
-    border-radius:50%;
-    opacity:0.6;
-    box-shadow: 0 0 8px var(--gold-400);
-    animation: floatUp linear infinite;
-    pointer-events:none;
-    z-index:1;
-  }
-  @keyframes floatUp{
-    to{ transform: translateY(-110vh) translateX(20px); opacity:0; }
-  }
+/* Content */
+.container{
+  max-width:900px;
+  padding:20px;
+}
 
-  /* ===== Header ===== */
-  header{
-    position:relative;
-    z-index:5;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding: 24px 6%;
-  }
-  header a.logo{
-    font-family:'Fraunces', serif;
-    color: var(--gold-400);
-    font-weight:700;
-    font-size:20px;
-    text-decoration:none;
-  }
-  header a.back{
-    color: var(--text-muted);
-    text-decoration:none;
-    font-size:14px;
-    border: 1px solid rgba(255,255,255,0.15);
-    padding: 8px 18px;
-    border-radius: 50px;
-    transition: all .3s ease;
-  }
-  header a.back:hover{
-    border-color: var(--gold-500);
-    color: var(--gold-400);
-  }
+.logo{
+  font-family:'Fraunces',serif;
+  font-size:1.2rem;
+  letter-spacing:2px;
+  color:var(--gold);
+  margin-bottom:20px;
+}
 
-  /* ===== Hero / Scene ===== */
-  .hero-3d{
-    position:relative;
-    z-index:2;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding: 20px 20px 80px;
-  }
+h1{
+  font-family:'Fraunces',serif;
+  font-size:2.5rem;
+  margin-bottom:10px;
+}
 
-  .eyebrow{
-    color: var(--gold-400);
-    font-size:13px;
-    font-weight:700;
-    letter-spacing: 2px;
-    text-transform:uppercase;
-    margin-bottom: 16px;
-  }
+p{
+  color:var(--gray);
+  margin-bottom:40px;
+}
 
-  .hero-3d h1{
-    font-family:'Fraunces', serif;
-    font-size: clamp(28px, 5vw, 48px);
-    text-align:center;
-    margin-bottom: 12px;
-    max-width: 700px;
-  }
+/* 3D Solar Panel */
+.panel-wrapper{
+  perspective:1200px;
+  display:flex;
+  justify-content:center;
+}
 
-  .hero-3d p.sub{
-    color: var(--text-muted);
-    text-align:center;
-    max-width: 480px;
-    margin-bottom: 50px;
-    font-size:15px;
-  }
+.panel{
+  width:320px;
+  height:200px;
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
+  border-radius:12px;
+  transform-style:preserve-3d;
+  transition:transform .15s ease;
+  box-shadow:0 40px 80px rgba(0,0,0,0.6);
+  position:relative;
+}
 
-  /* ===== 3D Scene ===== */
-  .scene{
-    perspective: 1400px;
-    width: 100%;
-    max-width: 560px;
-    height: clamp(240px, 40vw, 340px);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-    margin-bottom: 30px;
-  }
+/* grid lines */
+.panel::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px);
+  background-size:30px 30px;
+  border-radius:12px;
+}
 
-  .panel-shadow{
-    position:absolute;
-    bottom: -20px;
-    width: 60%;
-    height: 30px;
-    background: radial-gradient(ellipse, rgba(0,0,0,0.55) 0%, transparent 70%);
-    filter: blur(6px);
-    border-radius: 50%;
-    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
-    z-index:1;
-  }
+/* shine effect */
+.panel::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.25),transparent 70%);
+  border-radius:12px;
+  opacity:.4;
+}
 
-  .panel-wrapper{
-    width: min(420px, 78vw);
-    aspect-ratio: 420 / 260;
-    position:relative;
-    transform-style: preserve-3d;
-    will-change: transform;
-    z-index:2;
-  }
+/* CTA */
+.btn{
+  display:inline-block;
+  margin-top:40px;
+  padding:14px 32px;
+  background:var(--gold);
+  color:#000;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:600;
+  transition:.3s;
+}
 
-  .panel-frame{
-    width:100%;
-    height:100%;
-    padding: 3.5%;
-    background: linear-gradient(135deg, var(--gold-400), var(--gold-500) 45%, #a97e28);
-    border-radius: 12px;
-    box-shadow:
-      0 40px 80px rgba(0,0,0,0.55),
-      0 0 70px rgba(217,169,76,0.25);
-    transform-style: preserve-3d;
-    position:relative;
-    overflow:hidden;
-  }
+.btn:hover{
+  background:var(--gold-light);
+  transform:translateY(-3px);
+}
 
-  .panel-grid{
-    width:100%;
-    height:100%;
-    display:grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 3px;
-    background: var(--navy-950);
-    border-radius: 6px;
-    overflow:hidden;
-    position:relative;
-  }
+footer{
+  position:absolute;
+  bottom:20px;
+  width:100%;
+  font-size:.8rem;
+  color:var(--gray);
+}
+footer a{color:var(--gold);text-decoration:none}
 
-  .cell{
-    background: linear-gradient(160deg, #1a2c58 0%, #0a1330 100%);
-    box-shadow: inset 0 0 8px rgba(0,0,0,0.6), inset 0 0 1px rgba(255,255,255,0.08);
-  }
-
-  .panel-glass{
-    position:absolute;
-    inset:0;
-    background: linear-gradient(120deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 45%);
-    mix-blend-mode: overlay;
-    pointer-events:none;
-    will-change: transform;
-    border-radius: 6px;
-  }
-
-  .panel-shine{
-    position:absolute;
-    top:-50%;
-    left:-150%;
-    width: 60px;
-    height: 220%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
-    transform: rotate(20deg);
-    animation: shineSweep 5s ease-in-out infinite;
-    pointer-events:none;
-  }
-  @keyframes shineSweep{
-    0%{ left:-150%; }
-    45%{ left:150%; }
-    100%{ left:150%; }
-  }
-
-  /* ===== Mobile tilt permission button ===== */
-  .tilt-btn{
-    display:none;
-    background: rgba(217,169,76,0.12);
-    border: 1px solid rgba(217,169,76,0.4);
-    color: var(--gold-400);
-    padding: 10px 22px;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight:700;
-    cursor:pointer;
-    margin-bottom: 30px;
-  }
-
-  /* ===== CTA ===== */
-  .cta-group{
-    display:flex;
-    gap: 14px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding: 14px 28px;
-    border-radius:50px;
-    font-weight:700;
-    font-size:14px;
-    text-decoration:none;
-    transition: all .3s ease;
-  }
-  .btn-primary{
-    background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
-    color: var(--navy-950);
-    box-shadow: 0 10px 26px rgba(217,169,76,0.3);
-  }
-  .btn-primary:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 14px 34px rgba(217,169,76,0.45);
-  }
-  .btn-outline{
-    background: transparent;
-    color: var(--text-light);
-    border: 1px solid rgba(255,255,255,0.2);
-  }
-  .btn-outline:hover{
-    border-color: var(--gold-500);
-    color: var(--gold-400);
-    transform: translateY(-3px);
-  }
-
-  @media (max-width: 480px){
-    .cta-group{ flex-direction:column; width:100%; }
-    .btn{ justify-content:center; }
-  }
+@media(max-width:600px){
+  .panel{width:260px;height:160px}
+  h1{font-size:1.8rem}
+}
 </style>
 </head>
+
 <body>
 
-<div class="bg-glow"></div>
-<div class="bg-dots"></div>
-<div id="particles"></div>
+<div class="sun-glow"></div>
 
-<header>
-  <a href="/" class="logo">SVSOLAR</a>
-  <a href="/" class="back">← Back to Home</a>
-</header>
+<div class="container">
 
-<section class="hero-3d">
-  <span class="eyebrow">Interactive Preview</span>
-  <h1>Engineered for the Sun</h1>
-  <p class="sub">Move your cursor — or tilt your phone — to explore our premium-grade solar panel in 3D.</p>
+<div class="logo">SVSOLAR</div>
 
-  <button class="tilt-btn" id="tiltBtn">Enable Motion Tilt</button>
+<h1>Interactive 3D Solar Panel</h1>
+<p>Move your cursor and feel the precision engineering.</p>
 
-  <div class="scene" id="scene">
-    <div class="panel-shadow" id="panelShadow"></div>
-    <div class="panel-wrapper" id="panelWrapper">
-      <div class="panel-frame">
-        <div class="panel-grid" id="panelGrid"></div>
-        <div class="panel-glass" id="panelGlass"></div>
-        <div class="panel-shine"></div>
-      </div>
-    </div>
-  </div>
+<div class="panel-wrapper">
+  <div class="panel" id="panel"></div>
+</div>
 
-  <div class="cta-group">
-    <a href="/#calculator" class="btn btn-primary">Calculate My Savings →</a>
-    <a href="/" class="btn btn-outline">Explore SVSOLAR</a>
-  </div>
-</section>
+<a href="https://svsolar.online" class="btn">Back to Homepage</a>
+
+</div>
+
+<footer>
+© 2026 Shree Vinayak Solar Agency · 
+<a href="https://svsolar.online">svsolar.online</a>
+</footer>
 
 <script>
-  // ===== Generate solar cell grid (10x6 = 60 cells) =====
-  const grid = document.getElementById('panelGrid');
-  for(let i = 0; i < 60; i++){
-    const cell = document.createElement('div');
-    cell.className = 'cell';
-    // slight random brightness variation for realism
-    const brightness = 0.92 + Math.random() * 0.16;
-    cell.style.filter = `brightness(${brightness})`;
-    grid.appendChild(cell);
-  }
+const panel = document.getElementById("panel");
 
-  // ===== Floating light particles =====
-  const particleContainer = document.getElementById('particles');
-  for(let i = 0; i < 18; i++){
-    const p = document.createElement('div');
-    p.className = 'particle';
-    p.style.left = Math.random() * 100 + 'vw';
-    p.style.animationDuration = (8 + Math.random() * 10) + 's';
-    p.style.animationDelay = (Math.random() * 10) + 's';
-    particleContainer.appendChild(p);
-  }
+document.addEventListener("mousemove", (e) => {
+  const x = (window.innerWidth / 2 - e.clientX) / 25;
+  const y = (window.innerHeight / 2 - e.clientY) / 25;
+  panel.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
 
-  // ===== 3D Tilt Logic =====
-  const scene = document.getElementById('scene');
-  const wrapper = document.getElementById('panelWrapper');
-  const glass = document.getElementById('panelGlass');
-  const shadow = document.getElementById('panelShadow');
-
-  const MAX_TILT = 18; // degrees
-  let targetX = 0, targetY = 0;   // desired rotation
-  let currentX = 0, currentY = 0; // smoothed rotation
-  let idleTime = 0;
-
-  function updateScene(){
-    idleTime += 0.015;
-
-    // Idle floating bob (always active, adds life even without input)
-    const idleFloat = Math.sin(idleTime) * 6;
-    const idleTiltX = Math.sin(idleTime * 0.6) * 2;
-    const idleTiltY = Math.cos(idleTime * 0.5) * 2;
-
-    // Smooth interpolation toward target tilt
-    currentX += (targetX - currentX) * 0.08;
-    currentY += (targetY - currentY) * 0.08;
-
-    const finalX = currentX + idleTiltX;
-    const finalY = currentY + idleTiltY;
-
-    wrapper.style.transform =
-      `translateY(${idleFloat}px) rotateX(${-finalX}deg) rotateY(${finalY}deg)`;
-
-    // Glass parallax reflection (moves opposite of tilt)
-    glass.style.transform =
-      `translate(${finalY * 1.2}px, ${finalX * 1.2}px)`;
-
-    // Shadow reacts to tilt + float height
-    const shadowScale = 1 - Math.abs(finalY) / 90 - Math.abs(idleFloat) / 120;
-    const shadowOpacity = 0.5 - Math.abs(idleFloat) / 40;
-    shadow.style.transform = `translateX(${finalY * -2}px) scale(${shadowScale})`;
-    shadow.style.opacity = Math.max(0.15, shadowOpacity);
-
-    requestAnimationFrame(updateScene);
-  }
-  requestAnimationFrame(updateScene);
-
-  // ===== Mouse tracking (desktop) =====
-  scene.addEventListener('mousemove', (e) => {
-    const rect = scene.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;  // -0.5 to 0.5
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-
-    targetX = y * MAX_TILT;
-    targetY = x * MAX_TILT;
-  });
-
-  scene.addEventListener('mouseleave', () => {
-    targetX = 0;
-    targetY = 0;
-  });
-
-  // ===== Touch tracking (mobile drag) =====
-  scene.addEventListener('touchmove', (e) => {
-    const touch = e.touches[0];
-    const rect = scene.getBoundingClientRect();
-    const x = (touch.clientX - rect.left) / rect.width - 0.5;
-    const y = (touch.clientY - rect.top) / rect.height - 0.5;
-
-    targetX = y * MAX_TILT;
-    targetY = x * MAX_TILT;
-  }, { passive: true });
-
-  scene.addEventListener('touchend', () => {
-    targetX = 0;
-    targetY = 0;
-  });
-
-  // ===== Device orientation (gyroscope) for mobile =====
-  function enableGyro(){
-    window.addEventListener('deviceorientation', (e) => {
-      if(e.beta === null || e.gamma === null) return;
-      // beta: front-back tilt (-180 to 180), gamma: left-right tilt (-90 to 90)
-      const x = Math.max(-30, Math.min(30, e.beta - 45)); // offset assumes phone held upright-ish
-      const y = Math.max(-30, Math.min(30, e.gamma));
-
-      targetX = (x / 30) * MAX_TILT;
-      targetY = (y / 30) * MAX_TILT;
-    });
-  }
-
-  const tiltBtn = document.getElementById('tiltBtn');
-
-  // iOS 13+ requires explicit permission
-  if (typeof DeviceOrientationEvent !== 'undefined' &&
-      typeof DeviceOrientationEvent.requestPermission === 'function') {
-    tiltBtn.style.display = 'inline-block';
-    tiltBtn.addEventListener('click', () => {
-      DeviceOrientationEvent.requestPermission().then(response => {
-        if (response === 'granted') {
-          enableGyro();
-          tiltBtn.style.display = 'none';
-        }
-      }).catch(console.error);
-    });
-  } else if (window.DeviceOrientationEvent && /Mobi|Android/i.test(navigator.userAgent)) {
-    // Android / other mobile — no permission needed
-    enableGyro();
-  }
+/* Reset on mouse leave */
+document.addEventListener("mouseleave", () => {
+  panel.style.transform = "rotateY(0deg) rotateX(0deg)";
+});
 </script>
 
 </body>
