@@ -10,25 +10,44 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://svsolar.online/</loc>
   <lastmod>2026-07-08T02:28:03+00:00</lastmod>
 </url>
 
+<url>
+  <loc>https://svsolar.online/blog.html</loc>
+  <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://svsolar.online/blog/3kw-solar-cost-rajasthan.html</loc>
+  <lastmod>2025-01-15T00:00:00+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://svsolar.online/blog/pm-surya-ghar-yojana-explained.html</loc>
+  <lastmod>2025-01-18T00:00:00+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://svsolar.online/blog/roof-suitable-for-solar.html</loc>
+  <lastmod>2025-01-20T00:00:00+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://svsolar.online/blog/solar-panel-maintenance-guide.html</loc>
+  <lastmod>2025-01-22T00:00:00+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://svsolar.online/blog/solar-loan-vs-full-payment.html</loc>
+  <lastmod>2025-01-24T00:00:00+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://svsolar.online/blog/solar-myths-india.html</loc>
+  <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+</url>
+
 </urlset>
-<url><loc>https://svsolar.online/blog.html</loc></url>
-<url><loc>https://svsolar.online/blog/3kw-solar-cost-rajasthan.html</loc></url>
-<url><loc>https://svsolar.online/blog/pm-surya-ghar-yojana-explained.html</loc></url>
-<url><loc>https://svsolar.online/blog/roof-suitable-for-solar.html</loc></url>
-<url><loc>https://svsolar.online/blog/solar-panel-maintenance-guide.html</loc></url>
-<url><loc>https://svsolar.online/blog/solar-loan-vs-full-payment.html</loc></url>
-<url><loc>https://svsolar.online/blog/solar-myths-india.html</loc></url>
-/blog.html
-/blog/
-  ├── 3kw-solar-cost-rajasthan.html
-  ├── pm-surya-ghar-yojana-explained.html
-  ├── roof-suitable-for-solar.html
-  ├── solar-panel-maintenance-guide.html
-  ├── solar-loan-vs-full-payment.html
-  └── solar-myths-india.html
