@@ -569,6 +569,113 @@
   </div>
 </section>
 
+  <!-- ===== CALLBACK REQUEST WIDGET ===== -->
+<section id="callback" class="callback-section">
+  <div class="callback-card">
+    <div class="callback-icon">📞</div>
+    <h3>Too Busy to Call Right Now?</h3>
+    <p class="callback-sub">Leave your number — we'll call you back within 2 hours.</p>
+
+    <form id="callbackForm" class="callback-form">
+      <input type="text" id="cbName" placeholder="Your Name" required>
+      <input type="tel" id="cbPhone" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" required>
+      <select id="cbTime" required>
+        <option value="" disabled selected>Best time to call</option>
+        <option value="Morning (9AM–12PM)">Morning (9AM–12PM)</option>
+        <option value="Afternoon (12PM–4PM)">Afternoon (12PM–4PM)</option>
+        <option value="Evening (4PM–8PM)">Evening (4PM–8PM)</option>
+      </select>
+      <button type="submit" class="cb-btn">Request Callback →</button>
+    </form>
+    <p class="cb-note">No spam. We only use this to call you back.</p>
+  </div>
+</section>
+
+<style>
+.callback-section{
+  padding: 70px 20px;
+  display:flex;
+  justify-content:center;
+}
+.callback-card{
+  background: linear-gradient(145deg, #101c40, #0a1330);
+  border: 1px solid rgba(217,169,76,0.25);
+  border-radius: 20px;
+  padding: 40px 36px;
+  max-width: 460px;
+  width:100%;
+  text-align:center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.callback-icon{ font-size: 36px; margin-bottom: 12px; }
+.callback-card h3{
+  font-family:'Fraunces', serif;
+  color:#f3f2ec;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.callback-sub{
+  color:#a8b0c4;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.callback-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.callback-form input,
+.callback-form select{
+  padding: 13px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color:#f3f2ec;
+  font-family:'Manrope', sans-serif;
+  font-size: 14px;
+  outline:none;
+}
+.callback-form input::placeholder{ color:#7f88a0; }
+.callback-form select{ color:#a8b0c4; }
+.callback-form select:valid{ color:#f3f2ec; }
+.cb-btn{
+  margin-top: 6px;
+  padding: 14px;
+  border:none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #e8c579, #d9a94c);
+  color:#0a1330;
+  font-weight:800;
+  font-size: 15px;
+  cursor:pointer;
+  transition: all .3s ease;
+}
+.cb-btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 25px rgba(217,169,76,0.4); }
+.cb-note{
+  margin-top: 14px;
+  font-size: 12px;
+  color:#7f88a0;
+}
+</style>
+
+<script>
+document.getElementById('callbackForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('cbName').value.trim();
+  const phone = document.getElementById('cbPhone').value.trim();
+  const time = document.getElementById('cbTime').value;
+  const now = new Date().toLocaleString('en-IN', { dateStyle:'medium', timeStyle:'short' });
+
+ 
+  const yourWhatsAppNumber = "917727852619";
+
+  const message = `Hello SVSOLAR, I'd like a callback.%0A%0AName: ${name}%0APhone: ${phone}%0APreferred time: ${time}%0ARequested at: ${now}`;
+
+  window.open(`https://wa.me/${yourWhatsAppNumber}?text=${message}`, '_blank');
+
+  document.getElementById('callbackForm').reset();
+});
+</script>
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="container footer__inner">
