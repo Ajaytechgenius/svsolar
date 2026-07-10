@@ -38,6 +38,9 @@
 -->
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='58' r='26' fill='%23C9962C'/%3E%3Cg stroke='%23C9962C' stroke-width='6' stroke-linecap='round'%3E%3Cline x1='50' y1='10' x2='50' y2='20'/%3E%3Cline x1='18' y1='58' x2='8' y2='58'/%3E%3Cline x1='92' y1='58' x2='82' y2='58'/%3E%3Cline x1='27' y1='35' x2='20' y2='28'/%3E%3Cline x1='73' y1='35' x2='80' y2='28'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0A1420">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,20 +93,25 @@
   <div class="nav__inner">
     <a href="#top" class="nav__brand">
       <svg class="nav__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="24" r="9" fill="currentColor"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="20" y1="4" x2="20" y2="8"/><line x1="6" y1="24" x2="2" y2="24"/><line x1="38" y1="24" x2="34" y2="24"/><line x1="10.5" y1="14.5" x2="7.5" y2="11.5"/><line x1="29.5" y1="14.5" x2="32.5" y2="11.5"/></g></svg>
-      <span class="nav__brand-full">Shree Vinayak <em>Solar</em></span>
+      <span class="nav__brand-full" data-i18n="nav_brand" data-i18n-html>Shree Vinayak <em>Solar</em></span>
     </a>
 
     <nav class="nav__links" id="navLinks">
-      <a href="#why">Why Solar</a>
-      <a href="#subsidy">Subsidy</a>
-      <a href="#calculator">Calculator</a>
-      <a href="#services">Services</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="#why" data-i18n="nav_why">Why Solar</a>
+      <a href="#subsidy" data-i18n="nav_subsidy">Subsidy</a>
+      <a href="#calculator" data-i18n="nav_calculator">Calculator</a>
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
     </nav>
 
     <div class="nav__actions">
-      <a href="#contact" class="btn btn--gold btn--sm">Free Site Visit</a>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language / भाषा बदलें">
+        <span class="lang-toggle__pill" id="langTogglePill"></span>
+        <span class="lang-toggle__opt is-active" data-lang="en">EN</span>
+        <span class="lang-toggle__opt" data-lang="hi">हिं</span>
+      </button>
+      <a href="#contact" class="btn btn--gold btn--sm" data-i18n="nav_cta">Free Site Visit</a>
       <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -144,26 +152,26 @@
   </svg>
 
   <div class="hero__inner">
-    <p class="eyebrow eyebrow--light hero-anim" style="--d:0">Shree Vinayak Solar Agency (SVSOLAR) · Sikar, Rajasthan</p>
+    <p class="eyebrow eyebrow--light hero-anim" style="--d:0" data-i18n="hero_eyebrow">Shree Vinayak Solar Agency (SVSOLAR) · Sikar, Rajasthan</p>
     <h1 class="hero__title">
-      <span class="hero-anim" style="--d:1">Turn Rajasthan's Sunshine Into</span>
-      <span class="hero-anim hero__title--accent" style="--d:2">Zero Electricity Bills.</span>
+      <span class="hero-anim" style="--d:1" data-i18n="hero_title_1">Turn Rajasthan's Sunshine Into</span>
+      <span class="hero-anim hero__title--accent" style="--d:2" data-i18n="hero_title_2">Zero Electricity Bills.</span>
     </h1>
-    <p class="hero__sub hero-anim" style="--d:3">We design, install, and manage your entire PM Surya Ghar subsidy paperwork —
+    <p class="hero__sub hero-anim" style="--d:3" data-i18n="hero_sub" data-i18n-html>We design, install, and manage your entire PM Surya Ghar subsidy paperwork —
       so up to <strong>₹78,000</strong> comes back to your bank account, and you get up to
       <strong>300 units of free electricity</strong> every month.</p>
 
     <div class="hero__cta hero-anim" style="--d:4">
-      <a href="#contact" class="btn btn--gold btn--lg">Check My Free Subsidy Amount</a>
-      <a href="tel:+917727852619" class="btn btn--ghost btn--lg">Call Now</a>
+      <a href="#contact" class="btn btn--gold btn--lg" data-i18n="hero_cta1">Check My Free Subsidy Amount</a>
+      <a href="tel:+917727852619" class="btn btn--ghost btn--lg" data-i18n="hero_cta2">Call Now</a>
     </div>
 
     <div class="hero__trust hero-anim" style="--d:5">
-      <span><strong>500+</strong> Homes Powered</span>
+      <span data-i18n="hero_trust1" data-i18n-html><strong>500+</strong> Homes Powered</span>
       <span class="dot" aria-hidden="true"></span>
-      <span><strong>4.2 MW+</strong> Installed</span>
+      <span data-i18n="hero_trust2" data-i18n-html><strong>4.2 MW+</strong> Installed</span>
       <span class="dot" aria-hidden="true"></span>
-      <span>Free, No-Obligation Quotes</span>
+      <span data-i18n="hero_trust3">Free, No-Obligation Quotes</span>
     </div>
   </div>
 
@@ -173,24 +181,24 @@
 <!-- ================= WHY SOLAR ================= -->
 <section class="section section--ivory" id="why">
   <div class="container">
-    <p class="eyebrow reveal">Why Now</p>
-    <h2 class="section__title reveal">The Sun Already Pays Your Electricity Bill.<br>You're Just Not Collecting It Yet.</h2>
+    <p class="eyebrow reveal" data-i18n="why_eyebrow">Why Now</p>
+    <h2 class="section__title reveal" data-i18n="why_title" data-i18n-html>The Sun Already Pays Your Electricity Bill.<br>You're Just Not Collecting It Yet.</h2>
 
     <div class="why-grid">
       <div class="why-item reveal">
         <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40h32M14 40V22l10-8 10 8v18" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M20 40V28h8v12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="24" cy="10" r="3.4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-        <h3>Government Pays a Share</h3>
-        <p>Up to ₹78,000 subsidy credited directly to your bank account under PM Surya Ghar Muft Bijli Yojana — no middlemen, no hidden cuts.</p>
+        <h3 data-i18n="why1_title">Government Pays a Share</h3>
+        <p data-i18n="why1_desc">Up to ₹78,000 subsidy credited directly to your bank account under PM Surya Ghar Muft Bijli Yojana — no middlemen, no hidden cuts.</p>
       </div>
       <div class="why-item reveal">
         <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2" fill="none"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="24" y1="4" x2="24" y2="9"/><line x1="24" y1="39" x2="24" y2="44"/><line x1="4" y1="24" x2="9" y2="24"/><line x1="39" y1="24" x2="44" y2="24"/></g></svg>
-        <h3>Bills Drop to Near-Zero</h3>
-        <p>Generate up to 300 free units a month and export surplus power back to the grid through net metering.</p>
+        <h3 data-i18n="why2_title">Bills Drop to Near-Zero</h3>
+        <p data-i18n="why2_desc">Generate up to 300 free units a month and export surplus power back to the grid through net metering.</p>
       </div>
       <div class="why-item reveal">
         <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 40c8-2 14-8 16-18 6 2 10-2 10-2s-2 12-10 16c-6 3-12 5-16 4z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M32 8s6 4 4 12" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-        <h3>It Pays for Itself</h3>
-        <p>Most Sikar-area homes recover their investment in 4–6 years, then generate free power for two decades more.</p>
+        <h3 data-i18n="why3_title">It Pays for Itself</h3>
+        <p data-i18n="why3_desc">Most Sikar-area homes recover their investment in 4–6 years, then generate free power for two decades more.</p>
       </div>
     </div>
   </div>
@@ -199,33 +207,33 @@
 <!-- ================= SUBSIDY ================= -->
 <section class="section section--navy" id="subsidy">
   <div class="container">
-    <p class="eyebrow eyebrow--light reveal">Government of India · PM Surya Ghar Muft Bijli Yojana</p>
-    <h2 class="section__title section__title--light reveal">Here's Exactly What The Government Gives Back</h2>
-    <p class="section__lead reveal">Subsidy is disbursed in central financial assistance based on your rooftop system size.</p>
+    <p class="eyebrow eyebrow--light reveal" data-i18n="subsidy_eyebrow">Government of India · PM Surya Ghar Muft Bijli Yojana</p>
+    <h2 class="section__title section__title--light reveal" data-i18n="subsidy_title">Here's Exactly What The Government Gives Back</h2>
+    <p class="section__lead reveal" data-i18n="subsidy_lead">Subsidy is disbursed in central financial assistance based on your rooftop system size.</p>
 
     <div class="subsidy-bars reveal">
       <div class="subsidy-bar" style="--h:34%">
         <span class="subsidy-bar__amount">₹30,000</span>
         <div class="subsidy-bar__fill"></div>
-        <span class="subsidy-bar__label">Up to 1 kW</span>
+        <span class="subsidy-bar__label" data-i18n="subsidy_bar1_label">Up to 1 kW</span>
       </div>
       <div class="subsidy-bar" style="--h:68%">
         <span class="subsidy-bar__amount">₹60,000</span>
         <div class="subsidy-bar__fill"></div>
-        <span class="subsidy-bar__label">2 kW system</span>
+        <span class="subsidy-bar__label" data-i18n="subsidy_bar2_label">2 kW system</span>
       </div>
       <div class="subsidy-bar" style="--h:100%">
         <span class="subsidy-bar__amount">₹78,000</span>
         <div class="subsidy-bar__fill"></div>
-        <span class="subsidy-bar__label">3 kW &amp; above (max)</span>
+        <span class="subsidy-bar__label" data-i18n="subsidy_bar3_label">3 kW &amp; above (max)</span>
       </div>
     </div>
 
-    <p class="subsidy-note reveal">+ up to <strong>300 units of free electricity every month</strong>, credited via net metering with your local DISCOM.</p>
+    <p class="subsidy-note reveal" data-i18n="subsidy_note" data-i18n-html>+ up to <strong>300 units of free electricity every month</strong>, credited via net metering with your local DISCOM.</p>
 
     <div class="subsidy-footer reveal">
-      <p>Subsidy is typically disbursed to your bank account within 30–45 days of commissioning. Figures shown follow current PM Surya Ghar guidelines and may be revised by MNRE — we confirm the exact figure with every quote. Official portal: <span class="nowrap">pmsuryaghar.gov.in</span></p>
-      <a href="#contact" class="btn btn--gold">We Guide You Through the Paperwork →</a>
+      <p data-i18n="subsidy_footer_p" data-i18n-html>Subsidy is typically disbursed to your bank account within 30–45 days of commissioning. Figures shown follow current PM Surya Ghar guidelines and may be revised by MNRE — we confirm the exact figure with every quote. Official portal: <span class="nowrap">pmsuryaghar.gov.in</span></p>
+      <a href="#contact" class="btn btn--gold" data-i18n="subsidy_cta">We Guide You Through the Paperwork →</a>
     </div>
   </div>
 </section>
@@ -233,40 +241,40 @@
 <!-- ================= CALCULATOR ================= -->
 <section class="section section--cream" id="calculator">
   <div class="container">
-    <p class="eyebrow reveal">Instant Estimate</p>
-    <h2 class="section__title reveal">See Your Own Numbers</h2>
-    <p class="section__lead reveal">Set your bill and a timeline — watch how much of your investment gets covered by the subsidy plus your savings. A planning guide, not a quote.</p>
+    <p class="eyebrow reveal" data-i18n="calc_eyebrow">Instant Estimate</p>
+    <h2 class="section__title reveal" data-i18n="calc_title">See Your Own Numbers</h2>
+    <p class="section__lead reveal" data-i18n="calc_lead">Set your bill and a timeline — watch how much of your investment gets covered by the subsidy plus your savings. A planning guide, not a quote.</p>
 
     <div class="calc reveal">
       <div class="calc__controls">
         <div class="calc__field">
-          <label for="calcBill">Approx. monthly electricity bill</label>
+          <label for="calcBill" data-i18n="calc_bill_label">Approx. monthly electricity bill</label>
           <div class="calc__bill-value"><span>₹</span><span id="calcBillDisplay">3,000</span></div>
           <input type="range" id="calcBill" min="500" max="15000" step="100" value="3000">
           <div class="calc__range-labels"><span>₹500</span><span>₹15,000</span></div>
         </div>
 
         <div class="calc__field">
-          <label>Track coverage over</label>
+          <label data-i18n="calc_tenure_label">Track coverage over</label>
           <div class="calc__tenure" id="calcTenure" role="tablist">
-            <button class="calc__tenure-btn" data-years="3" role="tab">3 yrs</button>
-            <button class="calc__tenure-btn is-active" data-years="5" role="tab" aria-selected="true">5 yrs</button>
-            <button class="calc__tenure-btn" data-years="10" role="tab">10 yrs</button>
-            <button class="calc__tenure-btn" data-years="15" role="tab">15 yrs</button>
+            <button class="calc__tenure-btn" data-years="3" role="tab" data-i18n="calc_tenure_3">3 yrs</button>
+            <button class="calc__tenure-btn is-active" data-years="5" role="tab" aria-selected="true" data-i18n="calc_tenure_5">5 yrs</button>
+            <button class="calc__tenure-btn" data-years="10" role="tab" data-i18n="calc_tenure_10">10 yrs</button>
+            <button class="calc__tenure-btn" data-years="15" role="tab" data-i18n="calc_tenure_15">15 yrs</button>
           </div>
         </div>
 
         <div class="calc__stats">
           <div class="calc__stat">
-            <span class="calc__stat-label">System Size</span>
+            <span class="calc__stat-label" data-i18n="calc_stat1_label">System Size</span>
             <span class="calc__stat-value" id="calcKw">3 kW</span>
           </div>
           <div class="calc__stat calc__stat--gold">
-            <span class="calc__stat-label">Govt. Subsidy</span>
+            <span class="calc__stat-label" data-i18n="calc_stat2_label">Govt. Subsidy</span>
             <span class="calc__stat-value" id="calcSubsidy">₹78,000</span>
           </div>
           <div class="calc__stat">
-            <span class="calc__stat-label">Net Investment</span>
+            <span class="calc__stat-label" data-i18n="calc_stat3_label">Net Investment</span>
             <span class="calc__stat-value" id="calcNetCost">₹1,17,000</span>
           </div>
         </div>
@@ -279,52 +287,52 @@
         </svg>
         <div class="calc__ring-center">
           <span class="calc__ring-percent" id="calcCoveragePct">0%</span>
-          <span class="calc__ring-caption">of investment covered</span>
+          <span class="calc__ring-caption" data-i18n="calc_ring_caption">of investment covered</span>
         </div>
-        <p class="calc__visual-footer"><span id="calcYearsLabel">By year 5</span> · cumulative savings <strong id="calcCumSavings">₹0</strong></p>
+        <p class="calc__visual-footer"><span id="calcYearsLabel">By year 5</span> <span data-i18n="calc_cumtext">· cumulative savings </span><strong id="calcCumSavings">₹0</strong></p>
       </div>
     </div>
 
-    <p class="calc__disclaimer reveal">Assumes a blended tariff of ~₹7/unit, ~4 units generated per kW per day (typical for Rajasthan's high solar irradiance), and an installed cost of ~₹65,000/kW before subsidy — all figures vary by roof, shading, equipment choice, and your actual DISCOM tariff. This is an indicative planning tool, not a quotation. <a href="#contact">Get your exact numbers →</a></p>
+    <p class="calc__disclaimer reveal" data-i18n="calc_disclaimer" data-i18n-html>Assumes a blended tariff of ~₹7/unit, ~4 units generated per kW per day (typical for Rajasthan's high solar irradiance), and an installed cost of ~₹65,000/kW before subsidy — all figures vary by roof, shading, equipment choice, and your actual DISCOM tariff. This is an indicative planning tool, not a quotation. <a href="#contact">Get your exact numbers →</a></p>
   </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
 <section class="section section--ivory" id="services">
   <div class="container">
-    <p class="eyebrow reveal">What We Do</p>
-    <h2 class="section__title reveal">End-to-End Solar, Handled by One Team</h2>
+    <p class="eyebrow reveal" data-i18n="services_eyebrow">What We Do</p>
+    <h2 class="section__title reveal" data-i18n="services_title">End-to-End Solar, Handled by One Team</h2>
 
     <div class="services-grid">
       <div class="service-card reveal">
         <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="10" width="32" height="20" rx="1.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="8" y1="20" x2="40" y2="20" stroke="currentColor" stroke-width="1.6"/><line x1="24" y1="10" x2="24" y2="30" stroke="currentColor" stroke-width="1.6"/><line x1="24" y1="30" x2="24" y2="40" stroke="currentColor" stroke-width="2"/><line x1="14" y1="40" x2="34" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <h3>Residential Rooftop Solar</h3>
-        <p>Custom-sized systems for homes, from 1 kW to 10 kW+, matched to your roof and consumption.</p>
+        <h3 data-i18n="svc1_title">Residential Rooftop Solar</h3>
+        <p data-i18n="svc1_desc">Custom-sized systems for homes, from 1 kW to 10 kW+, matched to your roof and consumption.</p>
       </div>
       <div class="service-card reveal">
         <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="16" y1="15" x2="32" y2="15" stroke="currentColor" stroke-width="1.6"/><line x1="16" y1="22" x2="32" y2="22" stroke="currentColor" stroke-width="1.6"/><line x1="16" y1="29" x2="26" y2="29" stroke="currentColor" stroke-width="1.6"/><path d="M28 34l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3>Subsidy &amp; DISCOM Paperwork</h3>
-        <p>We guide your PM Surya Ghar application and help you liaise with your local DISCOM.</p>
+        <h3 data-i18n="svc2_title">Subsidy &amp; DISCOM Paperwork</h3>
+        <p data-i18n="svc2_desc">We guide your PM Surya Ghar application and help you liaise with your local DISCOM.</p>
       </div>
       <div class="service-card reveal">
         <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="2" fill="none"/><path d="M24 15v9l6 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-        <h3>Net Metering Setup</h3>
-        <p>Sell surplus power back to the grid and watch your meter run backward on sunny days.</p>
+        <h3 data-i18n="svc3_title">Net Metering Setup</h3>
+        <p data-i18n="svc3_desc">Sell surplus power back to the grid and watch your meter run backward on sunny days.</p>
       </div>
       <div class="service-card reveal">
         <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l4 10h10l-8 7 3 11-9-6-9 6 3-11-8-7h10z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
-        <h3>Annual Maintenance (AMC)</h3>
-        <p>Scheduled panel cleaning, inverter checks, and performance monitoring after installation.</p>
+        <h3 data-i18n="svc4_title">Annual Maintenance (AMC)</h3>
+        <p data-i18n="svc4_desc">Scheduled panel cleaning, inverter checks, and performance monitoring after installation.</p>
       </div>
       <div class="service-card reveal">
         <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="14" width="30" height="20" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><rect x="38" y="20" width="3" height="8" fill="currentColor"/><line x1="13" y1="20" x2="19" y2="20" stroke="currentColor" stroke-width="1.6"/><line x1="13" y1="26" x2="24" y2="26" stroke="currentColor" stroke-width="1.6"/></svg>
-        <h3>Commercial &amp; Society Installs</h3>
-        <p>Larger systems for shops, offices, schools, and RWAs, sized for commercial tariffs.</p>
+        <h3 data-i18n="svc5_title">Commercial &amp; Society Installs</h3>
+        <p data-i18n="svc5_desc">Larger systems for shops, offices, schools, and RWAs, sized for commercial tariffs.</p>
       </div>
       <div class="service-card reveal">
         <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="6" width="20" height="36" rx="3" stroke="currentColor" stroke-width="2" fill="none"/><rect x="20" y="2" width="8" height="5" rx="1" fill="currentColor"/><path d="M22 16l-4 8h5l-2 8 7-10h-5z" fill="currentColor"/></svg>
-        <h3>Battery Backup Add-ons</h3>
-        <p>Keep essentials running through outages with a right-sized battery storage upgrade.</p>
+        <h3 data-i18n="svc6_title">Battery Backup Add-ons</h3>
+        <p data-i18n="svc6_desc">Keep essentials running through outages with a right-sized battery storage upgrade.</p>
       </div>
     </div>
   </div>
@@ -333,29 +341,29 @@
 <!-- ================= PROCESS ================= -->
 <section class="section section--cream" id="process">
   <div class="container">
-    <p class="eyebrow reveal">How It Works</p>
-    <h2 class="section__title reveal">From Site Visit to Subsidy, in Five Steps</h2>
+    <p class="eyebrow reveal" data-i18n="process_eyebrow">How It Works</p>
+    <h2 class="section__title reveal" data-i18n="process_title">From Site Visit to Subsidy, in Five Steps</h2>
 
     <ol class="process-list">
       <li class="process-step reveal">
         <span class="process-step__num">01</span>
-        <div><h3>Free Site Visit &amp; Roof Assessment</h3><p>Our team studies your roof, shading, and electricity bill to size the right system.</p></div>
+        <div><h3 data-i18n="step1_title">Free Site Visit &amp; Roof Assessment</h3><p data-i18n="step1_desc">Our team studies your roof, shading, and electricity bill to size the right system.</p></div>
       </li>
       <li class="process-step reveal">
         <span class="process-step__num">02</span>
-        <div><h3>Subsidy Application Support</h3><p>We help you register on the PM Surya Ghar portal and prepare the documentation your local DISCOM requires.</p></div>
+        <div><h3 data-i18n="step2_title">Subsidy Application Support</h3><p data-i18n="step2_desc">We help you register on the PM Surya Ghar portal and prepare the documentation your local DISCOM requires.</p></div>
       </li>
       <li class="process-step reveal">
         <span class="process-step__num">03</span>
-        <div><h3>Design &amp; Installation</h3><p>Quality panels and inverter installed by our team, typically within 5–7 days.</p></div>
+        <div><h3 data-i18n="step3_title">Design &amp; Installation</h3><p data-i18n="step3_desc">Quality panels and inverter installed by our team, typically within 5–7 days.</p></div>
       </li>
       <li class="process-step reveal">
         <span class="process-step__num">04</span>
-        <div><h3>Net Meter &amp; Commissioning</h3><p>Your local DISCOM inspects and commissions your system, and your net meter goes live.</p></div>
+        <div><h3 data-i18n="step4_title">Net Meter &amp; Commissioning</h3><p data-i18n="step4_desc">Your local DISCOM inspects and commissions your system, and your net meter goes live.</p></div>
       </li>
       <li class="process-step reveal">
         <span class="process-step__num">05</span>
-        <div><h3>Subsidy Credited to Your Bank</h3><p>Your ₹30,000–₹78,000 subsidy lands directly in your account, usually within 30–45 days.</p></div>
+        <div><h3 data-i18n="step5_title">Subsidy Credited to Your Bank</h3><p data-i18n="step5_desc">Your ₹30,000–₹78,000 subsidy lands directly in your account, usually within 30–45 days.</p></div>
       </li>
     </ol>
   </div>
@@ -367,19 +375,19 @@
     <div class="stats-grid">
       <div class="stat reveal">
         <span class="stat__num" data-count="500" data-suffix="+">0</span>
-        <span class="stat__label">Homes Powered</span>
+        <span class="stat__label" data-i18n="stat1_label">Homes Powered</span>
       </div>
       <div class="stat reveal">
         <span class="stat__num" data-count="4.2" data-decimal="1" data-suffix=" MW+">0</span>
-        <span class="stat__label">Capacity Installed</span>
+        <span class="stat__label" data-i18n="stat2_label">Capacity Installed</span>
       </div>
       <div class="stat reveal">
         <span class="stat__num" data-static="₹78,000">₹78,000</span>
-        <span class="stat__label">Max Govt. Subsidy</span>
+        <span class="stat__label" data-i18n="stat3_label">Max Govt. Subsidy</span>
       </div>
       <div class="stat reveal">
         <span class="stat__num" data-count="300" data-suffix=" units">0</span>
-        <span class="stat__label">Free Power / Month</span>
+        <span class="stat__label" data-i18n="stat4_label">Free Power / Month</span>
       </div>
     </div>
   </div>
@@ -388,112 +396,112 @@
 <!-- ================= TESTIMONIALS ================= -->
 <section class="section section--ivory" id="reviews">
   <div class="container">
-    <p class="eyebrow reveal">In Their Words</p>
-    <h2 class="section__title reveal">Sikar Homes, Real Savings</h2>
+    <p class="eyebrow reveal" data-i18n="testi_eyebrow">In Their Words</p>
+    <h2 class="section__title reveal" data-i18n="testi_title">Sikar Homes, Real Savings</h2>
 
     <div class="testimonial-grid">
       <blockquote class="testimonial reveal">
-        <p>"Our electricity bill went from ₹4,200 to almost nothing. The subsidy paperwork felt scarier than it was — their team handled every form."</p>
-        <cite>Ramesh K. <span>· Piprali Road</span></cite>
+        <p data-i18n="testi1_quote">"Our electricity bill went from ₹4,200 to almost nothing. The subsidy paperwork felt scarier than it was — their team handled every form."</p>
+        <cite data-i18n="testi1_cite" data-i18n-html>Ramesh K. <span>· Piprali Road</span></cite>
       </blockquote>
       <blockquote class="testimonial reveal">
-        <p>"Installation was done in four days flat, and the net meter was live within three weeks. Didn't expect the government process to move that fast."</p>
-        <cite>Anita S. <span>· Jaipur Road</span></cite>
+        <p data-i18n="testi2_quote">"Installation was done in four days flat, and the net meter was live within three weeks. Didn't expect the government process to move that fast."</p>
+        <cite data-i18n="testi2_cite" data-i18n-html>Anita S. <span>· Jaipur Road</span></cite>
       </blockquote>
       <blockquote class="testimonial reveal">
-        <p>"I compared five vendors. These were the only ones who explained exactly how the ₹78,000 subsidy is calculated instead of just quoting a final price."</p>
-        <cite>Deepak M. <span>· Fatehpur Road</span></cite>
+        <p data-i18n="testi3_quote">"I compared five vendors. These were the only ones who explained exactly how the ₹78,000 subsidy is calculated instead of just quoting a final price."</p>
+        <cite data-i18n="testi3_cite" data-i18n-html>Deepak M. <span>· Fatehpur Road</span></cite>
       </blockquote>
     </div>
-    <p class="testimonial-disclaimer reveal">Illustrative reviews — replace with feedback from your own customers once you have installations completed.</p>
+    <p class="testimonial-disclaimer reveal" data-i18n="testi_disclaimer">Illustrative reviews — replace with feedback from your own customers once you have installations completed.</p>
   </div>
 </section>
 
 <!-- ================= FAQ ================= -->
 <section class="section section--cream" id="faq">
   <div class="container">
-    <p class="eyebrow reveal">Common Questions</p>
-    <h2 class="section__title reveal">Before You Decide</h2>
+    <p class="eyebrow reveal" data-i18n="faq_eyebrow">Common Questions</p>
+    <h2 class="section__title reveal" data-i18n="faq_title">Before You Decide</h2>
 
     <div class="faq-list">
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
-          <span>Is the site visit and quote actually free?</span>
+          <span data-i18n="faq1_q">Is the site visit and quote actually free?</span>
           <span class="faq-item__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </button>
-        <div class="faq-item__a"><p>Yes — the roof assessment, system sizing, and quotation cost nothing and carry no obligation to proceed.</p></div>
+        <div class="faq-item__a"><p data-i18n="faq1_a">Yes — the roof assessment, system sizing, and quotation cost nothing and carry no obligation to proceed.</p></div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
-          <span>What if my roof isn't strong enough for panels?</span>
+          <span data-i18n="faq2_q">What if my roof isn't strong enough for panels?</span>
           <span class="faq-item__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </button>
-        <div class="faq-item__a"><p>Our site visit includes a structural check. Most RCC rooftops in Sikar handle standard mounting without reinforcement; if yours needs extra support, we'll flag it and price it upfront before you commit to anything.</p></div>
+        <div class="faq-item__a"><p data-i18n="faq2_a">Our site visit includes a structural check. Most RCC rooftops in Sikar handle standard mounting without reinforcement; if yours needs extra support, we'll flag it and price it upfront before you commit to anything.</p></div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
-          <span>Can I get the subsidy if I live in a rented house?</span>
+          <span data-i18n="faq3_q">Can I get the subsidy if I live in a rented house?</span>
           <span class="faq-item__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </button>
-        <div class="faq-item__a"><p>The PM Surya Ghar subsidy is linked to the electricity connection and typically requires the applicant to be the registered consumer, with the property owner's consent for installation. If you're renting, talk to us and we'll check your specific eligibility.</p></div>
+        <div class="faq-item__a"><p data-i18n="faq3_a">The PM Surya Ghar subsidy is linked to the electricity connection and typically requires the applicant to be the registered consumer, with the property owner's consent for installation. If you're renting, talk to us and we'll check your specific eligibility.</p></div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
-          <span>What happens if a panel or inverter fails after installation?</span>
+          <span data-i18n="faq4_q">What happens if a panel or inverter fails after installation?</span>
           <span class="faq-item__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </button>
-        <div class="faq-item__a"><p>Panels typically carry a manufacturer performance warranty of around 25 years, and inverters around 5–10 years depending on brand. We also offer an Annual Maintenance Contract for regular checks and faster response if something needs attention.</p></div>
+        <div class="faq-item__a"><p data-i18n="faq4_a">Panels typically carry a manufacturer performance warranty of around 25 years, and inverters around 5–10 years depending on brand. We also offer an Annual Maintenance Contract for regular checks and faster response if something needs attention.</p></div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
-          <span>How long does the whole process take?</span>
+          <span data-i18n="faq5_q">How long does the whole process take?</span>
           <span class="faq-item__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </button>
-        <div class="faq-item__a"><p>Most homes go from application to power generation in roughly 4–6 weeks — this depends mainly on DISCOM feasibility approval timelines, which are outside our control but which we track closely on your behalf.</p></div>
+        <div class="faq-item__a"><p data-i18n="faq5_a">Most homes go from application to power generation in roughly 4–6 weeks — this depends mainly on DISCOM feasibility approval timelines, which are outside our control but which we track closely on your behalf.</p></div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
-          <span>Is the government subsidy guaranteed once I apply?</span>
+          <span data-i18n="faq6_q">Is the government subsidy guaranteed once I apply?</span>
           <span class="faq-item__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </button>
-        <div class="faq-item__a"><p>No — it's approved by MNRE/your DISCOM based on eligibility, correct documentation, ALMM-listed panels, and installation by an empanelled vendor. We handle the paperwork carefully to avoid the most common rejection reasons, but final approval is a government decision, not ours.</p></div>
+        <div class="faq-item__a"><p data-i18n="faq6_a">No — it's approved by MNRE/your DISCOM based on eligibility, correct documentation, ALMM-listed panels, and installation by an empanelled vendor. We handle the paperwork carefully to avoid the most common rejection reasons, but final approval is a government decision, not ours.</p></div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
-          <span>Does solar keep working during a power cut?</span>
+          <span data-i18n="faq7_q">Does solar keep working during a power cut?</span>
           <span class="faq-item__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </button>
-        <div class="faq-item__a"><p>A standard on-grid system shuts off automatically during outages for safety, same as most rooftop solar in India. If you want power during outages too, ask us about our battery backup add-on.</p></div>
+        <div class="faq-item__a"><p data-i18n="faq7_a">A standard on-grid system shuts off automatically during outages for safety, same as most rooftop solar in India. If you want power during outages too, ask us about our battery backup add-on.</p></div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-item__q" aria-expanded="false">
-          <span>Can I finance this instead of paying upfront?</span>
+          <span data-i18n="faq8_q">Can I finance this instead of paying upfront?</span>
           <span class="faq-item__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </button>
-        <div class="faq-item__a"><p>Several nationalised banks offer collateral-free solar loans for systems under PM Surya Ghar. Rates and limits change, so we'll point you to current options during your site visit rather than quote a number here that may be outdated.</p></div>
+        <div class="faq-item__a"><p data-i18n="faq8_a">Several nationalised banks offer collateral-free solar loans for systems under PM Surya Ghar. Rates and limits change, so we'll point you to current options during your site visit rather than quote a number here that may be outdated.</p></div>
       </div>
     </div>
   </div>
@@ -503,11 +511,11 @@
 <section class="section section--navy final-cta">
   <canvas class="hero__pattern" aria-hidden="true"></canvas>
   <div class="container final-cta__inner">
-    <h2 class="section__title section__title--light reveal">Your Roof Is Already Collecting Sunlight.<br>Start Collecting the Savings.</h2>
-    <p class="section__lead reveal">Book a free, no-obligation site visit — we'll tell you your exact subsidy amount and payback period before you decide anything.</p>
+    <h2 class="section__title section__title--light reveal" data-i18n="finalcta_title" data-i18n-html>Your Roof Is Already Collecting Sunlight.<br>Start Collecting the Savings.</h2>
+    <p class="section__lead reveal" data-i18n="finalcta_lead">Book a free, no-obligation site visit — we'll tell you your exact subsidy amount and payback period before you decide anything.</p>
     <div class="hero__cta reveal">
-      <a href="#contact" class="btn btn--gold btn--lg">Book Free Site Visit</a>
-      <a href="tel:+917727852619" class="btn btn--ghost btn--lg">Call Now</a>
+      <a href="#contact" class="btn btn--gold btn--lg" data-i18n="finalcta_btn1">Book Free Site Visit</a>
+      <a href="tel:+917727852619" class="btn btn--ghost btn--lg" data-i18n="hero_cta2">Call Now</a>
     </div>
   </div>
 </section>
@@ -516,47 +524,47 @@
 <section class="section section--cream" id="contact">
   <div class="container contact-grid">
     <div class="reveal">
-      <p class="eyebrow">Get In Touch</p>
-      <h2 class="section__title">Get Your Free Subsidy &amp; Site Estimate</h2>
-      <p class="section__lead">Fill this in and it opens a pre-filled WhatsApp message straight to us — or call/visit directly.</p>
+      <p class="eyebrow" data-i18n="contact_eyebrow">Get In Touch</p>
+      <h2 class="section__title" data-i18n="contact_title">Get Your Free Subsidy &amp; Site Estimate</h2>
+      <p class="section__lead" data-i18n="contact_lead">Fill this in and it opens a pre-filled WhatsApp message straight to us — or call/visit directly.</p>
 
       <form id="leadForm" class="lead-form">
-        <label>Full Name<input type="text" name="name" required placeholder="Your name"></label>
-        <label>Phone Number<input type="tel" name="phone" required placeholder="10-digit mobile number"></label>
-        <label>Locality in Sikar<input type="text" name="locality" placeholder="e.g. Piprali Road"></label>
-        <label>Approx. Monthly Electricity Bill
+        <label><span data-i18n="form_name_label">Full Name</span><input type="text" name="name" required placeholder="Your name" data-i18n-placeholder="form_name_placeholder"></label>
+        <label><span data-i18n="form_phone_label">Phone Number</span><input type="tel" name="phone" required placeholder="10-digit mobile number" data-i18n-placeholder="form_phone_placeholder"></label>
+        <label><span data-i18n="form_locality_label">Locality in Sikar</span><input type="text" name="locality" placeholder="e.g. Piprali Road" data-i18n-placeholder="form_locality_placeholder"></label>
+        <label><span data-i18n="form_bill_label">Approx. Monthly Electricity Bill</span>
           <select name="bill">
-            <option value="Under ₹2,000">Under ₹2,000</option>
-            <option value="₹2,000 – ₹4,000">₹2,000 – ₹4,000</option>
-            <option value="₹4,000 – ₹8,000">₹4,000 – ₹8,000</option>
-            <option value="Above ₹8,000">Above ₹8,000</option>
+            <option value="Under ₹2,000" data-i18n="bill_opt1">Under ₹2,000</option>
+            <option value="₹2,000 – ₹4,000" data-i18n="bill_opt2">₹2,000 – ₹4,000</option>
+            <option value="₹4,000 – ₹8,000" data-i18n="bill_opt3">₹4,000 – ₹8,000</option>
+            <option value="Above ₹8,000" data-i18n="bill_opt4">Above ₹8,000</option>
           </select>
         </label>
-        <label>Message (optional)<textarea name="message" rows="3" placeholder="Anything else we should know?"></textarea></label>
-        <button type="submit" class="btn btn--gold btn--lg">Send via WhatsApp</button>
+        <label><span data-i18n="form_message_label">Message (optional)</span><textarea name="message" rows="3" placeholder="Anything else we should know?" data-i18n-placeholder="form_message_placeholder"></textarea></label>
+        <button type="submit" class="btn btn--gold btn--lg" data-i18n="form_submit">Send via WhatsApp</button>
       </form>
     </div>
 
     <div class="contact-info reveal">
       <div class="contact-card">
-        <h3>Visit Our Shop</h3>
-        <p>Jaipur Road, near Shyam Residency<br>Sikar, Rajasthan</p>
+        <h3 data-i18n="contact_card1_title">Visit Our Shop</h3>
+        <p data-i18n="contact_card1_addr" data-i18n-html>Jaipur Road, near Shyam Residency<br>Sikar, Rajasthan</p>
       </div>
       <div class="contact-card">
-        <h3>Call or WhatsApp</h3>
-        <p><a href="tel:+917727852619">Call Now</a><br><a href="https://wa.me/917727852619" target="_blank" rel="noopener">WhatsApp Chat →</a></p>
+        <h3 data-i18n="contact_card2_title">Call or WhatsApp</h3>
+        <p><a href="tel:+917727852619" data-i18n="hero_cta2">Call Now</a><br><a href="https://wa.me/917727852619" target="_blank" rel="noopener" data-i18n="whatsapp_chat">WhatsApp Chat →</a></p>
       </div>
       <div class="contact-card">
-        <h3>Email</h3>
+        <h3 data-i18n="contact_card3_title">Email</h3>
         <p><a href="mailto:contact@svsolar.online">contact@svsolar.online</a></p>
       </div>
       <div class="contact-card">
-        <h3>Hours</h3>
-        <p>Mon – Sat, 10:00 AM – 7:00 PM</p>
+        <h3 data-i18n="contact_card4_title">Hours</h3>
+        <p data-i18n="contact_card4_hours">Mon – Sat, 10:00 AM – 7:00 PM</p>
       </div>
       <!-- Replace this block with your real Google Maps embed:
            Google Maps → Share → Embed a map → copy the <iframe> here -->
-      <div class="map-placeholder">Google Maps embed goes here</div>
+      <div class="map-placeholder" data-i18n="map_placeholder">Google Maps embed goes here</div>
     </div>
   </div>
 </section>
@@ -569,7 +577,7 @@
         <svg class="nav__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="24" r="9" fill="currentColor"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="20" y1="4" x2="20" y2="8"/><line x1="6" y1="24" x2="2" y2="24"/><line x1="38" y1="24" x2="34" y2="24"/><line x1="10.5" y1="14.5" x2="7.5" y2="11.5"/><line x1="29.5" y1="14.5" x2="32.5" y2="11.5"/></g></svg>
         <span>SV<em>SOLAR</em></span>
       </a>
-      <p class="footer__tag">Shree Vinayak Solar Agency (SVSOLAR) — rooftop solar installer serving Sikar &amp; Rajasthan.</p>
+      <p class="footer__tag" data-i18n="footer_tagline">Shree Vinayak Solar Agency (SVSOLAR) — rooftop solar installer serving Sikar &amp; Rajasthan.</p>
     </div>
     <div class="footer__nav-group">
       <nav class="footer__links">
@@ -580,20 +588,42 @@
         <a href="#contact">Contact</a>
       </nav>
       <nav class="footer__legal-links">
-        <a href="privacy.html">Privacy Policy <span aria-hidden="true">→</span></a>
-        <a href="terms.html">Terms &amp; Disclaimer <span aria-hidden="true">→</span></a>
+        <a href="privacy.html"><span data-i18n="footer_privacy">Privacy Policy</span> <span aria-hidden="true">→</span></a>
+        <a href="terms.html"><span data-i18n="footer_terms">Terms &amp; Disclaimer</span> <span aria-hidden="true">→</span></a>
       </nav>
     </div>
   </div>
   <div class="container footer__bottom">
-    <p>© <span id="year"></span> SVSOLAR. All rights reserved.</p>
-    <p>Government scheme details sourced from pmsuryaghar.gov.in — please verify current rates before purchase decisions.</p>
+    <p>© <span id="year"></span> SVSOLAR. <span data-i18n="footer_rights">All rights reserved.</span></p>
+    <p data-i18n="footer_scheme_note">Government scheme details sourced from pmsuryaghar.gov.in — please verify current rates before purchase decisions.</p>
   </div>
 </footer>
 
 <a class="wa-float" href="https://wa.me/917727852619" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="#fff" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1a12.6 12.6 0 0 0 6.3 1.7c7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3zm0 23.1c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.2 1.2-3.9-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.3 9.9 10.1 5.1 16 5.1c5.9 0 10.7 4.8 10.7 10.6 0 5.9-4.8 10.6-10.7 10.6zm5.9-7.9c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.6-2-1.9-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.5.2-.2.2-.3.3-.6.1-.2 0-.5 0-.6-.1-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1.8.4 1.5.6 2 .7.8.2 1.6.2 2.1.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
 </a>
+
+<!-- ================= STICKY MOBILE CTA BAR ================= -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="tel:+917727852619" class="sticky-cta__btn sticky-cta__btn--call">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.2 2.2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    <span data-i18n="hero_cta2">Call Now</span>
+  </a>
+  <a href="https://wa.me/917727852619" target="_blank" rel="noopener" class="sticky-cta__btn sticky-cta__btn--wa">
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1a12.6 12.6 0 0 0 6.3 1.7c7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3z" opacity="0"/><path stroke="currentColor" stroke-width="0" d="M0 0h32v32H0z"/><path fill="currentColor" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1a12.6 12.6 0 0 0 6.3 1.7c7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3zm0 23.1c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.2 1.2-3.9-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.3 9.9 10.1 5.1 16 5.1c5.9 0 10.7 4.8 10.7 10.6 0 5.9-4.8 10.6-10.7 10.6z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+</div>
+
+
+
+<!--
+  Analytics — free, privacy-friendly, no cookies, no consent banner needed.
+  To activate: go to the Cloudflare dashboard → Analytics & Logs → Web Analytics →
+  Add a site → copy your token → paste it below in place of YOUR_CF_TOKEN.
+  Until you do that, this script simply does nothing (safe to leave in place).
+-->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CF_TOKEN"}'></script>
 
 <script src="script.js"></script>
 </body>
