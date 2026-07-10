@@ -1,207 +1,238 @@
-Here is your **premium modern 404 page file** for **svsolar.online**.  
-Save this as: **404.html**
-
----
-
-### ✅ 404.html
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page Not Found | SVSOLAR</title>
-  <meta name="robots" content="noindex" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Shree Vinayak Solar Agency (SVSOLAR)</title>
+<meta name="description" content="The page you're looking for has wandered off. Head back to SVSOLAR home for solar subsidy calculators, services, and more.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="/icon-192.png" type="image/png">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --navy: #0b1220;
-      --gold: #d4af37;
-      --light: #f5f7fa;
-      --gray: #9aa4b2;
-    }
+<style>
+  :root{
+    --navy-950:#050b17;
+    --navy-900:#0a1330;
+    --navy-800:#101c40;
+    --navy-700:#182852;
+    --gold-500:#d9a94c;
+    --gold-400:#e8c579;
+    --gold-glow: rgba(217,169,76,0.35);
+    --text-light:#f3f2ec;
+    --text-muted:#a8b0c4;
+  }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  *{margin:0;padding:0;box-sizing:border-box;}
 
-    body {
-      font-family: 'Manrope', sans-serif;
-      background: radial-gradient(circle at top, #111a2e 0%, #0b1220 60%);
-      color: var(--light);
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      text-align: center;
-    }
+  body{
+    min-height:100vh;
+    background: radial-gradient(ellipse at 50% 0%, var(--navy-800) 0%, var(--navy-950) 65%);
+    color:var(--text-light);
+    font-family:'Manrope', sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    position:relative;
+  }
 
-    .container {
-      max-width: 650px;
-      padding: 40px 20px;
-      animation: fadeIn 1.2s ease forwards;
-    }
+  /* Ambient sun glow */
+  .glow{
+    position:absolute;
+    top:-200px;
+    left:50%;
+    transform:translateX(-50%);
+    width:900px;
+    height:900px;
+    background: radial-gradient(circle, var(--gold-glow) 0%, transparent 65%);
+    filter: blur(40px);
+    animation: pulse 6s ease-in-out infinite;
+    pointer-events:none;
+  }
 
-    .logo {
-      font-family: 'Fraunces', serif;
-      font-size: 1.4rem;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
-      color: var(--gold);
-    }
+  @keyframes pulse{
+    0%,100%{ opacity:0.55; transform:translateX(-50%) scale(1); }
+    50%{ opacity:0.85; transform:translateX(-50%) scale(1.08); }
+  }
 
-    .error-code {
-      font-size: 8rem;
-      font-weight: 700;
-      font-family: 'Fraunces', serif;
-      background: linear-gradient(45deg, var(--gold), #ffdf70);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: glow 3s ease-in-out infinite alternate;
-    }
+  /* Floating dot grid background */
+  .dots{
+    position:absolute;
+    inset:0;
+    background-image: radial-gradient(rgba(217,169,76,0.15) 1.5px, transparent 1.5px);
+    background-size: 34px 34px;
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+    pointer-events:none;
+  }
 
-    h1 {
-      font-family: 'Fraunces', serif;
-      font-size: 2rem;
-      margin: 15px 0;
-    }
+  .container{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:40px 24px;
+    max-width:640px;
+  }
 
-    p {
-      color: var(--gray);
-      margin-bottom: 35px;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
+  .sun-icon{
+    width:72px;
+    height:72px;
+    margin:0 auto 28px;
+    animation: float 4s ease-in-out infinite;
+  }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+  @keyframes float{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
+  }
 
-    .btn {
-      padding: 12px 26px;
-      border-radius: 40px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
+  .error-code{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:clamp(80px, 18vw, 160px);
+    line-height:1;
+    letter-spacing:-2px;
+    background: linear-gradient(180deg, var(--gold-400) 0%, var(--gold-500) 55%, #a97e28 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    text-shadow: 0 0 60px var(--gold-glow);
+    margin-bottom:8px;
+  }
 
-    .btn-primary {
-      background: var(--gold);
-      color: #000;
-    }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(22px, 4vw, 32px);
+    margin-bottom:14px;
+    color:var(--text-light);
+  }
 
-    .btn-primary:hover {
-      background: #ffdf70;
-      transform: translateY(-3px);
-    }
+  p.sub{
+    color:var(--text-muted);
+    font-size:16px;
+    line-height:1.6;
+    max-width:460px;
+    margin:0 auto 36px;
+  }
 
-    .btn-outline {
-      border: 1px solid var(--gold);
-      color: var(--gold);
-    }
+  .divider{
+    width:60px;
+    height:2px;
+    background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+    margin:0 auto 32px;
+  }
 
-    .btn-outline:hover {
-      background: var(--gold);
-      color: #000;
-      transform: translateY(-3px);
-    }
+  .actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    justify-content:center;
+    margin-bottom:44px;
+  }
 
-    /* subtle animated solar glow */
-    .sun-glow {
-      position: absolute;
-      top: -200px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(212,175,55,0.4) 0%, rgba(212,175,55,0.1) 40%, transparent 70%);
-      border-radius: 50%;
-      animation: pulse 6s ease-in-out infinite;
-      z-index: -1;
-    }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:14px 26px;
+    border-radius:50px;
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    text-decoration:none;
+    transition: all .3s ease;
+    border:1px solid transparent;
+    cursor:pointer;
+  }
 
-    @keyframes glow {
-      from { text-shadow: 0 0 20px rgba(212,175,55,0.4); }
-      to { text-shadow: 0 0 40px rgba(212,175,55,0.8); }
-    }
+  .btn-primary{
+    background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+    color:var(--navy-950);
+    box-shadow: 0 8px 24px rgba(217,169,76,0.3);
+  }
+  .btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow: 0 12px 32px rgba(217,169,76,0.45);
+  }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  .btn-outline{
+    background:transparent;
+    color:var(--text-light);
+    border:1px solid rgba(255,255,255,0.2);
+  }
+  .btn-outline:hover{
+    border-color:var(--gold-500);
+    color:var(--gold-400);
+    transform:translateY(-3px);
+  }
 
-    @keyframes pulse {
-      0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.8; }
-      50% { transform: translateX(-50%) scale(1.1); opacity: 1; }
-    }
+  .brand{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    color:var(--text-muted);
+    font-size:14px;
+    letter-spacing:0.5px;
+  }
 
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.8rem;
-      color: var(--gray);
-      width: 100%;
-      text-align: center;
-    }
+  .brand strong{
+    color:var(--gold-400);
+    font-weight:800;
+  }
 
-    footer a {
-      color: var(--gold);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 500px) {
-      .error-code { font-size: 5rem; }
-      h1 { font-size: 1.5rem; }
-    }
-  </style>
+  @media (max-width:480px){
+    .actions{ flex-direction:column; align-items:stretch; }
+    .btn{ justify-content:center; }
+  }
+</style>
 </head>
-
 <body>
 
-  <div class="sun-glow"></div>
+<div class="glow"></div>
+<div class="dots"></div>
 
-  <div class="container">
-    <div class="logo">SVSOLAR</div>
+<div class="container">
 
-    <div class="error-code">404</div>
+  <svg class="sun-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="5" fill="#e8c579"/>
+    <g stroke="#d9a94c" stroke-width="1.8" stroke-linecap="round">
+      <line x1="12" y1="1" x2="12" y2="4"/>
+      <line x1="12" y1="20" x2="12" y2="23"/>
+      <line x1="1" y1="12" x2="4" y2="12"/>
+      <line x1="20" y1="12" x2="23" y2="12"/>
+      <line x1="4.2" y1="4.2" x2="6.3" y2="6.3"/>
+      <line x1="17.7" y1="17.7" x2="19.8" y2="19.8"/>
+      <line x1="4.2" y1="19.8" x2="6.3" y2="17.7"/>
+      <line x1="17.7" y1="6.3" x2="19.8" y2="4.2"/>
+    </g>
+  </svg>
 
-    <h1>Looks Like You Lost the Sun ☀️</h1>
-    <p>
-      The page you're looking for doesn’t exist or may have been moved.
-      Let’s bring you back to clean solar energy.
-    </p>
+  <div class="error-code">404</div>
+  <h1>This Page Hasn't Caught the Sun Yet</h1>
+  <div class="divider"></div>
+  <p class="sub">
+    The page you're looking for may have been moved, renamed, or doesn't exist.
+    Let's get you back to exploring solar savings.
+  </p>
 
-    <div class="buttons">
-      <a href="https://svsolar.online" class="btn btn-primary">Go to Homepage</a>
-      <a href="https://svsolar.online/#contact" class="btn btn-outline">Contact Us</a>
-    </div>
+  <div class="actions">
+    <a href="/" class="btn btn-primary">
+      ← Back to Home
+    </a>
+    <a href="/#contact" class="btn btn-outline">
+      Get a Free Quote
+    </a>
   </div>
 
-  <footer>
-    © 2026 Shree Vinayak Solar Agency · 
-    <a href="https://svsolar.online">svsolar.online</a>
-  </footer>
+  <div class="brand">
+    <span><strong>SVSOLAR</strong> · Shree Vinayak Solar Agency</span>
+  </div>
+
+</div>
 
 </body>
 </html>
-```
-
----
-
-If you want, I can also provide a **matching animated 404 with solar panel SVG illustration** for an even more premium feel.
