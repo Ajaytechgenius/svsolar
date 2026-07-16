@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rev Nation Jaipur — Studio Admin</title>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#0a0a0b;--graphite:#131315;--surface:#1a1a1d;--surface-raised:#212124;
+  --line:rgba(242,241,238,0.1);--line-strong:rgba(242,241,238,0.2);
+  --ink:#f2f1ee;--ink-dim:#9a9a9f;--ink-faint:#5c5c60;
+  --accent:#c17f3e;--accent-bright:#e0a565;--accent-dim:rgba(193,127,62,0.14);
+  --ignition:#e8462a;--ignition-bright:#ff7350;
+  --good:#3ecf8e;--bad:#e8462a;
+  --display:'Clash Display','Space Grotesk',sans-serif;
+  --body:'General Sans','Inter',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--void);color:var(--ink);font-family:var(--body);min-height:100vh;}
+h1,h2,h3{font-family:var(--display);font-weight:600;}
+input,select,textarea,button{font-family:var(--body);}
+a{color:var(--accent-bright);}
+
+/* -------- login / gate -------- */
+#gate{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;}
+.gate-card{width:100%;max-width:380px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:36px;}
+.gate-card h1{font-size:22px;margin-bottom:6px;}
+.gate-card p.sub{color:var(--ink-dim);font-size:13.5px;margin-bottom:26px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:12px;color:var(--ink-faint);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
+.field input,.field select,.field textarea{width:100%;background:var(--void);border:1px solid var(--line-strong);border-radius:5px;padding:10px 12px;color:var(--ink);font-size:14px;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:6px;border:1px solid var(--accent);background:var(--accent-dim);color:var(--accent-bright);font-weight:600;font-size:13.5px;cursor:pointer;transition:.2s;}
+.btn:hover{background:var(--accent);color:var(--void);}
+.btn.ghost{background:transparent;border-color:var(--line-strong);color:var(--ink-dim);}
+.btn.ghost:hover{background:var(--surface-raised);color:var(--ink);}
+.btn.danger{border-color:var(--bad);color:var(--ignition-bright);background:transparent;}
+.btn.danger:hover{background:var(--bad);color:var(--ink);}
+.btn.block{width:100%;}
+.err{color:var(--ignition-bright);font-size:13px;margin-top:10px;min-height:16px;}
+.notice{background:var(--surface);border:1px solid var(--line-strong);border-radius:6px;padding:16px 18px;font-size:13.5px;color:var(--ink-dim);line-height:1.6;}
+.notice code{background:var(--void);padding:1px 6px;border-radius:3px;font-family:var(--mono);font-size:12.5px;color:var(--accent-bright);}
+
+/* -------- app shell -------- */
+#app{display:none;min-height:100vh;}
+#app.show{display:flex;}
+.sidebar{width:220px;flex-shrink:0;background:var(--graphite);border-right:1px solid var(--line);padding:24px 0;display:flex;flex-direction:column;}
+.sidebar .brand{padding:0 22px 22px;font-family:var(--display);font-weight:700;font-size:16px;border-bottom:1px solid var(--line);margin-bottom:14px;}
+.sidebar .brand span{display:block;font-family:var(--mono);font-weight:400;font-size:10px;color:var(--ink-faint);letter-spacing:.1em;margin-top:3px;}
+.sidebar nav{flex:1;}
+.sidebar button.tab{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:none;color:var(--ink-dim);padding:11px 22px;font-size:13.5px;cursor:pointer;border-left:2px solid transparent;transition:.2s;}
+.sidebar button.tab:hover{color:var(--ink);background:rgba(255,255,255,.02);}
+.sidebar button.tab.active{color:var(--accent-bright);border-left-color:var(--accent);background:var(--accent-dim);}
+.sidebar .foot{padding:14px 22px 0;border-top:1px solid var(--line);margin-top:14px;}
+.sidebar .foot p{font-size:11.5px;color:var(--ink-faint);margin-bottom:10px;word-break:break-all;}
+
+.main{flex:1;padding:36px 40px;overflow-y:auto;max-height:100vh;}
+.main h2{font-size:24px;margin-bottom:6px;}
+.main .lede{color:var(--ink-dim);font-size:13.5px;margin-bottom:28px;}
+.panel{display:none;}
+.panel.active{display:block;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px;margin-bottom:20px;}
+.card h3{font-size:15px;margin-bottom:16px;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;}
+th{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);padding:10px 12px;border-bottom:1px solid var(--line-strong);}
+td{padding:12px;border-bottom:1px solid var(--line);vertical-align:middle;}
+tr:last-child td{border-bottom:none;}
+td select, td input{background:var(--void);border:1px solid var(--line-strong);border-radius:4px;color:var(--ink);padding:6px 8px;font-size:13px;}
+.tag{display:inline-block;padding:3px 9px;border-radius:100px;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;}
+.tag.new{background:rgba(232,70,42,.15);color:var(--ignition-bright);}
+.tag.contacted{background:rgba(193,127,62,.15);color:var(--accent-bright);}
+.tag.closed{background:rgba(255,255,255,.06);color:var(--ink-faint);}
+
+.stat-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:28px;}
+.stat-cards .sc{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;}
+.stat-cards .sc .n{font-family:var(--display);font-size:30px;}
+.stat-cards .sc .l{font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;margin-top:4px;}
+
+.progress-line{font-family:var(--mono);font-size:12.5px;color:var(--accent-bright);margin-top:12px;}
+.thumb{width:44px;height:44px;object-fit:cover;border-radius:4px;background:var(--void);}
+.muted{color:var(--ink-faint);font-size:12.5px;}
+@media(max-width:800px){ .sidebar{display:none;} .grid2,.grid3{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     GATE — shown until config is valid + user is signed in
+     ============================================================ -->
+<div id="gate">
+  <div class="gate-card">
+    <div id="gateNotConfigured" style="display:none;">
+      <h1>Admin not connected yet</h1>
+      <p class="sub">This panel needs a Supabase project before it can do anything.</p>
+      <div class="notice">
+        1. Create a free project at <a href="https://supabase.com" target="_blank">supabase.com</a><br>
+        2. Run <code>supabase-schema.sql</code> in its SQL Editor<br>
+        3. Paste your Project URL + anon key into <code>config.js</code><br>
+        4. Create yourself an admin user under Authentication → Users<br>
+        See <code>SETUP-GUIDE.md</code> for the full walkthrough.
+      </div>
+    </div>
+    <div id="gateLogin" style="display:none;">
+      <h1>Studio Admin</h1>
+      <p class="sub">Rev Nation Jaipur — sign in to manage the site.</p>
+      <form id="loginForm">
+        <div class="field"><label>Email</label><input type="email" id="loginEmail" required></div>
+        <div class="field"><label>Password</label><input type="password" id="loginPassword" required></div>
+        <button type="submit" class="btn block">Sign In</button>
+        <div class="err" id="loginErr"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     APP SHELL
+     ============================================================ -->
+<div id="app">
+  <aside class="sidebar">
+    <div class="brand">REV NATION<span>Studio Admin</span></div>
+    <nav>
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="leads">Leads</button>
+      <button class="tab" data-tab="projects">Projects / Builds</button>
+      <button class="tab" data-tab="testimonials">Testimonials</button>
+      <button class="tab" data-tab="stats">Stats</button>
+      <button class="tab" data-tab="media">Site Media</button>
+      <button class="tab" data-tab="frames">Frame Sequences</button>
+    </nav>
+    <div class="foot">
+      <p id="sessionEmail"></p>
+      <button class="btn ghost block" id="logoutBtn">Sign Out</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <!-- OVERVIEW -->
+    <section class="panel active" id="panel-overview">
+      <h2>Overview</h2>
+      <p class="lede">A snapshot of what's in the system right now.</p>
+      <div class="stat-cards" id="overviewCards"></div>
+      <div class="card">
+        <h3>Newest leads</h3>
+        <table id="overviewLeadsTable"><thead><tr><th>Name</th><th>Car</th><th>Service</th><th>Status</th></tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <!-- LEADS -->
+    <section class="panel" id="panel-leads">
+      <h2>Leads</h2>
+      <p class="lede">Booking form submissions from the live site.</p>
+      <div class="card">
+        <table>
+          <thead><tr><th>Date</th><th>Name</th><th>Phone</th><th>City</th><th>Car</th><th>Service</th><th>Message</th><th>Status</th></tr></thead>
+          <tbody id="leadsTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="panel" id="panel-projects">
+      <h2>Projects / Builds</h2>
+      <p class="lede">These populate the "Recent Builds" horizontal gallery on the site.</p>
+      <div class="card">
+        <h3>Add a project</h3>
+        <div class="grid3">
+          <div class="field"><label>Title</label><input id="pTitle" placeholder="Satin Wrap + Alloys"></div>
+          <div class="field"><label>Car make</label><input id="pMake" placeholder="Mahindra"></div>
+          <div class="field"><label>Car model</label><input id="pModel" placeholder="Thar"></div>
+        </div>
+        <div class="grid2">
+          <div class="field"><label>Service tag</label><input id="pService" placeholder="Full Wrap"></div>
+          <div class="field"><label>Cover image</label><input id="pCoverFile" type="file" accept="image/*"></div>
+        </div>
+        <div class="field"><label><input type="checkbox" id="pPublished" checked style="width:auto;margin-right:6px;">Published (visible on live site)</label></div>
+        <button class="btn" id="addProjectBtn">Add Project</button>
+        <div class="progress-line" id="projectUploadStatus"></div>
+      </div>
+      <div class="card">
+        <h3>Existing projects</h3>
+        <table>
+          <thead><tr><th>Cover</th><th>Title</th><th>Car</th><th>Service</th><th>Published</th><th></th></tr></thead>
+          <tbody id="projectsTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="panel" id="panel-testimonials">
+      <h2>Testimonials</h2>
+      <p class="lede">Feeds the review carousel on the live site.</p>
+      <div class="card">
+        <h3>Add a testimonial</h3>
+        <div class="grid3">
+          <div class="field"><label>Name</label><input id="tName" placeholder="Aditya R."></div>
+          <div class="field"><label>City</label><input id="tCity" placeholder="Jaipur"></div>
+          <div class="field"><label>Car</label><input id="tCar" placeholder="Mahindra Thar"></div>
+        </div>
+        <div class="field"><label>Quote</label><textarea id="tQuote" rows="3" placeholder="What they said, no quotation marks needed."></textarea></div>
+        <button class="btn" id="addTestiBtn">Add Testimonial</button>
+      </div>
+      <div class="card">
+        <h3>Existing testimonials</h3>
+        <table>
+          <thead><tr><th>Name</th><th>Car</th><th>Quote</th><th>Published</th><th></th></tr></thead>
+          <tbody id="testiTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="panel" id="panel-stats">
+      <h2>Authority Stats</h2>
+      <p class="lede">The odometer counters on the live site. Edit values and save.</p>
+      <div class="card">
+        <table>
+          <thead><tr><th>Label</th><th>Value</th><th>Suffix</th><th></th></tr></thead>
+          <tbody id="statsTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SITE MEDIA -->
+    <section class="panel" id="panel-media">
+      <h2>Site Media</h2>
+      <p class="lede">Fixed media slots used directly by the live site — hero video/poster, the before/after comparison, and the six service panel images. Upload to replace what's currently shown; leave blank to keep the built-in placeholder.</p>
+      <div class="card">
+        <h3>Hero</h3>
+        <div class="grid2">
+          <div class="field"><label>Hero video (mp4)</label><input type="file" id="media_hero_video" accept="video/mp4,video/*"><p class="muted" id="cur_hero_video" style="margin-top:6px;"></p></div>
+          <div class="field"><label>Hero poster (shown while video loads)</label><input type="file" id="media_hero_poster" accept="image/*"><p class="muted" id="cur_hero_poster" style="margin-top:6px;"></p></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Before / After comparison</h3>
+        <div class="grid2">
+          <div class="field"><label>Before photo</label><input type="file" id="media_compare_before" accept="image/*"><p class="muted" id="cur_compare_before" style="margin-top:6px;"></p></div>
+          <div class="field"><label>After photo</label><input type="file" id="media_compare_after" accept="image/*"><p class="muted" id="cur_compare_after" style="margin-top:6px;"></p></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>What We Do — service panel images</h3>
+        <p class="lede" style="margin-bottom:16px;">01 Modifications · 02 PPF · 03 Ceramic Coating · 04 Detailing · 05 Windshield · 06 Interior</p>
+        <div class="grid3">
+          <div class="field"><label>01 — Modifications</label><input type="file" id="media_service_0" accept="image/*"><p class="muted" id="cur_service_0" style="margin-top:6px;"></p></div>
+          <div class="field"><label>02 — PPF</label><input type="file" id="media_service_1" accept="image/*"><p class="muted" id="cur_service_1" style="margin-top:6px;"></p></div>
+          <div class="field"><label>03 — Ceramic Coating</label><input type="file" id="media_service_2" accept="image/*"><p class="muted" id="cur_service_2" style="margin-top:6px;"></p></div>
+          <div class="field"><label>04 — Detailing</label><input type="file" id="media_service_3" accept="image/*"><p class="muted" id="cur_service_3" style="margin-top:6px;"></p></div>
+          <div class="field"><label>05 — Windshield</label><input type="file" id="media_service_4" accept="image/*"><p class="muted" id="cur_service_4" style="margin-top:6px;"></p></div>
+          <div class="field"><label>06 — Interior</label><input type="file" id="media_service_5" accept="image/*"><p class="muted" id="cur_service_5" style="margin-top:6px;"></p></div>
+        </div>
+      </div>
+      <button class="btn" id="uploadMediaBtn">Upload Selected Files</button>
+      <div class="progress-line" id="mediaUploadStatus"></div>
+    </section>
+
+    <!-- FRAME SEQUENCES -->
+    <section class="panel" id="panel-frames">
+      <h2>Frame Sequences</h2>
+      <p class="lede">Upload a numbered image sequence for the canvas player. Hero autoplays the sequence as a smooth loop behind the headline. Select files in order — filenames are sorted numerically before upload.</p>
+      <div class="card">
+        <div class="grid3">
+          <div class="field"><label>Project (optional)</label><select id="fProject"><option value="">— General / not tied to a project —</option></select></div>
+          <div class="field"><label>Section</label><select id="fSection"><option value="hero">Hero (autoplay loop)</option><option value="mods">Mods Scene (reserved)</option></select></div>
+          <div class="field"><label>Frames (multi-select)</label><input type="file" id="fFiles" accept="image/*" multiple></div>
+        </div>
+        <button class="btn" id="uploadFramesBtn">Upload Sequence</button>
+        <div class="progress-line" id="frameUploadStatus"></div>
+      </div>
+      <div class="card">
+        <h3>Existing sequences</h3>
+        <table>
+          <thead><tr><th>Section</th><th>Folder</th><th>Frame Count</th><th>Project</th><th></th></tr></thead>
+          <tbody id="framesTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script>
+var MEDIA_KEYS = ['hero_video','hero_poster','compare_before','compare_after','service_0','service_1','service_2','service_3','service_4','service_5'];
+var db = null;
+var configured = false;
+
+(function init(){
+  var cfg = window.REV_NATION_CONFIG;
+  configured = !!(cfg && cfg.SUPABASE_URL && cfg.SUPABASE_ANON_KEY &&
+    cfg.SUPABASE_URL.indexOf('YOUR_') === -1 && cfg.SUPABASE_ANON_KEY.indexOf('YOUR_') === -1);
+  if(!configured){
+    document.getElementById('gateNotConfigured').style.display = 'block';
+    return;
+  }
+  db = supabase.createClient(cfg.SUPABASE_URL, cfg.SUPABASE_ANON_KEY);
+  checkSession();
+})();
+
+async function checkSession(){
+  var { data } = await db.auth.getSession();
+  if(data && data.session){
+    showApp(data.session);
+  } else {
+    document.getElementById('gateLogin').style.display = 'block';
+  }
+}
+
+document.getElementById('loginForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var email = document.getElementById('loginEmail').value;
+  var password = document.getElementById('loginPassword').value;
+  var errEl = document.getElementById('loginErr');
+  errEl.textContent = '';
+  var { data, error } = await db.auth.signInWithPassword({ email:email, password:password });
+  if(error){ errEl.textContent = error.message; return; }
+  showApp(data.session);
+});
+
+function showApp(session){
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('app').classList.add('show');
+  document.getElementById('sessionEmail').textContent = session.user.email;
+  loadAll();
+}
+
+document.getElementById('logoutBtn').addEventListener('click', async function(){
+  await db.auth.signOut();
+  window.location.reload();
+});
+
+/* -------- tabs -------- */
+document.querySelectorAll('.tab').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById('panel-'+btn.dataset.tab).classList.add('active');
+  });
+});
+
+/* -------- data loading -------- */
+var cache = { leads:[], projects:[], testimonials:[], stats:[], frames:[], media:{} };
+
+async function loadAll(){
+  await Promise.all([loadLeads(), loadProjects(), loadTestimonials(), loadStats(), loadFrames(), loadSiteMedia()]);
+  renderOverview();
+}
+
+async function loadLeads(){
+  var { data } = await db.from('leads').select('*').order('created_at', {ascending:false});
+  cache.leads = data || [];
+  renderLeads();
+}
+async function loadProjects(){
+  var { data } = await db.from('projects').select('*').order('sort_order');
+  cache.projects = data || [];
+  renderProjects();
+  var sel = document.getElementById('fProject');
+  sel.innerHTML = '<option value="">— General / not tied to a project —</option>' +
+    cache.projects.map(function(p){ return '<option value="'+p.id+'">'+p.title+'</option>'; }).join('');
+}
+async function loadTestimonials(){
+  var { data } = await db.from('testimonials').select('*').order('sort_order');
+  cache.testimonials = data || [];
+  renderTestimonials();
+}
+async function loadStats(){
+  var { data } = await db.from('stats').select('*').order('sort_order');
+  cache.stats = data || [];
+  renderStats();
+}
+async function loadFrames(){
+  var { data } = await db.from('frame_sequences').select('*, projects(title)').order('created_at', {ascending:false});
+  cache.frames = data || [];
+  renderFrames();
+}
+async function loadSiteMedia(){
+  var { data } = await db.from('site_media').select('*');
+  cache.media = {};
+  (data||[]).forEach(function(row){ cache.media[row.key] = row.url; });
+  MEDIA_KEYS.forEach(function(key){
+    var el = document.getElementById('cur_'+key);
+    if(!el) return;
+    var url = cache.media[key];
+    el.innerHTML = url ? 'Current: <a href="'+url+'" target="_blank">view file</a>' : 'No file uploaded yet — using site default.';
+  });
+}
+
+/* -------- overview -------- */
+function renderOverview(){
+  var newLeads = cache.leads.filter(function(l){ return l.status === 'new'; }).length;
+  var cardsHtml = [
+    {n:cache.leads.length, l:'Total Leads'},
+    {n:newLeads, l:'New Leads'},
+    {n:cache.projects.length, l:'Projects'},
+    {n:cache.testimonials.length, l:'Testimonials'},
+    {n:cache.frames.length, l:'Frame Sequences'}
+  ].map(function(c){ return '<div class="sc"><div class="n">'+c.n+'</div><div class="l">'+c.l+'</div></div>'; }).join('');
+  document.getElementById('overviewCards').innerHTML = cardsHtml;
+
+  var tbody = document.querySelector('#overviewLeadsTable tbody');
+  tbody.innerHTML = cache.leads.slice(0,6).map(function(l){
+    return '<tr><td>'+esc(l.name)+'</td><td>'+esc(l.car||'')+'</td><td>'+esc(l.service||'')+'</td><td><span class="tag '+l.status+'">'+l.status+'</span></td></tr>';
+  }).join('') || '<tr><td colspan="4" class="muted">No leads yet.</td></tr>';
+}
+
+/* -------- leads -------- */
+function renderLeads(){
+  var tbody = document.getElementById('leadsTable');
+  tbody.innerHTML = cache.leads.map(function(l){
+    return '<tr>' +
+      '<td class="muted">'+new Date(l.created_at).toLocaleDateString()+'</td>' +
+      '<td>'+esc(l.name)+'</td><td>'+esc(l.phone)+'</td><td>'+esc(l.city||'')+'</td><td>'+esc(l.car||'')+'</td><td>'+esc(l.service||'')+'</td>' +
+      '<td class="muted">'+esc(l.message||'—')+'</td>' +
+      '<td><select data-id="'+l.id+'" class="leadStatus"><option value="new"'+(l.status==='new'?' selected':'')+'>New</option><option value="contacted"'+(l.status==='contacted'?' selected':'')+'>Contacted</option><option value="closed"'+(l.status==='closed'?' selected':'')+'>Closed</option></select></td>' +
+    '</tr>';
+  }).join('') || '<tr><td colspan="8" class="muted">No leads yet — they will appear here as the booking form is used.</td></tr>';
+
+  tbody.querySelectorAll('.leadStatus').forEach(function(sel){
+    sel.addEventListener('change', async function(){
+      await db.from('leads').update({status:sel.value}).eq('id', sel.dataset.id);
+      await loadLeads(); renderOverview();
+    });
+  });
+}
+
+/* -------- projects -------- */
+function renderProjects(){
+  var tbody = document.getElementById('projectsTable');
+  tbody.innerHTML = cache.projects.map(function(p){
+    return '<tr>' +
+      '<td>'+(p.cover_image ? '<img class="thumb" src="'+p.cover_image+'">' : '<span class="muted">—</span>')+'</td>' +
+      '<td>'+esc(p.title)+'</td><td>'+esc([p.car_make,p.car_model].filter(Boolean).join(' '))+'</td><td>'+esc(p.service_type||'')+'</td>' +
+      '<td>'+(p.published ? 'Yes' : 'No')+'</td>' +
+      '<td><button class="btn danger" data-id="'+p.id+'" style="padding:6px 12px;font-size:12px;">Delete</button></td>' +
+    '</tr>';
+  }).join('') || '<tr><td colspan="6" class="muted">No projects yet.</td></tr>';
+
+  tbody.querySelectorAll('button.danger').forEach(function(btn){
+    btn.addEventListener('click', async function(){
+      if(!confirm('Delete this project?')) return;
+      await db.from('projects').delete().eq('id', btn.dataset.id);
+      await loadProjects(); renderOverview();
+    });
+  });
+}
+
+document.getElementById('addProjectBtn').addEventListener('click', async function(){
+  var status = document.getElementById('projectUploadStatus');
+  var title = document.getElementById('pTitle').value.trim();
+  if(!title){ alert('Title is required'); return; }
+  var payload = {
+    title: title,
+    car_make: document.getElementById('pMake').value.trim(),
+    car_model: document.getElementById('pModel').value.trim(),
+    service_type: document.getElementById('pService').value.trim(),
+    published: document.getElementById('pPublished').checked
+  };
+  var file = document.getElementById('pCoverFile').files[0];
+  if(file){
+    status.textContent = 'Uploading cover image…';
+    var path = Date.now()+'-'+sanitizeName(file.name);
+    var { error: upErr } = await db.storage.from('project-images').upload(path, file);
+    if(upErr){ status.textContent = 'Upload failed: '+upErr.message; return; }
+    var { data: pub } = db.storage.from('project-images').getPublicUrl(path);
+    payload.cover_image = pub.publicUrl;
+  }
+  status.textContent = 'Saving…';
+  var { error } = await db.from('projects').insert([payload]);
+  if(error){ status.textContent = 'Save failed: '+error.message; return; }
+  status.textContent = 'Added.';
+  document.getElementById('pTitle').value = '';
+  document.getElementById('pMake').value = '';
+  document.getElementById('pModel').value = '';
+  document.getElementById('pService').value = '';
+  document.getElementById('pCoverFile').value = '';
+  await loadProjects(); renderOverview();
+  setTimeout(function(){ status.textContent=''; }, 2500);
+});
+
+/* -------- testimonials -------- */
+function renderTestimonials(){
+  var tbody = document.getElementById('testiTable');
+  tbody.innerHTML = cache.testimonials.map(function(t){
+    return '<tr>' +
+      '<td>'+esc(t.name)+'</td><td>'+esc(t.car||'')+'</td>' +
+      '<td class="muted" style="max-width:320px;">'+esc(t.quote)+'</td>' +
+      '<td>'+(t.published?'Yes':'No')+'</td>' +
+      '<td><button class="btn danger" data-id="'+t.id+'" style="padding:6px 12px;font-size:12px;">Delete</button></td>' +
+    '</tr>';
+  }).join('') || '<tr><td colspan="5" class="muted">No testimonials yet.</td></tr>';
+
+  tbody.querySelectorAll('button.danger').forEach(function(btn){
+    btn.addEventListener('click', async function(){
+      if(!confirm('Delete this testimonial?')) return;
+      await db.from('testimonials').delete().eq('id', btn.dataset.id);
+      await loadTestimonials(); renderOverview();
+    });
+  });
+}
+
+document.getElementById('addTestiBtn').addEventListener('click', async function(){
+  var name = document.getElementById('tName').value.trim();
+  var quote = document.getElementById('tQuote').value.trim();
+  if(!name || !quote){ alert('Name and quote are required'); return; }
+  var payload = {
+    name: name, city: document.getElementById('tCity').value.trim(),
+    car: document.getElementById('tCar').value.trim(), quote: quote, published:true
+  };
+  await db.from('testimonials').insert([payload]);
+  document.getElementById('tName').value=''; document.getElementById('tCity').value='';
+  document.getElementById('tCar').value=''; document.getElementById('tQuote').value='';
+  await loadTestimonials(); renderOverview();
+});
+
+/* -------- stats -------- */
+function renderStats(){
+  var tbody = document.getElementById('statsTable');
+  tbody.innerHTML = cache.stats.map(function(s){
+    return '<tr data-id="'+s.id+'">' +
+      '<td>'+esc(s.label)+'</td>' +
+      '<td><input type="number" class="statValue" value="'+s.value+'" style="width:100px;"></td>' +
+      '<td><input type="text" class="statSuffix" value="'+esc(s.suffix||'')+'" style="width:90px;"></td>' +
+      '<td><button class="btn" style="padding:6px 12px;font-size:12px;">Save</button></td>' +
+    '</tr>';
+  }).join('') || '<tr><td colspan="4" class="muted">No stats yet — run the seed SQL.</td></tr>';
+
+  tbody.querySelectorAll('button.btn').forEach(function(btn){
+    btn.addEventListener('click', async function(){
+      var row = btn.closest('tr');
+      var id = row.dataset.id;
+      var value = parseInt(row.querySelector('.statValue').value, 10);
+      var suffix = row.querySelector('.statSuffix').value;
+      await db.from('stats').update({value:value, suffix:suffix}).eq('id', id);
+      btn.textContent = 'Saved';
+      setTimeout(function(){ btn.textContent = 'Save'; }, 1200);
+    });
+  });
+}
+
+/* -------- frame sequences -------- */
+function renderFrames(){
+  var tbody = document.getElementById('framesTable');
+  tbody.innerHTML = cache.frames.map(function(f){
+    return '<tr>' +
+      '<td>'+esc(f.section_key||'')+'</td><td class="muted">'+esc(f.folder_path)+'</td><td>'+f.frame_count+'</td>' +
+      '<td>'+esc((f.projects && f.projects.title) || '—')+'</td>' +
+      '<td><button class="btn danger" data-id="'+f.id+'" style="padding:6px 12px;font-size:12px;">Delete</button></td>' +
+    '</tr>';
+  }).join('') || '<tr><td colspan="5" class="muted">No sequences uploaded yet.</td></tr>';
+
+  tbody.querySelectorAll('button.danger').forEach(function(btn){
+    btn.addEventListener('click', async function(){
+      if(!confirm('Delete this sequence record? (Files already uploaded will stay in storage.)')) return;
+      await db.from('frame_sequences').delete().eq('id', btn.dataset.id);
+      await loadFrames(); renderOverview();
+    });
+  });
+}
+
+document.getElementById('uploadFramesBtn').addEventListener('click', async function(){
+  var status = document.getElementById('frameUploadStatus');
+  var files = Array.from(document.getElementById('fFiles').files);
+  if(!files.length){ alert('Select at least one image'); return; }
+  files.sort(function(a,b){ return a.name.localeCompare(b.name, undefined, {numeric:true}); });
+
+  var projectId = document.getElementById('fProject').value || null;
+  var section = document.getElementById('fSection').value;
+  var folder = (projectId || 'general') + '/' + section;
+  var frameUrls = [];
+
+  for(var i=0;i<files.length;i++){
+    status.textContent = 'Uploading '+(i+1)+' / '+files.length+'…';
+    var idx = String(i+1).padStart(4,'0');
+    var ext = files[i].name.split('.').pop();
+    var path = folder + '/frame-' + idx + '.' + ext;
+    var { error } = await db.storage.from('frame-sequences').upload(path, files[i], {upsert:true});
+    if(error){ status.textContent = 'Failed on frame '+(i+1)+': '+error.message; return; }
+    var { data: pub } = db.storage.from('frame-sequences').getPublicUrl(path);
+    frameUrls.push(pub.publicUrl);
+  }
+
+  var { error: insertErr } = await db.from('frame_sequences').insert([{
+    project_id: projectId, folder_path: folder + '/', frame_count: files.length, section_key: section, frame_urls: frameUrls
+  }]);
+  if(insertErr){ status.textContent = 'Uploaded files but failed to save record: '+insertErr.message; return; }
+
+  status.textContent = 'Done — ' + files.length + ' frames uploaded to ' + folder + '/';
+  document.getElementById('fFiles').value = '';
+  await loadFrames(); renderOverview();
+});
+
+/* -------- site media -------- */
+document.getElementById('uploadMediaBtn').addEventListener('click', async function(){
+  var status = document.getElementById('mediaUploadStatus');
+  var toUpload = MEDIA_KEYS.filter(function(key){
+    var input = document.getElementById('media_'+key);
+    return input && input.files && input.files[0];
+  });
+  if(!toUpload.length){ alert('Choose at least one file to upload'); return; }
+
+  for(var i=0;i<toUpload.length;i++){
+    var key = toUpload[i];
+    var file = document.getElementById('media_'+key).files[0];
+    status.textContent = 'Uploading '+key+' ('+(i+1)+'/'+toUpload.length+')…';
+    var path = key + '-' + Date.now() + '-' + sanitizeName(file.name);
+    var { error: upErr } = await db.storage.from('site-assets').upload(path, file, {upsert:true});
+    if(upErr){ status.textContent = 'Failed on '+key+': '+upErr.message; return; }
+    var { data: pub } = db.storage.from('site-assets').getPublicUrl(path);
+    var { error: dbErr } = await db.from('site_media').upsert({ key:key, url:pub.publicUrl, updated_at:new Date().toISOString() });
+    if(dbErr){ status.textContent = 'Uploaded but failed to save '+key+': '+dbErr.message; return; }
+    document.getElementById('media_'+key).value = '';
+  }
+  status.textContent = 'Done — ' + toUpload.length + ' file(s) updated.';
+  await loadSiteMedia();
+  setTimeout(function(){ status.textContent=''; }, 3000);
+});
+
+/* -------- helpers -------- */
+function esc(s){ var d=document.createElement('div'); d.textContent=s==null?'':String(s); return d.innerHTML; }
+function sanitizeName(name){ return name.replace(/[^a-zA-Z0-9._-]/g,'-'); }
+</script>
+</body>
+</html>

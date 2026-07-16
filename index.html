@@ -2,738 +2,1539 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="e2ynMl9WnZSCU8bjYGTIFZzNcXRfY9hF8iK5Xwq47rM" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shree Vinayak Solar Agency (SVSOLAR) — Best Solar Company in Sikar, Rajasthan</title>
-<meta name="description" content="Shree Vinayak Solar Agency (SVSOLAR) — Sikar's rooftop solar installer. Free site visit, PM Surya Ghar subsidy up to ₹78,000, and 300 free electricity units every month.">
-
-<!-- NOTE: replace https://svsolar.online/ below with your actual live URL once deployed, if different -->
-<link rel="canonical" href="https://svsolar.online/">
-
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="SVSOLAR">
-<meta property="og:title" content="Shree Vinayak Solar Agency (SVSOLAR) — Best Solar Company in Sikar">
-<meta property="og:description" content="Shree Vinayak Solar Agency (SVSOLAR) — Sikar's rooftop solar installer. Free site visit, PM Surya Ghar subsidy up to ₹78,000, and 300 free electricity units every month.">
-<meta property="og:image" content="https://svsolar.online/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://svsolar.online/">
-<meta property="og:locale" content="en_IN">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Shree Vinayak Solar Agency (SVSOLAR) — Sikar">
-<meta name="twitter:description" content="PM Surya Ghar subsidy up to ₹78,000, handled end-to-end. Free site visit in Sikar.">
-<meta name="twitter:image" content="https://svsolar.online/og-image.png">
-
-<!--
-  ============================================================
-  SVSOLAR — Sikar, Rajasthan. Business details filled in below.
-  Still pending: real Google Maps embed (see contact section —
-  search "MAPS_EMBED"). Stats in the STATS section and testimonials
-  are placeholders — swap for real numbers/reviews once available.
-  Government subsidy figures follow current PM Surya Ghar guidelines —
-  reverify at pmsuryaghar.gov.in before quoting customers, since these
-  can be revised.
-  ============================================================
--->
-
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='58' r='26' fill='%23C9962C'/%3E%3Cg stroke='%23C9962C' stroke-width='6' stroke-linecap='round'%3E%3Cline x1='50' y1='10' x2='50' y2='20'/%3E%3Cline x1='18' y1='58' x2='8' y2='58'/%3E%3Cline x1='92' y1='58' x2='82' y2='58'/%3E%3Cline x1='27' y1='35' x2='20' y2='28'/%3E%3Cline x1='73' y1='35' x2='80' y2='28'/%3E%3C/g%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#0A1420">
+<title>REV NATION JAIPUR — Custom Builds, PPF &amp; Detailing Studio</title>
+<meta name="description" content="Custom modifications, precision PPF, ceramic coatings and studio-grade detailing — engineered and installed in-house in Jaipur.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.25/dist/lenis.css">
 
-<link rel="stylesheet" href="styles.css">
+<style>
+/* ============================================================
+   REV NATION JAIPUR — Design Tokens
+   Two-accent system: bronze (craft/protection) + ignition (mods/energy)
+   ============================================================ */
+:root{
+  --void:#0a0a0b;
+  --graphite:#131315;
+  --surface:#1a1a1d;
+  --surface-raised:#212124;
+  --line:rgba(242,241,238,0.09);
+  --line-strong:rgba(242,241,238,0.18);
+  --ink:#f2f1ee;
+  --ink-dim:#9a9a9f;
+  --ink-faint:#5c5c60;
 
-<!-- Structured data for local search (SEO). Replace placeholder values. -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "name": "Shree Vinayak Solar Agency",
-  "alternateName": "SVSOLAR",
-  "image": "",
-  "telephone": "+91-7727852619",
-  "email": "contact@svsolar.online",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Jaipur Road, near Shyam Residency",
-    "addressLocality": "Sikar",
-    "addressRegion": "Rajasthan",
-    "addressCountry": "IN"
-  },
-  "areaServed": "Sikar, Rajasthan",
-  "priceRange": "₹₹"
+  --accent:#c17f3e;
+  --accent-bright:#e0a565;
+  --accent-dim:rgba(193,127,62,0.14);
+  --accent-line:rgba(193,127,62,0.4);
+
+  --ignition:#e8462a;
+  --ignition-bright:#ff7350;
+  --ignition-dim:rgba(232,70,42,0.14);
+  --ignition-line:rgba(232,70,42,0.45);
+
+  --display:'Clash Display','Space Grotesk',sans-serif;
+  --body:'General Sans','Inter',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+
+  --ease:cubic-bezier(.65,0,.35,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
 }
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question", "name": "Is the site visit and quote actually free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the roof assessment, system sizing, and quotation cost nothing and carry no obligation to proceed."}},
-    {"@type": "Question", "name": "What if my roof isn't strong enough for panels?", "acceptedAnswer": {"@type": "Answer", "text": "Our site visit includes a structural check. Most RCC rooftops in Sikar handle standard mounting without reinforcement; if yours needs extra support, we flag it and price it upfront."}},
-    {"@type": "Question", "name": "Can I get the subsidy if I live in a rented house?", "acceptedAnswer": {"@type": "Answer", "text": "The PM Surya Ghar subsidy is linked to the electricity connection and typically requires the applicant to be the registered consumer, with the property owner's consent for installation."}},
-    {"@type": "Question", "name": "What happens if a panel or inverter fails after installation?", "acceptedAnswer": {"@type": "Answer", "text": "Panels typically carry a manufacturer performance warranty of around 25 years, and inverters around 5–10 years depending on brand. An Annual Maintenance Contract is also available."}},
-    {"@type": "Question", "name": "How long does the whole process take?", "acceptedAnswer": {"@type": "Answer", "text": "Most homes go from application to power generation in roughly 4–6 weeks, depending mainly on DISCOM feasibility approval timelines."}},
-    {"@type": "Question", "name": "Is the government subsidy guaranteed once I apply?", "acceptedAnswer": {"@type": "Answer", "text": "No — it is approved by MNRE and the DISCOM based on eligibility, documentation, ALMM-listed panels, and installation by an empanelled vendor."}},
-    {"@type": "Question", "name": "Does solar keep working during a power cut?", "acceptedAnswer": {"@type": "Answer", "text": "A standard on-grid system shuts off automatically during outages for safety. A battery backup add-on is available for those who want power during outages too."}},
-    {"@type": "Question", "name": "Can I finance this instead of paying upfront?", "acceptedAnswer": {"@type": "Answer", "text": "Several nationalised banks offer collateral-free solar loans for systems under PM Surya Ghar Muft Bijli Yojana; current rates and limits are confirmed during the site visit."}}
-  ]
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:auto;}
+body{
+  background:var(--void);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.5;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
 }
-</script>
+img,video{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+ul{list-style:none;}
+::selection{background:var(--accent);color:var(--void);}
+
+/* Lenis recommended base */
+html.lenis, html.lenis body{height:auto;}
+.lenis.lenis-smooth{scroll-behavior:auto !important;}
+.lenis.lenis-stopped{overflow:hidden;}
+
+.container{width:100%;max-width:1360px;margin:0 auto;padding:0 40px;}
+@media(max-width:768px){ .container{padding:0 22px;} }
+
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--accent);display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:'';width:16px;height:1px;background:var(--accent);}
+.eyebrow.ignite{color:var(--ignition-bright);}
+.eyebrow.ignite::before{background:var(--ignition-bright);}
+
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;letter-spacing:-0.01em;line-height:1.06;}
+
+.section-head{max-width:640px;margin-bottom:56px;}
+.section-head h2{font-size:clamp(28px,3.6vw,44px);margin-top:14px;}
+.section-head p{color:var(--ink-dim);margin-top:16px;font-size:16px;max-width:520px;}
+
+section{position:relative;}
+.pad{padding:120px 0;}
+@media(max-width:768px){ .pad{padding:80px 0;} }
+
+.reveal{opacity:0;transform:translateY(28px);filter:blur(4px);}
+.reveal.in{opacity:1;transform:translateY(0);filter:blur(0);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out),filter .8s var(--ease-out);}
+
+/* ============================================================
+   Buttons — real liquid-fill via SVG goo filter
+   ============================================================ */
+.btn{
+  position:relative;display:inline-flex;align-items:center;gap:10px;
+  padding:15px 30px;border-radius:100px;font-family:var(--body);font-weight:600;font-size:14px;
+  letter-spacing:0.01em;border:1px solid var(--line-strong);background:transparent;color:var(--ink);
+  transition:border-color .3s var(--ease);
+}
+.btn:hover{border-color:var(--ink-dim);}
+.btn svg{width:14px;height:14px;transition:transform .3s var(--ease);}
+.btn:hover svg{transform:translate(3px,-3px);}
+
+.btn-liquid{position:relative;overflow:hidden;isolation:isolate;border:1px solid var(--accent-line);background:var(--accent-dim);}
+.btn-liquid.ignite{border-color:var(--ignition-line);background:var(--ignition-dim);}
+.goo-layer{position:absolute;inset:-40% -10% -10% -10%;z-index:1;pointer-events:none;filter:url(#liquid-goo);}
+.blob{position:absolute;bottom:0;width:46%;height:100%;border-radius:50%;background:var(--accent);transform:translateY(120%);transition:transform .7s var(--ease);}
+.btn-liquid.ignite .blob{background:var(--ignition);}
+.blob.b1{left:-8%;transition-delay:.02s;}
+.blob.b2{left:18%;transition-delay:.08s;}
+.blob.b3{left:44%;transition-delay:0s;}
+.blob.b4{left:70%;transition-delay:.1s;}
+.btn-liquid:hover .blob{transform:translateY(0%);}
+.btn-liquid .txt{position:relative;z-index:2;color:var(--accent-bright);transition:color .5s var(--ease) .05s;}
+.btn-liquid.ignite .txt{color:var(--ignition-bright);}
+.btn-liquid .txt-fill{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;z-index:3;
+  color:var(--void);clip-path:inset(100% 0 0 0);transition:clip-path .7s var(--ease);pointer-events:none;
+  font-weight:600;font-size:14px;letter-spacing:.01em;
+}
+.btn-liquid:hover .txt-fill{clip-path:inset(-30% 0 0 0);}
+.btn-liquid:hover .txt{color:var(--void);}
+
+.btn-ghost{border-color:var(--line);transition:border-color .35s var(--ease),background .35s var(--ease),color .35s var(--ease),transform .35s var(--ease);}
+.btn-ghost:hover{background:var(--surface-raised);border-color:var(--accent-line);color:var(--accent-bright);transform:translateY(-2px);}
+
+/* ============================================================
+   Preloader — rev-counter dial
+   ============================================================ */
+#preloader{
+  position:fixed;inset:0;z-index:999;background:var(--void);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
+  transition:opacity .9s var(--ease),visibility .9s;
+}
+#preloader.done{opacity:0;visibility:hidden;pointer-events:none;}
+.pl-dial{width:110px;height:110px;position:relative;}
+.pl-dial svg{width:100%;height:100%;overflow:visible;}
+.pl-ring-bg{fill:none;stroke:var(--line-strong);stroke-width:3;}
+.pl-ring{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-dasharray:402;stroke-dashoffset:402;filter:drop-shadow(0 0 6px var(--accent));transition:stroke .3s;}
+.pl-needle{stroke:var(--ignition);stroke-width:3;stroke-linecap:round;transform-origin:80px 80px;transform:rotate(-110deg);transition:transform .12s linear;}
+.pl-pct{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--ink-faint);}
+.pl-pct span{color:var(--accent);}
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;
+  transition:padding .4s var(--ease);
+}
+header .container{transition:max-width .4s var(--ease);}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:13px 14px 13px 26px;
+  border-radius:100px;
+  background:rgba(255,255,255,0.035);
+  border:1px solid rgba(255,255,255,0.09);
+  backdrop-filter:blur(22px) saturate(180%);
+  -webkit-backdrop-filter:blur(22px) saturate(180%);
+  box-shadow:0 10px 36px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.06);
+  transition:background .45s var(--ease),border-color .45s var(--ease),box-shadow .45s var(--ease),padding .4s var(--ease);
+}
+header.scrolled{padding:14px 0;}
+header.scrolled .container{max-width:1240px;}
+header.scrolled .nav-inner{
+  background:rgba(19,19,21,0.6);
+  border-color:rgba(255,255,255,0.14);
+  box-shadow:0 14px 44px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.08);
+  padding:10px 10px 10px 24px;
+}
+.logo{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:0.01em;display:flex;align-items:center;gap:10px;}
+.logo .mark{width:26px;height:26px;flex-shrink:0;}
+.logo .mark svg{width:100%;height:100%;}
+.logo .sub{font-family:var(--mono);font-weight:400;font-size:9px;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase;border-left:1px solid var(--line-strong);padding-left:9px;margin-left:1px;}
+nav.links{display:flex;gap:8px;}
+nav.links a{font-size:13.5px;font-weight:500;color:var(--ink-dim);position:relative;padding:9px 16px;border-radius:100px;transition:color .3s var(--ease),background .3s var(--ease);}
+nav.links a:hover{color:var(--ink);background:rgba(255,255,255,0.06);}
+.nav-actions{display:flex;align-items:center;gap:12px;}
+.nav-actions .btn{padding:11px 22px;font-size:13px;}
+.menu-trigger{display:none;flex-direction:column;gap:5px;width:26px;background:none;border:none;padding:4px;}
+.menu-trigger span{display:block;height:1.5px;background:var(--ink);}
+@media(max-width:900px){
+  nav.links{display:none;}
+  .nav-actions .btn.desktop-only{display:none;}
+  .menu-trigger{display:flex;}
+}
+#mobile-drawer{
+  position:fixed;inset:0;z-index:99;background:rgba(10,10,11,0.98);display:flex;flex-direction:column;
+  justify-content:center;padding:0 32px;transform:translateY(-100%);transition:transform .5s var(--ease);
+}
+#mobile-drawer.open{transform:translateY(0);}
+#mobile-drawer a{font-family:var(--display);font-size:28px;font-weight:600;padding:14px 0;border-bottom:1px solid var(--line);opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease-out),transform .5s var(--ease-out);}
+#mobile-drawer.open a{opacity:1;transform:translateY(0);}
+#mobile-drawer a:nth-child(1){transition-delay:.08s;}
+#mobile-drawer a:nth-child(2){transition-delay:.14s;}
+#mobile-drawer a:nth-child(3){transition-delay:.2s;}
+#mobile-drawer a:nth-child(4){transition-delay:.26s;}
+#mobile-drawer a:nth-child(5){transition-delay:.32s;}
+#mobile-drawer a:nth-child(6){transition-delay:.38s;}
+body.menu-open{overflow:hidden;}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+#hero{height:100vh;min-height:640px;position:relative;overflow:hidden;background:var(--void);}
+.hero-media{position:absolute;inset:0;}
+.hero-media video,.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.55;}
+.hero-scrim{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(10,10,11,0) 0%, rgba(10,10,11,0.55) 62%, rgba(10,10,11,0.96) 100%),
+    linear-gradient(180deg, rgba(10,10,11,0.5) 0%, rgba(10,10,11,0.15) 30%, rgba(10,10,11,0.6) 78%, var(--void) 100%);
+}
+.hero-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:110px;}
+.hero-eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--accent-bright);text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:10px;}
+.hero-eyebrow::before{content:'';width:26px;height:1px;background:var(--accent-bright);}
+.hero h1{font-size:clamp(38px,6.4vw,80px);max-width:840px;overflow:hidden;}
+.hero h1 .line{display:block;overflow:hidden;}
+.hero h1 .line span{display:inline-block;transform:translateY(105%);transition:transform .9s var(--ease-out);}
+.hero.revealed h1 .line:nth-child(1) span{transition-delay:.15s;}
+.hero.revealed h1 .line:nth-child(2) span{transition-delay:.3s;}
+.hero.revealed h1 .line span{transform:translateY(0);}
+.hero p.sub{margin-top:26px;max-width:500px;color:var(--ink-dim);font-size:17px;opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease-out) .55s,transform .8s var(--ease-out) .55s;}
+.hero.revealed p.sub{opacity:1;transform:translateY(0);}
+.hero-actions{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap;opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease-out) .7s,transform .8s var(--ease-out) .7s;}
+.hero.revealed .hero-actions{opacity:1;transform:translateY(0);}
+.scroll-cue{position:absolute;bottom:34px;left:40px;z-index:2;display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ink-faint);text-transform:uppercase;}
+.scroll-cue .track{width:1px;height:34px;background:var(--line-strong);position:relative;overflow:hidden;}
+.scroll-cue .track::before{content:'';position:absolute;top:0;left:0;width:100%;height:40%;background:var(--accent);animation:cue-fill 2.2s var(--ease) infinite;}
+@keyframes cue-fill{0%{transform:translateY(-100%);}100%{transform:translateY(250%);}}
+@media(max-width:768px){ .scroll-cue{left:22px;} }
+
+/* ============================================================
+   MARQUEE — makes serviced
+   ============================================================ */
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--graphite);padding:20px 0;}
+.marquee-track{display:flex;gap:56px;width:max-content;animation:marquee-scroll 28s linear infinite;}
+.marquee-track span{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;color:var(--ink-faint);text-transform:uppercase;white-space:nowrap;}
+@keyframes marquee-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ============================================================
+   AUTHORITY — odometer stats
+   ============================================================ */
+#authority{background:var(--graphite);border-bottom:1px solid var(--line);}
+.authority-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.authority-statement{font-size:clamp(24px,2.6vw,34px);color:var(--ink);max-width:440px;}
+.authority-statement .accent{color:var(--accent);}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;}
+.stat{padding:22px 22px 22px 0;border-bottom:1px solid var(--line);}
+.stat:nth-child(-n+3){padding-top:0;}
+.stat-num{font-family:var(--display);font-size:clamp(30px,3vw,42px);font-weight:600;color:var(--ink);display:flex;align-items:baseline;gap:2px;}
+.odo{display:inline-flex;}
+.odo-digit{display:inline-block;height:1.18em;overflow:hidden;position:relative;width:0.66em;vertical-align:top;}
+.odo-strip{position:absolute;left:0;top:0;display:flex;flex-direction:column;}
+.odo-strip span{height:1.18em;display:flex;align-items:center;justify-content:center;}
+.stat-num .suffix{font-size:.5em;color:var(--accent);margin-left:2px;}
+.stat-label{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);letter-spacing:.04em;margin-top:8px;text-transform:uppercase;}
+@media(max-width:900px){
+  .authority-grid{grid-template-columns:1fr;gap:40px;}
+  .stat-grid{grid-template-columns:1fr 1fr;}
+}
+
+/* ============================================================
+   STUDIO EXPERIENCE — animated interactive offering boxes
+   ============================================================ */
+#studio-experience{background:var(--void);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.studio-intro{display:grid;grid-template-columns:1.3fr 0.7fr;gap:50px;align-items:end;margin-bottom:56px;padding-bottom:44px;border-bottom:1px solid var(--line);}
+.studio-copy h2{font-size:clamp(30px,4vw,48px);margin-top:14px;}
+.studio-lede{font-family:var(--display);font-size:clamp(18px,2vw,24px);font-weight:600;color:var(--ink);margin-top:16px;}
+.studio-lede .accent-ignite{color:var(--ignition-bright);font-style:italic;}
+.studio-sub{color:var(--ink-dim);font-size:15.5px;margin-top:10px;max-width:440px;}
+.studio-stat{text-align:right;}
+.studio-stat-num{font-family:var(--display);font-size:clamp(46px,6vw,84px);font-weight:700;color:var(--ink);line-height:1;}
+.studio-stat-num .odo{display:inline-flex;}
+.studio-stat-label{font-family:var(--mono);font-size:11.5px;color:var(--accent-bright);text-transform:uppercase;letter-spacing:.08em;margin-top:8px;}
+
+.amenity-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+.amenity-card{
+  position:relative;padding:30px 22px;border-radius:12px;background:var(--surface);border:1px solid var(--line);
+  overflow:hidden;isolation:isolate;
+  transition:transform .45s var(--ease-out),border-color .45s var(--ease),background .45s var(--ease);
+}
+.amenity-card::before{
+  content:'';position:absolute;inset:0;z-index:-1;opacity:0;
+  background:radial-gradient(circle at 50% 0%, rgba(232,70,42,0.16) 0%, transparent 70%);
+  transition:opacity .5s var(--ease);
+}
+.amenity-card:hover{transform:translateY(-8px);border-color:var(--ignition-line);background:var(--surface-raised);}
+.amenity-card:hover::before{opacity:1;}
+.amenity-icon{
+  width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:var(--accent-dim);color:var(--accent-bright);margin-bottom:20px;
+  transition:transform .5s var(--ease-out),background .4s var(--ease),color .4s var(--ease);
+}
+.amenity-icon svg{width:22px;height:22px;}
+.amenity-card:hover .amenity-icon{transform:scale(1.12) rotate(-6deg);background:var(--ignition-dim);color:var(--ignition-bright);}
+.amenity-card h4{font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:8px;line-height:1.3;}
+.amenity-card p{font-size:13px;color:var(--ink-faint);line-height:1.5;}
+@media(max-width:1024px){ .amenity-grid{grid-template-columns:repeat(3,1fr);} }
+@media(max-width:900px){
+  .studio-intro{grid-template-columns:1fr;gap:26px;text-align:left;}
+  .studio-stat{text-align:left;}
+}
+@media(max-width:640px){ .amenity-grid{grid-template-columns:repeat(2,1fr);} }
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+#services{background:var(--void);}
+.services-layout{display:grid;grid-template-columns:1.15fr 0.85fr;gap:50px;align-items:start;}
+.service-list{border-top:1px solid var(--line);}
+.service-item{position:relative;border-bottom:1px solid var(--line);padding:20px 16px 20px 4px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;border-radius:8px;transition:padding .35s var(--ease),background .35s var(--ease);}
+.service-item:hover{background:rgba(255,255,255,0.025);}
+.service-item .idx{font-family:var(--mono);font-size:12px;color:var(--ink-faint);width:28px;flex-shrink:0;transition:color .35s var(--ease);}
+.service-item h4{font-size:19px;color:var(--ink-dim);font-weight:500;flex:1;transition:color .35s var(--ease),transform .35s var(--ease);}
+.service-item svg{width:16px;height:16px;opacity:0;transform:translateX(-6px);transition:.35s var(--ease);flex-shrink:0;color:var(--accent);}
+.service-item.active{padding:26px 16px 26px 4px;background:rgba(255,255,255,0.03);}
+.service-item.active .idx{color:var(--accent-bright);}
+.service-item.active h4{color:var(--ink);transform:translateX(6px);}
+.service-item.active svg{opacity:1;transform:translateX(0);}
+.service-item[data-panel="0"].active svg,.service-item[data-panel="0"].active .idx{color:var(--ignition-bright);}
+.service-desc{max-height:0;overflow:hidden;font-size:14px;color:var(--ink-dim);transition:max-height .4s var(--ease);}
+.service-item.active .service-desc{max-height:60px;margin-top:8px;}
+
+.service-media{
+  position:sticky;top:96px;aspect-ratio:1/1;max-width:380px;margin-left:auto;border-radius:10px;overflow:hidden;
+  background:var(--surface);border:1px solid var(--line);box-shadow:0 20px 50px rgba(0,0,0,0.3);
+  transition:border-color .5s var(--ease);
+}
+.service-media.ignite-active{border-color:var(--ignition-line);}
+.service-media .panel{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(1.06);
+  transition:opacity .55s var(--ease),transform .55s var(--ease);
+  background:radial-gradient(ellipse at 50% 30%, var(--surface-raised) 0%, var(--void) 100%);
+}
+.service-media .panel.active{opacity:1;transform:scale(1);}
+.service-media .panel svg{width:46%;opacity:.9;}
+.service-media .panel-badge{
+  position:absolute;top:16px;left:16px;z-index:2;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  color:var(--ink-faint);text-transform:uppercase;padding:5px 11px;border-radius:100px;
+  background:rgba(10,10,11,0.55);border:1px solid var(--line-strong);
+}
+@media(max-width:900px){
+  .services-layout{grid-template-columns:1fr;}
+  .service-media{position:relative;top:0;order:-1;max-width:100%;aspect-ratio:16/10;}
+}
+
+/* ============================================================
+   BUILDS — horizontal scroll gallery
+   ============================================================ */
+#builds{background:var(--graphite);overflow:hidden;}
+.builds-viewport{overflow:hidden;}
+.builds-track{display:flex;gap:24px;width:max-content;padding:0 40px 10px;will-change:transform;}
+.build-card{
+  width:340px;flex-shrink:0;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:var(--surface);
+  perspective:700px;transition:background .5s var(--ease),border-color .5s var(--ease),box-shadow .5s var(--ease);
+}
+.build-card:hover{background:#000;border-color:var(--ignition-line);box-shadow:0 20px 46px rgba(0,0,0,0.5);}
+.build-card .bc-media{
+  aspect-ratio:4/3;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse at 30% 20%, var(--surface-raised) 0%, var(--void) 100%);
+}
+.build-card .bc-slides{position:absolute;inset:0;}
+.build-card .bc-slide{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  opacity:0;transform:scale(1.1);transition:opacity .8s var(--ease),transform 1.1s var(--ease);
+}
+.build-card .bc-slide.active{opacity:1;transform:scale(1);}
+.build-card .bc-slide svg{width:52%;opacity:.85;}
+.build-card .bc-scrim{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg, rgba(0,0,0,0) 26%, rgba(0,0,0,0.94) 100%);
+  opacity:0;transition:opacity .5s var(--ease);
+}
+.build-card:hover .bc-scrim{opacity:1;}
+.build-card .bc-tag{position:absolute;top:14px;left:14px;z-index:3;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:100px;background:rgba(10,10,11,.7);border:1px solid var(--ignition-line);color:var(--ignition-bright);transition:opacity .3s var(--ease);}
+.build-card .bc-progress{position:absolute;top:16px;right:14px;z-index:3;display:flex;gap:4px;opacity:0;transition:opacity .4s var(--ease);}
+.build-card:hover .bc-progress{opacity:1;}
+.build-card .bc-progress i{width:12px;height:2px;background:rgba(255,255,255,0.25);border-radius:2px;transition:background .3s var(--ease);}
+.build-card .bc-progress i.active{background:var(--ignition-bright);}
+.build-card .bc-hover-info{
+  position:absolute;left:16px;right:16px;bottom:14px;z-index:3;
+  opacity:0;transform:translateY(12px);transition:opacity .45s var(--ease),transform .45s var(--ease);
+}
+.build-card:hover .bc-hover-info{opacity:1;transform:translateY(0);}
+.build-card .bc-slide-caption{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ignition-bright);text-transform:uppercase;}
+.build-card .bc-body{padding:20px;transition:opacity .4s var(--ease);}
+.build-card:hover .bc-body{opacity:0.55;}
+.build-card h4{font-size:17px;font-weight:600;}
+.build-card p{font-size:13px;color:var(--ink-faint);font-family:var(--mono);margin-top:6px;}
+.build-card.build-end{
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:16px;padding:32px;
+  background:transparent;border-style:dashed;
+}
+.build-card.build-end:hover{background:transparent;}
+.build-card.build-end p{font-family:var(--body);color:var(--ink-dim);font-size:15px;}
+@media(max-width:900px){
+  .builds-viewport{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;}
+  .build-card{scroll-snap-align:start;}
+}
+
+/* ============================================================
+   BEFORE / AFTER
+   ============================================================ */
+#compare{background:var(--void);}
+.compare-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:4px;overflow:hidden;border:1px solid var(--line);user-select:none;background:var(--void);}
+.compare-layer{position:absolute;inset:0;overflow:hidden;}
+.compare-media{position:absolute;inset:-3%;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center;}
+.compare-after .compare-media{background:linear-gradient(135deg,#1c1c1f 0%, #0c0c0d 100%);animation:kenburns 16s ease-in-out infinite alternate;}
+.compare-before .compare-media{background:linear-gradient(135deg,#232019 0%, #100d09 100%);animation:kenburns 16s ease-in-out infinite alternate -8s;}
+@keyframes kenburns{ from{transform:scale(1);} to{transform:scale(1.07);} }
+.compare-before .compare-media::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(115deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 26px);}
+.compare-before.has-photo .compare-media::before{display:none;}
+.compare-before-clip{position:absolute;inset:0;overflow:hidden;clip-path:inset(0 50% 0 0);will-change:clip-path;}
+.compare-label{position:absolute;top:20px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:6px 12px;background:rgba(10,10,11,.65);border:1px solid var(--line);border-radius:100px;text-transform:uppercase;}
+.compare-label.l-before{left:20px;}
+.compare-label.l-after{right:20px;}
+.compare-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--accent);transform:translateX(-50%);cursor:ew-resize;box-shadow:0 0 12px rgba(193,127,62,.6);}
+.compare-handle .grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--void);border:1px solid var(--accent-line);display:flex;align-items:center;justify-content:center;gap:4px;}
+.compare-handle .grip svg{width:12px;height:12px;color:var(--accent);}
+.compare-toggle{display:flex;gap:10px;margin-top:22px;}
+.compare-toggle button{padding:9px 18px;border-radius:100px;border:1px solid var(--line);background:transparent;color:var(--ink-dim);font-size:13px;font-family:var(--body);transition:.3s var(--ease);}
+.compare-toggle button.active{border-color:var(--accent-line);color:var(--accent-bright);background:var(--accent-dim);}
+.compare-set-icon{width:80px;height:80px;color:var(--ink-faint);}
+
+/* ============================================================
+   PROCESS
+   ============================================================ */
+#process{background:var(--graphite);}
+.process-tabs{display:flex;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:34px;}
+.process-tab{font-family:var(--mono);font-size:13px;padding:10px 18px;border-radius:100px;border:1px solid var(--line-strong);background:transparent;color:var(--ink-dim);cursor:pointer;transition:border-color .3s var(--ease),background .3s var(--ease),color .3s var(--ease);}
+.process-tab:hover{border-color:var(--ink-dim);color:var(--ink);}
+.process-tab.active{border-color:var(--accent-line);background:var(--accent-dim);color:var(--accent-bright);}
+.process-panel{min-height:150px;}
+.process-panel .step-eyebrow{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;}
+.process-panel h4{font-family:var(--display);font-size:clamp(22px,2.6vw,30px);font-weight:600;margin-bottom:14px;}
+.process-panel p{color:var(--ink-dim);font-size:15.5px;max-width:560px;line-height:1.6;}
+@media(max-width:768px){
+  .process-tabs{gap:8px;}
+  .process-tab{padding:8px 14px;font-size:12px;}
+}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+#testimonials{background:var(--void);}
+.testi-wrap{max-width:760px;}
+.testi-quote{font-family:var(--display);font-size:clamp(20px,2.6vw,30px);font-weight:500;line-height:1.35;min-height:150px;}
+.testi-meta{display:flex;align-items:center;gap:14px;margin-top:28px;}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:var(--surface-raised);border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px;color:var(--accent);}
+.testi-name{font-size:14px;font-weight:600;}
+.testi-sub{font-size:12.5px;color:var(--ink-faint);font-family:var(--mono);margin-top:2px;}
+.testi-nav{display:flex;gap:10px;margin-top:34px;}
+.testi-nav button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line-strong);background:transparent;display:flex;align-items:center;justify-content:center;color:var(--ink-dim);transition:.3s var(--ease);}
+.testi-nav button:hover{border-color:var(--accent-line);color:var(--accent-bright);}
+.testi-nav svg{width:14px;height:14px;}
+
+/* ============================================================
+   BOOKING FINALE
+   ============================================================ */
+#booking{background:var(--void);position:relative;overflow:hidden;}
+.booking-glow{position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:900px;height:900px;background:radial-gradient(circle, rgba(193,127,62,0.10) 0%, transparent 65%);pointer-events:none;}
+.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;position:relative;z-index:1;}
+.booking-grid h2{font-size:clamp(32px,4.2vw,52px);}
+.booking-grid > div:first-child p{color:var(--ink-dim);margin-top:20px;max-width:420px;}
+.field{margin-bottom:20px;position:relative;}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line-strong);padding:12px 2px;color:var(--ink);font-family:var(--body);font-size:15px;transition:border-color .3s var(--ease);}
+.field textarea{resize:vertical;min-height:70px;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);}
+.field label{position:absolute;top:12px;left:2px;color:var(--ink-faint);font-size:15px;pointer-events:none;transition:transform .25s var(--ease),font-size .25s var(--ease),color .25s var(--ease);}
+.field input:focus + label,.field input:not(:placeholder-shown) + label,
+.field select:focus + label,.field.filled select + label,
+.field textarea:focus + label,.field textarea:not(:placeholder-shown) + label{transform:translateY(-20px);font-size:11px;color:var(--accent);}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.booking-form-wrap{position:relative;}
+.confirm-card{position:absolute;inset:0;background:var(--graphite);border:1px solid var(--accent-line);border-radius:6px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:40px;opacity:0;transform:scale(.97);pointer-events:none;transition:opacity .5s var(--ease),transform .5s var(--ease);}
+.confirm-card.show{opacity:1;transform:scale(1);pointer-events:auto;}
+.confirm-card svg{width:36px;height:36px;color:var(--accent);margin-bottom:16px;}
+.confirm-card h4{font-size:20px;margin-bottom:8px;}
+.confirm-card p{color:var(--ink-dim);font-size:14px;}
+@media(max-width:900px){ .booking-grid{grid-template-columns:1fr;gap:44px;} .field-row{grid-template-columns:1fr;} }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{background:var(--graphite);border-top:1px solid var(--line);padding:80px 0 30px;}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:50px;padding-bottom:60px;border-bottom:1px solid var(--line);}
+.foot-word{font-family:var(--display);font-size:clamp(38px,7vw,100px);font-weight:700;letter-spacing:-0.02em;line-height:1;color:var(--ink);opacity:.94;}
+.foot-cols{display:flex;gap:70px;flex-wrap:wrap;}
+.foot-col h5{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;}
+.foot-col a,.foot-col p{display:block;font-size:14px;color:var(--ink-dim);margin-bottom:10px;transition:color .3s;}
+.foot-col a:hover{color:var(--accent-bright);}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;flex-wrap:wrap;gap:14px;}
+.foot-bottom p{font-size:12.5px;color:var(--ink-faint);font-family:var(--mono);}
+.back-top{width:42px;height:42px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:.4s var(--ease);}
+.back-top.show{opacity:1;transform:translateY(0);}
+.back-top svg{width:14px;height:14px;}
+
+/* ============================================================
+   WhatsApp Floating Liquid Button — goo blob + idle pulse
+   ============================================================ */
+#wa-float{
+  position:fixed;bottom:26px;right:26px;z-index:80;width:60px;height:60px;border-radius:50%;overflow:hidden;
+  background:var(--surface-raised);border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 24px rgba(0,0,0,.4);transition:transform .3s var(--ease),border-color .3s var(--ease);
+}
+#wa-float:hover{transform:translateY(-3px) scale(1.04);border-color:rgba(37,211,102,.5);}
+/* Same goo-layer/blob mechanism as .btn-liquid, recoloured for WhatsApp and given an idle bob */
+#wa-float .goo-layer{inset:-30%;}
+#wa-float .blob{background:#25D366;transform:translateY(70%);animation:wa-bob 3.4s ease-in-out infinite;}
+#wa-float .blob.b1{animation-delay:0s;}
+#wa-float .blob.b2{animation-delay:.3s;}
+#wa-float .blob.b3{animation-delay:.15s;}
+#wa-float .blob.b4{animation-delay:.45s;}
+@keyframes wa-bob{0%,100%{transform:translateY(70%);}50%{transform:translateY(48%);}}
+#wa-float:hover .blob{animation-play-state:paused;transform:translateY(0%) !important;transition:transform .55s var(--ease);}
+#wa-float svg{position:relative;z-index:2;width:26px;height:26px;color:var(--ink);transition:color .45s var(--ease) .05s;}
+#wa-float:hover svg{color:var(--void);}
+#wa-float .pulse{position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(37,211,102,.5);animation:pulse-ring 2.6s var(--ease) infinite;}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.9;}100%{transform:scale(1.6);opacity:0;}}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.2s !important;scroll-behavior:auto !important;}
+  .reveal{opacity:1;transform:none;filter:none;}
+}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+</style>
 </head>
 <body>
 
-<!-- ================= NAV ================= -->
-<header class="nav" id="top">
-  <div class="nav__inner">
-    <a href="#top" class="nav__brand">
-      <svg class="nav__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="24" r="9" fill="currentColor"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="20" y1="4" x2="20" y2="8"/><line x1="6" y1="24" x2="2" y2="24"/><line x1="38" y1="24" x2="34" y2="24"/><line x1="10.5" y1="14.5" x2="7.5" y2="11.5"/><line x1="29.5" y1="14.5" x2="32.5" y2="11.5"/></g></svg>
-      <span class="nav__brand-full" data-i18n="nav_brand" data-i18n-html>Shree Vinayak <em>Solar</em></span>
+<!-- Shared SVG goo filter for all liquid-fill elements -->
+<svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <filter id="liquid-goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo"/>
+      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- ============================================================
+     PRELOADER — rev-counter dial
+     ============================================================ -->
+<div id="preloader" role="status" aria-label="Loading">
+  <div class="pl-dial">
+    <svg viewBox="0 0 160 160">
+      <circle class="pl-ring-bg" cx="80" cy="80" r="64"/>
+      <circle class="pl-ring" id="plRing" cx="80" cy="80" r="64" transform="rotate(-90 80 80)"/>
+      <line class="pl-needle" id="plNeedle" x1="80" y1="80" x2="80" y2="26"/>
+      <circle cx="80" cy="80" r="4" fill="var(--ignition)"/>
+    </svg>
+  </div>
+  <div class="pl-pct"><span id="plPct">0</span>%</div>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header id="siteHeader">
+  <div class="container nav-inner">
+    <a href="#hero" class="logo">
+      <span class="mark">
+        <svg viewBox="0 0 40 40" fill="none">
+          <path d="M6 30 A16 16 0 0 1 34 30" stroke="var(--line-strong)" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M6 30 A16 16 0 0 1 21 14.4" stroke="var(--ignition)" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="20" y1="30" x2="27.5" y2="16" stroke="var(--ignition)" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="20" cy="30" r="2.6" fill="var(--ignition)"/>
+        </svg>
+      </span>
+      REV NATION <span class="sub">Jaipur</span>
     </a>
-
-    <nav class="nav__links" id="navLinks">
-      <a href="#why" data-i18n="nav_why">Why Solar</a>
-      <a href="#subsidy" data-i18n="nav_subsidy">Subsidy</a>
-      <a href="#calculator" data-i18n="nav_calculator">Calculator</a>
-      <a href="#services" data-i18n="nav_services">Services</a>
-      <a href="/blog.html">Blog</a>
-      <a href="#faq" data-i18n="nav_faq">FAQ</a>
-      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    <nav class="links">
+      <a href="#services">Modifications</a>
+      <a href="#studio-experience">Studio</a>
+      <a href="#builds">Builds</a>
+      <a href="#process">Process</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#booking">Contact</a>
     </nav>
-
-    <div class="nav__actions">
-      <button class="lang-toggle" id="langToggle" aria-label="Switch language / भाषा बदलें">
-        <span class="lang-toggle__pill" id="langTogglePill"></span>
-        <span class="lang-toggle__opt is-active" data-lang="en">EN</span>
-        <span class="lang-toggle__opt" data-lang="hi">हिं</span>
-      </button>
-      <a href="#contact" class="btn btn--gold btn--sm" data-i18n="nav_cta">Free Site Visit</a>
-      <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    <div class="nav-actions">
+      <a href="#booking" class="btn btn-ghost desktop-only magnetic">Book an Inspection</a>
+      <button class="menu-trigger" id="menuTrigger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <canvas class="hero__pattern" aria-hidden="true"></canvas>
+<div id="mobile-drawer">
+  <a href="#services">Modifications</a>
+  <a href="#studio-experience">Studio</a>
+  <a href="#builds">Builds</a>
+  <a href="#process">Process</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#booking">Contact</a>
+</div>
 
-  <svg class="hero__sun" viewBox="0 0 600 500" aria-hidden="true">
-    <path id="sunArc" d="M 60 380 A 260 260 0 0 1 560 380" fill="none" stroke="#C9962C" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
-    <g class="sun-rays">
-      <circle cx="470" cy="150" r="46" fill="#C9962C" opacity="0.9"/>
-      <g stroke="#DBAE55" stroke-width="2" stroke-linecap="round" opacity="0.7">
-        <line x1="470" y1="70" x2="470" y2="86"/>
-        <line x1="470" y1="214" x2="470" y2="230"/>
-        <line x1="390" y1="150" x2="406" y2="150"/>
-        <line x1="534" y1="150" x2="550" y2="150"/>
-        <line x1="413" y1="93" x2="424" y2="104"/>
-        <line x1="516" y1="196" x2="527" y2="207"/>
-        <line x1="527" y1="93" x2="516" y2="104"/>
-        <line x1="424" y1="196" x2="413" y2="207"/>
-      </g>
-    </g>
-    <!-- rooftop with panel grid -->
-    <g transform="translate(30,360)">
-      <polygon points="0,80 230,0 460,80 460,110 0,110" fill="#0F2038" stroke="#1E3E63" stroke-width="1"/>
-      <g stroke="#C9962C" stroke-width="1.4" opacity="0.85">
-        <polygon points="40,72 110,34 110,58 34,92" fill="#16304F"/>
-        <polygon points="120,30 190,-6 190,16 122,52" fill="#16304F"/>
-        <polygon points="200,-8 270,-8 272,14 200,16" fill="#16304F"/>
-        <polygon points="280,-6 350,30 352,52 280,16" fill="#16304F"/>
-        <polygon points="360,32 420,64 424,88 360,58" fill="#16304F"/>
-      </g>
-    </g>
-  </svg>
+<main>
 
-  <div class="hero__inner">
-    <p class="eyebrow eyebrow--light hero-anim" style="--d:0" data-i18n="hero_eyebrow">Shree Vinayak Solar Agency (SVSOLAR) · Sikar, Rajasthan</p>
-    <h1 class="hero__title">
-      <span class="hero-anim" style="--d:1" data-i18n="hero_title_1">Turn Rajasthan's Sunshine Into</span>
-      <span class="hero-anim hero__title--accent" style="--d:2" data-i18n="hero_title_2">Zero Electricity Bills.</span>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+  <div class="hero-media">
+    <video autoplay muted loop playsinline poster="assets/hero-poster.jpg" id="heroVideo">
+      <source src="assets/hero-reveal.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="container hero-content">
+    <div class="hero-eyebrow">Jaipur · Custom Builds &amp; Protection</div>
+    <h1>
+      <span class="line"><span>Where Jaipur's cars</span></span>
+      <span class="line"><span>get built, not just washed.</span></span>
     </h1>
-    <p class="hero__sub hero-anim" style="--d:3" data-i18n="hero_sub" data-i18n-html>We design, install, and manage your entire PM Surya Ghar subsidy paperwork —
-      so up to <strong>₹78,000</strong> comes back to your bank account, and you get up to
-      <strong>300 units of free electricity</strong> every month.</p>
-
-    <div class="hero__cta hero-anim" style="--d:4">
-      <a href="#contact" class="btn btn--gold btn--lg" data-i18n="hero_cta1">Check My Free Subsidy Amount</a>
-      <a href="tel:+917727852619" class="btn btn--ghost btn--lg" data-i18n="hero_cta2">Call Now</a>
-    </div>
-
-    <div class="hero__trust hero-anim" style="--d:5">
-      <span data-i18n="hero_trust1" data-i18n-html><strong>500+</strong> Homes Powered</span>
-      <span class="dot" aria-hidden="true"></span>
-      <span data-i18n="hero_trust2" data-i18n-html><strong>4.2 MW+</strong> Installed</span>
-      <span class="dot" aria-hidden="true"></span>
-      <span data-i18n="hero_trust3">Free, No-Obligation Quotes</span>
-    </div>
-  </div>
-
-  <a href="#why" class="hero__scroll" aria-label="Scroll to content"><span></span></a>
-</section>
-
-<!-- ================= WHY SOLAR ================= -->
-<section class="section section--ivory" id="why">
-  <div class="container">
-    <p class="eyebrow reveal" data-i18n="why_eyebrow">Why Now</p>
-    <h2 class="section__title reveal" data-i18n="why_title" data-i18n-html>The Sun Already Pays Your Electricity Bill.<br>You're Just Not Collecting It Yet.</h2>
-
-    <div class="why-grid">
-      <div class="why-item reveal">
-        <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40h32M14 40V22l10-8 10 8v18" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M20 40V28h8v12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="24" cy="10" r="3.4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-        <h3 data-i18n="why1_title">Government Pays a Share</h3>
-        <p data-i18n="why1_desc">Up to ₹78,000 subsidy credited directly to your bank account under PM Surya Ghar Muft Bijli Yojana — no middlemen, no hidden cuts.</p>
-      </div>
-      <div class="why-item reveal">
-        <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2" fill="none"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="24" y1="4" x2="24" y2="9"/><line x1="24" y1="39" x2="24" y2="44"/><line x1="4" y1="24" x2="9" y2="24"/><line x1="39" y1="24" x2="44" y2="24"/></g></svg>
-        <h3 data-i18n="why2_title">Bills Drop to Near-Zero</h3>
-        <p data-i18n="why2_desc">Generate up to 300 free units a month and export surplus power back to the grid through net metering.</p>
-      </div>
-      <div class="why-item reveal">
-        <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 40c8-2 14-8 16-18 6 2 10-2 10-2s-2 12-10 16c-6 3-12 5-16 4z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M32 8s6 4 4 12" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-        <h3 data-i18n="why3_title">It Pays for Itself</h3>
-        <p data-i18n="why3_desc">Most Sikar-area homes recover their investment in 4–6 years, then generate free power for two decades more.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SUBSIDY ================= -->
-<section class="section section--navy" id="subsidy">
-  <div class="container">
-    <p class="eyebrow eyebrow--light reveal" data-i18n="subsidy_eyebrow">Government of India · PM Surya Ghar Muft Bijli Yojana</p>
-    <h2 class="section__title section__title--light reveal" data-i18n="subsidy_title">Here's Exactly What The Government Gives Back</h2>
-    <p class="section__lead reveal" data-i18n="subsidy_lead">Subsidy is disbursed in central financial assistance based on your rooftop system size.</p>
-
-    <div class="subsidy-bars reveal">
-      <div class="subsidy-bar" style="--h:34%">
-        <span class="subsidy-bar__amount">₹30,000</span>
-        <div class="subsidy-bar__fill"></div>
-        <span class="subsidy-bar__label" data-i18n="subsidy_bar1_label">Up to 1 kW</span>
-      </div>
-      <div class="subsidy-bar" style="--h:68%">
-        <span class="subsidy-bar__amount">₹60,000</span>
-        <div class="subsidy-bar__fill"></div>
-        <span class="subsidy-bar__label" data-i18n="subsidy_bar2_label">2 kW system</span>
-      </div>
-      <div class="subsidy-bar" style="--h:100%">
-        <span class="subsidy-bar__amount">₹78,000</span>
-        <div class="subsidy-bar__fill"></div>
-        <span class="subsidy-bar__label" data-i18n="subsidy_bar3_label">3 kW &amp; above (max)</span>
-      </div>
-    </div>
-
-    <p class="subsidy-note reveal" data-i18n="subsidy_note" data-i18n-html>+ up to <strong>300 units of free electricity every month</strong>, credited via net metering with your local DISCOM.</p>
-
-    <div class="subsidy-footer reveal">
-      <p data-i18n="subsidy_footer_p" data-i18n-html>Subsidy is typically disbursed to your bank account within 30–45 days of commissioning. Figures shown follow current PM Surya Ghar guidelines and may be revised by MNRE — we confirm the exact figure with every quote. Official portal: <span class="nowrap">pmsuryaghar.gov.in</span></p>
-      <a href="#contact" class="btn btn--gold" data-i18n="subsidy_cta">We Guide You Through the Paperwork →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CALCULATOR ================= -->
-<section class="section section--cream" id="calculator">
-  <div class="container">
-    <p class="eyebrow reveal" data-i18n="calc_eyebrow">Instant Estimate</p>
-    <h2 class="section__title reveal" data-i18n="calc_title">See Your Own Numbers</h2>
-    <p class="section__lead reveal" data-i18n="calc_lead">Set your bill and a timeline — watch how much of your investment gets covered by the subsidy plus your savings. A planning guide, not a quote.</p>
-
-    <div class="calc reveal">
-      <div class="calc__controls">
-        <div class="calc__field">
-          <label for="calcBill" data-i18n="calc_bill_label">Approx. monthly electricity bill</label>
-          <div class="calc__bill-value"><span>₹</span><span id="calcBillDisplay">3,000</span></div>
-          <input type="range" id="calcBill" min="500" max="15000" step="100" value="3000">
-          <div class="calc__range-labels"><span>₹500</span><span>₹15,000</span></div>
-        </div>
-
-        <div class="calc__field">
-          <label data-i18n="calc_tenure_label">Track coverage over</label>
-          <div class="calc__tenure" id="calcTenure" role="tablist">
-            <button class="calc__tenure-btn" data-years="3" role="tab" data-i18n="calc_tenure_3">3 yrs</button>
-            <button class="calc__tenure-btn is-active" data-years="5" role="tab" aria-selected="true" data-i18n="calc_tenure_5">5 yrs</button>
-            <button class="calc__tenure-btn" data-years="10" role="tab" data-i18n="calc_tenure_10">10 yrs</button>
-            <button class="calc__tenure-btn" data-years="15" role="tab" data-i18n="calc_tenure_15">15 yrs</button>
-          </div>
-        </div>
-
-        <div class="calc__stats">
-          <div class="calc__stat">
-            <span class="calc__stat-label" data-i18n="calc_stat1_label">System Size</span>
-            <span class="calc__stat-value" id="calcKw">3 kW</span>
-          </div>
-          <div class="calc__stat calc__stat--gold">
-            <span class="calc__stat-label" data-i18n="calc_stat2_label">Govt. Subsidy</span>
-            <span class="calc__stat-value" id="calcSubsidy">₹78,000</span>
-          </div>
-          <div class="calc__stat">
-            <span class="calc__stat-label" data-i18n="calc_stat3_label">Net Investment</span>
-            <span class="calc__stat-value" id="calcNetCost">₹1,17,000</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="calc__visual">
-        <svg class="calc__ring" viewBox="0 0 220 220">
-          <circle class="calc__ring-track" cx="110" cy="110" r="92"></circle>
-          <circle class="calc__ring-fill" id="calcRingFill" cx="110" cy="110" r="92"></circle>
-        </svg>
-        <div class="calc__ring-center">
-          <span class="calc__ring-percent" id="calcCoveragePct">0%</span>
-          <span class="calc__ring-caption" data-i18n="calc_ring_caption">of investment covered</span>
-        </div>
-        <p class="calc__visual-footer"><span id="calcYearsLabel">By year 5</span> <span data-i18n="calc_cumtext">· cumulative savings </span><strong id="calcCumSavings">₹0</strong></p>
-      </div>
-    </div>
-
-    <p class="calc__disclaimer reveal" data-i18n="calc_disclaimer" data-i18n-html>Assumes a blended tariff of ~₹7/unit, ~4 units generated per kW per day (typical for Rajasthan's high solar irradiance), and an installed cost of ~₹65,000/kW before subsidy — all figures vary by roof, shading, equipment choice, and your actual DISCOM tariff. This is an indicative planning tool, not a quotation. <a href="#contact">Get your exact numbers →</a></p>
-  </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section class="section section--ivory" id="services">
-  <div class="container">
-    <p class="eyebrow reveal" data-i18n="services_eyebrow">What We Do</p>
-    <h2 class="section__title reveal" data-i18n="services_title">End-to-End Solar, Handled by One Team</h2>
-
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="10" width="32" height="20" rx="1.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="8" y1="20" x2="40" y2="20" stroke="currentColor" stroke-width="1.6"/><line x1="24" y1="10" x2="24" y2="30" stroke="currentColor" stroke-width="1.6"/><line x1="24" y1="30" x2="24" y2="40" stroke="currentColor" stroke-width="2"/><line x1="14" y1="40" x2="34" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <h3 data-i18n="svc1_title">Residential Rooftop Solar</h3>
-        <p data-i18n="svc1_desc">Custom-sized systems for homes, from 1 kW to 10 kW+, matched to your roof and consumption.</p>
-      </div>
-      <div class="service-card reveal">
-        <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="16" y1="15" x2="32" y2="15" stroke="currentColor" stroke-width="1.6"/><line x1="16" y1="22" x2="32" y2="22" stroke="currentColor" stroke-width="1.6"/><line x1="16" y1="29" x2="26" y2="29" stroke="currentColor" stroke-width="1.6"/><path d="M28 34l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3 data-i18n="svc2_title">Subsidy &amp; DISCOM Paperwork</h3>
-        <p data-i18n="svc2_desc">We guide your PM Surya Ghar application and help you liaise with your local DISCOM.</p>
-      </div>
-      <div class="service-card reveal">
-        <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="2" fill="none"/><path d="M24 15v9l6 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-        <h3 data-i18n="svc3_title">Net Metering Setup</h3>
-        <p data-i18n="svc3_desc">Sell surplus power back to the grid and watch your meter run backward on sunny days.</p>
-      </div>
-      <div class="service-card reveal">
-        <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l4 10h10l-8 7 3 11-9-6-9 6 3-11-8-7h10z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
-        <h3 data-i18n="svc4_title">Annual Maintenance (AMC)</h3>
-        <p data-i18n="svc4_desc">Scheduled panel cleaning, inverter checks, and performance monitoring after installation.</p>
-      </div>
-      <div class="service-card reveal">
-        <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="14" width="30" height="20" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><rect x="38" y="20" width="3" height="8" fill="currentColor"/><line x1="13" y1="20" x2="19" y2="20" stroke="currentColor" stroke-width="1.6"/><line x1="13" y1="26" x2="24" y2="26" stroke="currentColor" stroke-width="1.6"/></svg>
-        <h3 data-i18n="svc5_title">Commercial &amp; Society Installs</h3>
-        <p data-i18n="svc5_desc">Larger systems for shops, offices, schools, and RWAs, sized for commercial tariffs.</p>
-      </div>
-      <div class="service-card reveal">
-        <svg class="why-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="6" width="20" height="36" rx="3" stroke="currentColor" stroke-width="2" fill="none"/><rect x="20" y="2" width="8" height="5" rx="1" fill="currentColor"/><path d="M22 16l-4 8h5l-2 8 7-10h-5z" fill="currentColor"/></svg>
-        <h3 data-i18n="svc6_title">Battery Backup Add-ons</h3>
-        <p data-i18n="svc6_desc">Keep essentials running through outages with a right-sized battery storage upgrade.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROCESS ================= -->
-<section class="section section--cream" id="process">
-  <div class="container">
-    <p class="eyebrow reveal" data-i18n="process_eyebrow">How It Works</p>
-    <h2 class="section__title reveal" data-i18n="process_title">From Site Visit to Subsidy, in Five Steps</h2>
-
-    <ol class="process-list">
-      <li class="process-step reveal">
-        <span class="process-step__num">01</span>
-        <div><h3 data-i18n="step1_title">Free Site Visit &amp; Roof Assessment</h3><p data-i18n="step1_desc">Our team studies your roof, shading, and electricity bill to size the right system.</p></div>
-      </li>
-      <li class="process-step reveal">
-        <span class="process-step__num">02</span>
-        <div><h3 data-i18n="step2_title">Subsidy Application Support</h3><p data-i18n="step2_desc">We help you register on the PM Surya Ghar portal and prepare the documentation your local DISCOM requires.</p></div>
-      </li>
-      <li class="process-step reveal">
-        <span class="process-step__num">03</span>
-        <div><h3 data-i18n="step3_title">Design &amp; Installation</h3><p data-i18n="step3_desc">Quality panels and inverter installed by our team, typically within 5–7 days.</p></div>
-      </li>
-      <li class="process-step reveal">
-        <span class="process-step__num">04</span>
-        <div><h3 data-i18n="step4_title">Net Meter &amp; Commissioning</h3><p data-i18n="step4_desc">Your local DISCOM inspects and commissions your system, and your net meter goes live.</p></div>
-      </li>
-      <li class="process-step reveal">
-        <span class="process-step__num">05</span>
-        <div><h3 data-i18n="step5_title">Subsidy Credited to Your Bank</h3><p data-i18n="step5_desc">Your ₹30,000–₹78,000 subsidy lands directly in your account, usually within 30–45 days.</p></div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ================= STATS ================= -->
-<section class="section section--navy stats">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat reveal">
-        <span class="stat__num" data-count="500" data-suffix="+">0</span>
-        <span class="stat__label" data-i18n="stat1_label">Homes Powered</span>
-      </div>
-      <div class="stat reveal">
-        <span class="stat__num" data-count="4.2" data-decimal="1" data-suffix=" MW+">0</span>
-        <span class="stat__label" data-i18n="stat2_label">Capacity Installed</span>
-      </div>
-      <div class="stat reveal">
-        <span class="stat__num" data-static="₹78,000">₹78,000</span>
-        <span class="stat__label" data-i18n="stat3_label">Max Govt. Subsidy</span>
-      </div>
-      <div class="stat reveal">
-        <span class="stat__num" data-count="300" data-suffix=" units">0</span>
-        <span class="stat__label" data-i18n="stat4_label">Free Power / Month</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= TESTIMONIALS ================= -->
-<section class="section section--ivory" id="reviews">
-  <div class="container">
-    <p class="eyebrow reveal" data-i18n="testi_eyebrow">In Their Words</p>
-    <h2 class="section__title reveal" data-i18n="testi_title">Sikar Homes, Real Savings</h2>
-
-    <div class="testimonial-grid">
-      <blockquote class="testimonial reveal">
-        <p data-i18n="testi1_quote">"Our electricity bill went from ₹4,200 to almost nothing. The subsidy paperwork felt scarier than it was — their team handled every form."</p>
-        <cite data-i18n="testi1_cite" data-i18n-html>Ramesh K. <span>· Piprali Road</span></cite>
-      </blockquote>
-      <blockquote class="testimonial reveal">
-        <p data-i18n="testi2_quote">"Installation was done in four days flat, and the net meter was live within three weeks. Didn't expect the government process to move that fast."</p>
-        <cite data-i18n="testi2_cite" data-i18n-html>Anita S. <span>· Jaipur Road</span></cite>
-      </blockquote>
-      <blockquote class="testimonial reveal">
-        <p data-i18n="testi3_quote">"I compared five vendors. These were the only ones who explained exactly how the ₹78,000 subsidy is calculated instead of just quoting a final price."</p>
-        <cite data-i18n="testi3_cite" data-i18n-html>Deepak M. <span>· Fatehpur Road</span></cite>
-      </blockquote>
-    </div>
-    <p class="testimonial-disclaimer reveal" data-i18n="testi_disclaimer">Illustrative reviews :).</p>
-  </div>
-</section>
-
-<!-- ================= FAQ ================= -->
-<section class="section section--cream" id="faq">
-  <div class="container">
-    <p class="eyebrow reveal" data-i18n="faq_eyebrow">Common Questions</p>
-    <h2 class="section__title reveal" data-i18n="faq_title">Before You Decide</h2>
-
-    <div class="faq-list">
-      <div class="faq-item reveal">
-        <button class="faq-item__q" aria-expanded="false">
-          <span data-i18n="faq1_q">Is the site visit and quote actually free?</span>
-          <span class="faq-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </button>
-        <div class="faq-item__a"><p data-i18n="faq1_a">Yes — the roof assessment, system sizing, and quotation cost nothing and carry no obligation to proceed.</p></div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-item__q" aria-expanded="false">
-          <span data-i18n="faq2_q">What if my roof isn't strong enough for panels?</span>
-          <span class="faq-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </button>
-        <div class="faq-item__a"><p data-i18n="faq2_a">Our site visit includes a structural check. Most RCC rooftops in Sikar handle standard mounting without reinforcement; if yours needs extra support, we'll flag it and price it upfront before you commit to anything.</p></div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-item__q" aria-expanded="false">
-          <span data-i18n="faq3_q">Can I get the subsidy if I live in a rented house?</span>
-          <span class="faq-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </button>
-        <div class="faq-item__a"><p data-i18n="faq3_a">The PM Surya Ghar subsidy is linked to the electricity connection and typically requires the applicant to be the registered consumer, with the property owner's consent for installation. If you're renting, talk to us and we'll check your specific eligibility.</p></div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-item__q" aria-expanded="false">
-          <span data-i18n="faq4_q">What happens if a panel or inverter fails after installation?</span>
-          <span class="faq-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </button>
-        <div class="faq-item__a"><p data-i18n="faq4_a">Panels typically carry a manufacturer performance warranty of around 25 years, and inverters around 5–10 years depending on brand. We also offer an Annual Maintenance Contract for regular checks and faster response if something needs attention.</p></div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-item__q" aria-expanded="false">
-          <span data-i18n="faq5_q">How long does the whole process take?</span>
-          <span class="faq-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </button>
-        <div class="faq-item__a"><p data-i18n="faq5_a">Most homes go from application to power generation in roughly 4–6 weeks — this depends mainly on DISCOM feasibility approval timelines, which are outside our control but which we track closely on your behalf.</p></div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-item__q" aria-expanded="false">
-          <span data-i18n="faq6_q">Is the government subsidy guaranteed once I apply?</span>
-          <span class="faq-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </button>
-        <div class="faq-item__a"><p data-i18n="faq6_a">No — it's approved by MNRE/your DISCOM based on eligibility, correct documentation, ALMM-listed panels, and installation by an empanelled vendor. We handle the paperwork carefully to avoid the most common rejection reasons, but final approval is a government decision, not ours.</p></div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-item__q" aria-expanded="false">
-          <span data-i18n="faq7_q">Does solar keep working during a power cut?</span>
-          <span class="faq-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </button>
-        <div class="faq-item__a"><p data-i18n="faq7_a">A standard on-grid system shuts off automatically during outages for safety, same as most rooftop solar in India. If you want power during outages too, ask us about our battery backup add-on.</p></div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-item__q" aria-expanded="false">
-          <span data-i18n="faq8_q">Can I finance this instead of paying upfront?</span>
-          <span class="faq-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </button>
-        <div class="faq-item__a"><p data-i18n="faq8_a">Several nationalised banks offer collateral-free solar loans for systems under PM Surya Ghar. Rates and limits change, so we'll point you to current options during your site visit rather than quote a number here that may be outdated.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FINAL CTA ================= -->
-<section class="section section--navy final-cta">
-  <canvas class="hero__pattern" aria-hidden="true"></canvas>
-  <div class="container final-cta__inner">
-    <h2 class="section__title section__title--light reveal" data-i18n="finalcta_title" data-i18n-html>Your Roof Is Already Collecting Sunlight.<br>Start Collecting the Savings.</h2>
-    <p class="section__lead reveal" data-i18n="finalcta_lead">Book a free, no-obligation site visit — we'll tell you your exact subsidy amount and payback period before you decide anything.</p>
-    <div class="hero__cta reveal">
-      <a href="#contact" class="btn btn--gold btn--lg" data-i18n="finalcta_btn1">Book Free Site Visit</a>
-      <a href="tel:+917727852619" class="btn btn--ghost btn--lg" data-i18n="hero_cta2">Call Now</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section class="section section--cream" id="contact">
-  <div class="container contact-grid">
-    <div class="reveal">
-      <p class="eyebrow" data-i18n="contact_eyebrow">Get In Touch</p>
-      <h2 class="section__title" data-i18n="contact_title">Get Your Free Subsidy &amp; Site Estimate</h2>
-      <p class="section__lead" data-i18n="contact_lead">Fill this in and it opens a pre-filled WhatsApp message straight to us — or call/visit directly.</p>
-
-      <form id="leadForm" class="lead-form">
-        <label><span data-i18n="form_name_label">Full Name</span><input type="text" name="name" required placeholder="Your name" data-i18n-placeholder="form_name_placeholder"></label>
-        <label><span data-i18n="form_phone_label">Phone Number</span><input type="tel" name="phone" required placeholder="10-digit mobile number" data-i18n-placeholder="form_phone_placeholder"></label>
-        <label><span data-i18n="form_locality_label">Locality in Sikar</span><input type="text" name="locality" placeholder="e.g. Piprali Road" data-i18n-placeholder="form_locality_placeholder"></label>
-        <label><span data-i18n="form_bill_label">Approx. Monthly Electricity Bill</span>
-          <select name="bill">
-            <option value="Under ₹2,000" data-i18n="bill_opt1">Under ₹2,000</option>
-            <option value="₹2,000 – ₹4,000" data-i18n="bill_opt2">₹2,000 – ₹4,000</option>
-            <option value="₹4,000 – ₹8,000" data-i18n="bill_opt3">₹4,000 – ₹8,000</option>
-            <option value="Above ₹8,000" data-i18n="bill_opt4">Above ₹8,000</option>
-          </select>
-        </label>
-        <label><span data-i18n="form_message_label">Message (optional)</span><textarea name="message" rows="3" placeholder="Anything else we should know?" data-i18n-placeholder="form_message_placeholder"></textarea></label>
-        <button type="submit" class="btn btn--gold btn--lg" data-i18n="form_submit">Send via WhatsApp</button>
-      </form>
-    </div>
-
-    <div class="contact-info reveal">
-      <div class="contact-card">
-        <h3 data-i18n="contact_card1_title">Visit Our Shop</h3>
-        <p data-i18n="contact_card1_addr" data-i18n-html>Jaipur Road, near Shyam Residency<br>Sikar, Rajasthan</p>
-      </div>
-      <div class="contact-card">
-        <h3 data-i18n="contact_card2_title">Call or WhatsApp</h3>
-        <p><a href="tel:+917727852619" data-i18n="hero_cta2">Call Now</a><br><a href="https://wa.me/917727852619" target="_blank" rel="noopener" data-i18n="whatsapp_chat">WhatsApp Chat →</a></p>
-      </div>
-      <div class="contact-card">
-        <h3 data-i18n="contact_card3_title">Email</h3>
-        <p><a href="mailto:contact@svsolar.online">contact@svsolar.online</a></p>
-      </div>
-      <div class="contact-card">
-        <h3 data-i18n="contact_card4_title">Hours</h3>
-        <p data-i18n="contact_card4_hours">Mon – Sat, 10:00 AM – 7:00 PM</p>
-      </div>
-      <!-- Replace this block with your real Google Maps embed:
-           Google Maps → Share → Embed a map → copy the <iframe> here -->
-      <div class="map-placeholder" data-i18n="map_placeholder">Google Maps embed goes here</div>
-    </div>
-  </div>
-</section>
-
-  <!-- ===== CALLBACK REQUEST WIDGET ===== -->
-<section id="callback" class="callback-section">
-  <div class="callback-card">
-    <div class="callback-icon">📞</div>
-    <h3>Too Busy to Call Right Now?</h3>
-    <p class="callback-sub">Leave your number — we'll call you back within 2 hours.</p>
-
-    <form id="callbackForm" class="callback-form">
-      <input type="text" id="cbName" placeholder="Your Name" required>
-      <input type="tel" id="cbPhone" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" required>
-      <select id="cbTime" required>
-        <option value="" disabled selected>Best time to call</option>
-        <option value="Morning (9AM–12PM)">Morning (9AM–12PM)</option>
-        <option value="Afternoon (12PM–4PM)">Afternoon (12PM–4PM)</option>
-        <option value="Evening (4PM–8PM)">Evening (4PM–8PM)</option>
-      </select>
-      <button type="submit" class="cb-btn">Request Callback →</button>
-    </form>
-    <p class="cb-note">No spam. We only use this to call you back.</p>
-  </div>
-</section>
-
-<style>
-.callback-section{
-  padding: 70px 20px;
-  display:flex;
-  justify-content:center;
-}
-.callback-card{
-  background: linear-gradient(145deg, #101c40, #0a1330);
-  border: 1px solid rgba(217,169,76,0.25);
-  border-radius: 20px;
-  padding: 40px 36px;
-  max-width: 460px;
-  width:100%;
-  text-align:center;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-}
-.callback-icon{ font-size: 36px; margin-bottom: 12px; }
-.callback-card h3{
-  font-family:'Fraunces', serif;
-  color:#f3f2ec;
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-.callback-sub{
-  color:#a8b0c4;
-  font-size: 14px;
-  margin-bottom: 24px;
-}
-.callback-form{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-.callback-form input,
-.callback-form select{
-  padding: 13px 16px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: rgba(255,255,255,0.05);
-  color:#f3f2ec;
-  font-family:'Manrope', sans-serif;
-  font-size: 14px;
-  outline:none;
-}
-.callback-form input::placeholder{ color:#7f88a0; }
-.callback-form select{ color:#a8b0c4; }
-.callback-form select:valid{ color:#f3f2ec; }
-.cb-btn{
-  margin-top: 6px;
-  padding: 14px;
-  border:none;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #e8c579, #d9a94c);
-  color:#0a1330;
-  font-weight:800;
-  font-size: 15px;
-  cursor:pointer;
-  transition: all .3s ease;
-}
-.cb-btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 25px rgba(217,169,76,0.4); }
-.cb-note{
-  margin-top: 14px;
-  font-size: 12px;
-  color:#7f88a0;
-}
-</style>
-
-<script>
-document.getElementById('callbackForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('cbName').value.trim();
-  const phone = document.getElementById('cbPhone').value.trim();
-  const time = document.getElementById('cbTime').value;
-  const now = new Date().toLocaleString('en-IN', { dateStyle:'medium', timeStyle:'short' });
-
- 
-  const yourWhatsAppNumber = "917727852619";
-
-  const message = `Hello SVSOLAR, I'd like a callback.%0A%0AName: ${name}%0APhone: ${phone}%0APreferred time: ${time}%0ARequested at: ${now}`;
-
-  window.open(`https://wa.me/${yourWhatsAppNumber}?text=${message}`, '_blank');
-
-  document.getElementById('callbackForm').reset();
-});
-</script>
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="container footer__inner">
-    <div>
-      <a href="#top" class="nav__brand nav__brand--footer">
-        <svg class="nav__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="24" r="9" fill="currentColor"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="20" y1="4" x2="20" y2="8"/><line x1="6" y1="24" x2="2" y2="24"/><line x1="38" y1="24" x2="34" y2="24"/><line x1="10.5" y1="14.5" x2="7.5" y2="11.5"/><line x1="29.5" y1="14.5" x2="32.5" y2="11.5"/></g></svg>
-        <span>SV<em>SOLAR</em></span>
+    <p class="sub">Custom modifications, precision PPF, ceramic coatings and studio-grade detailing — engineered and installed in-house, to one uncompromising standard.</p>
+    <div class="hero-actions">
+      <a href="#builds" class="btn btn-liquid ignite magnetic">
+        <span class="goo-layer"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span></span>
+        <span class="txt">Explore Builds</span>
+        <span class="txt-fill"><span>Explore Builds</span></span>
       </a>
-      <p class="footer__tag" data-i18n="footer_tagline">Shree Vinayak Solar Agency (SVSOLAR) — rooftop solar installer serving Sikar &amp; Rajasthan.</p>
-    </div>
-    <div class="footer__nav-group">
-      <nav class="footer__links">
-        <a href="#why">Why Solar</a>
-        <a href="#subsidy">Subsidy</a>
-        <a href="#services">Services</a>
-        <a href="/blog.html">Blog</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <nav class="footer__legal-links">
-        <a href="privacy.html"><span data-i18n="footer_privacy">Privacy Policy</span> <span aria-hidden="true">→</span></a>
-        <a href="terms.html"><span data-i18n="footer_terms">Terms &amp; Disclaimer</span> <span aria-hidden="true">→</span></a>
-      </nav>
+      <a href="#booking" class="btn btn-ghost magnetic">
+        Book an Inspection
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+      </a>
     </div>
   </div>
-  <div class="container footer__bottom">
-    <p>© <span id="year"></span> SVSOLAR. <span data-i18n="footer_rights">All rights reserved.</span></p>
-    <p data-i18n="footer_scheme_note">Government scheme details sourced from pmsuryaghar.gov.in — please verify current rates before purchase decisions.</p>
+  <div class="scroll-cue"><div class="track"></div>Scroll</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>BMW</span><span>Audi</span><span>Mercedes-Benz</span><span>Range Rover</span><span>Porsche</span><span>Jaguar</span><span>Volvo</span><span>MINI</span><span>Mahindra</span><span>Tata</span>
+    <span>BMW</span><span>Audi</span><span>Mercedes-Benz</span><span>Range Rover</span><span>Porsche</span><span>Jaguar</span><span>Volvo</span><span>MINI</span><span>Mahindra</span><span>Tata</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     AUTHORITY — odometer stats
+     ============================================================ -->
+<section id="authority" class="pad">
+  <div class="container authority-grid">
+    <div class="reveal">
+      <div class="eyebrow">Built on proof</div>
+      <p class="authority-statement">Every claim of scale is backed by <span class="accent">builds completed</span>, certified installers, and a studio built to run at volume — not by marketing alone.</p>
+    </div>
+    <div class="stat-grid reveal">
+      <div class="stat"><div class="stat-num"><span class="odo" data-count="4200"></span><span class="suffix">+</span></div><div class="stat-label">Vehicles Serviced</div></div>
+      <div class="stat"><div class="stat-num"><span class="odo" data-count="28"></span><span class="suffix">k sq.ft</span></div><div class="stat-label">Studio Area</div></div>
+      <div class="stat"><div class="stat-num"><span class="odo" data-count="12"></span></div><div class="stat-label">Installation Bays</div></div>
+      <div class="stat"><div class="stat-num"><span class="odo" data-count="24"></span></div><div class="stat-label">Certified Installers</div></div>
+      <div class="stat"><div class="stat-num"><span class="odo" data-count="9"></span></div><div class="stat-label">Cities Served</div></div>
+      <div class="stat"><div class="stat-num"><span class="odo" data-count="11"></span><span class="suffix">yrs</span></div><div class="stat-label">Experience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STUDIO EXPERIENCE — animated interactive offering boxes
+     ============================================================ -->
+<section id="studio-experience" class="pad">
+  <div class="container">
+    <div class="studio-intro">
+      <div class="studio-copy reveal">
+        <div class="eyebrow ignite">The Studio</div>
+        <h2>Jaipur's biggest studio.</h2>
+        <p class="studio-lede">Not just a studio — <span class="accent-ignite">it's a destination.</span></p>
+        <p class="studio-sub">6,000 sq ft of automotive excellence, built for space, precision and perfection.</p>
+      </div>
+      <div class="studio-stat reveal">
+        <div class="studio-stat-num"><span class="odo" data-count="6000"></span></div>
+        <div class="studio-stat-label">SQ FT of automotive excellence</div>
+      </div>
+    </div>
+
+    <div class="amenity-grid">
+      <div class="amenity-card reveal">
+        <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17h14M6 17V9a2 2 0 012-2h8a2 2 0 012 2v8M9 7V5a1 1 0 011-1h4a1 1 0 011 1v2"/><circle cx="8" cy="19" r="1.5"/><circle cx="16" cy="19" r="1.5"/></svg></div>
+        <h4>Valet Parking</h4>
+        <p>Your car, our responsibility.</p>
+      </div>
+      <div class="amenity-card reveal">
+        <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M8 10h1M15 10h1M9.5 14a2 2 0 005 0"/></svg></div>
+        <h4>Waiting Room with PS5</h4>
+        <p>Relax. Play. Enjoy the wait.</p>
+      </div>
+      <div class="amenity-card reveal">
+        <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3h12l-1 9a5 5 0 01-10 0L6 3z"/><path d="M12 12v6M9 21h6"/></svg></div>
+        <h4>Snacks &amp; Beverages</h4>
+        <p>Refreshments on us.</p>
+      </div>
+      <div class="amenity-card reveal">
+        <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h4>Premium Work Guaranteed</h4>
+        <p>Quality work, lasting impact.</p>
+      </div>
+      <div class="amenity-card reveal">
+        <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.4 6.8L21 11l-6.6 2.2L12 20l-2.4-6.8L3 11l6.6-2.2z"/></svg></div>
+        <h4>Every Detail Perfected</h4>
+        <p>Perfection is in the details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
+<section id="services" class="pad">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow ignite">What we do</div>
+      <h2>One studio. Every layer of the build.</h2>
+      <p>From wraps and wheels to optically clear film and ceramic gloss — each service is engineered to work together, not sold in isolation.</p>
+    </div>
+    <div class="services-layout">
+      <div class="service-list reveal">
+        <div class="service-item active" data-panel="0">
+          <span class="idx">01</span>
+          <div style="flex:1;"><h4>Custom Modifications</h4><div class="service-desc">Wraps, alloy wheels, lighting, exhaust and interior builds.</div></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+        </div>
+        <div class="service-item" data-panel="1">
+          <span class="idx">02</span>
+          <div style="flex:1;"><h4>Paint Protection Film</h4><div class="service-desc">Self-healing, optically clear film against stone chips and scratches.</div></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+        </div>
+        <div class="service-item" data-panel="2">
+          <span class="idx">03</span>
+          <div style="flex:1;"><h4>Ceramic Coating</h4><div class="service-desc">Chemical-resistant gloss that keeps paint clean for longer.</div></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+        </div>
+        <div class="service-item" data-panel="3">
+          <span class="idx">04</span>
+          <div style="flex:1;"><h4>Premium Detailing</h4><div class="service-desc">Multi-stage correction that restores true paint depth.</div></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+        </div>
+        <div class="service-item" data-panel="4">
+          <span class="idx">05</span>
+          <div style="flex:1;"><h4>Windshield Protection</h4><div class="service-desc">Impact-rated film engineered for clarity and visibility.</div></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+        </div>
+        <div class="service-item" data-panel="5">
+          <span class="idx">06</span>
+          <div style="flex:1;"><h4>Interior Protection</h4><div class="service-desc">Leather, fabric and trim treatments built for daily use.</div></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+        </div>
+      </div>
+      <div class="service-media reveal">
+        <div class="panel active" data-panel="0"><span class="panel-badge">01 · Modifications</span><svg viewBox="0 0 100 100"><circle cx="50" cy="60" r="16" fill="none" stroke="#e8462a" stroke-width="1"/><path d="M20 30 L80 30 L74 55 L26 55 Z" fill="none" stroke="#ff7350" stroke-width="0.7" stroke-dasharray="3 2"/></svg></div>
+        <div class="panel" data-panel="1"><span class="panel-badge">02 · Paint Protection Film</span><svg viewBox="0 0 100 100"><rect x="15" y="20" width="70" height="55" rx="3" fill="none" stroke="#c17f3e" stroke-width="1"/><rect x="22" y="27" width="56" height="41" rx="2" fill="rgba(193,127,62,0.08)" stroke="#e0a565" stroke-width="0.6" stroke-dasharray="2 2"/></svg></div>
+        <div class="panel" data-panel="2"><span class="panel-badge">03 · Ceramic Coating</span><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="28" fill="none" stroke="#c17f3e" stroke-width="1"/><circle cx="50" cy="50" r="20" fill="none" stroke="#e0a565" stroke-width="0.6"/><circle cx="50" cy="50" r="12" fill="rgba(193,127,62,0.1)"/></svg></div>
+        <div class="panel" data-panel="3"><span class="panel-badge">04 · Premium Detailing</span><svg viewBox="0 0 100 100"><path d="M20 60 Q50 20 80 60" fill="none" stroke="#c17f3e" stroke-width="1"/><path d="M20 68 Q50 34 80 68" fill="none" stroke="#e0a565" stroke-width="0.6"/></svg></div>
+        <div class="panel" data-panel="4"><span class="panel-badge">05 · Windshield Protection</span><svg viewBox="0 0 100 100"><path d="M15 30 L85 30 L78 75 L22 75 Z" fill="none" stroke="#c17f3e" stroke-width="1"/><path d="M50 30 L50 75 M30 45 L70 45" stroke="#e0a565" stroke-width="0.5"/></svg></div>
+        <div class="panel" data-panel="5"><span class="panel-badge">06 · Interior Protection</span><svg viewBox="0 0 100 100"><rect x="20" y="25" width="60" height="50" rx="6" fill="none" stroke="#c17f3e" stroke-width="1"/><path d="M20 45 L80 45" stroke="#e0a565" stroke-width="0.5"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BUILDS — horizontal scroll gallery
+     ============================================================ -->
+<section id="builds" class="pad">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow ignite">Recent builds</div>
+      <h2>Proof, not promises.</h2>
+      <p>A running log of what's left the studio. Drag or scroll through — real project photos go here once you send them over.</p>
+    </div>
+  </div>
+  <div class="builds-viewport" id="buildsViewport">
+    <div class="builds-track" id="buildsTrack">
+      <div class="build-card" data-slides='["Colour Match","Panel Wrap","Finish Seal"]'>
+        <div class="bc-media">
+          <span class="bc-tag">Full Wrap</span>
+          <div class="bc-progress"><i class="active"></i><i></i><i></i></div>
+          <div class="bc-slides">
+            <div class="bc-slide active"><svg viewBox="0 0 100 100" fill="none" stroke="#e8462a" stroke-width="1"><rect x="24" y="24" width="52" height="52" rx="8" transform="rotate(8 50 50)"/><rect x="30" y="30" width="40" height="40" rx="6" fill="rgba(232,70,42,0.08)"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#ff7350" stroke-width="1"><path d="M15 55 Q35 30 50 55 T85 55" /><path d="M15 68 Q35 43 50 68 T85 68" stroke-width="0.6"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#e8462a" stroke-width="0.9"><path d="M50 15 L57 42 L84 42 L62 58 L70 85 L50 68 L30 85 L38 58 L16 42 L43 42 Z"/></svg></div>
+          </div>
+          <div class="bc-scrim"></div>
+          <div class="bc-hover-info"><span class="bc-slide-caption">Colour Match</span></div>
+        </div>
+        <div class="bc-body"><h4>Satin Wrap + Alloys</h4><p>Mahindra Thar · Vaishali Nagar</p></div>
+      </div>
+
+      <div class="build-card" data-slides='["Film Applied","Edge Wrap","Optical Clarity"]'>
+        <div class="bc-media">
+          <span class="bc-tag">PPF</span>
+          <div class="bc-progress"><i class="active"></i><i></i><i></i></div>
+          <div class="bc-slides">
+            <div class="bc-slide active"><svg viewBox="0 0 100 100" fill="none" stroke="#c17f3e" stroke-width="1"><path d="M50 12 L82 24 C82 48 68 70 50 82 C32 70 18 48 18 24 Z"/><path d="M50 12 L82 24 C82 48 68 70 50 82" stroke="#e0a565" stroke-width="0.6"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#e0a565" stroke-width="0.8"><rect x="18" y="18" width="64" height="64" rx="4"/><rect x="24" y="24" width="52" height="52" rx="3" stroke-dasharray="2 2"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#c17f3e" stroke-width="0.9"><circle cx="50" cy="50" r="30"/><path d="M32 50a18 18 0 0136-8" stroke="#e0a565" stroke-width="0.6"/></svg></div>
+          </div>
+          <div class="bc-scrim"></div>
+          <div class="bc-hover-info"><span class="bc-slide-caption">Film Applied</span></div>
+        </div>
+        <div class="bc-body"><h4>Full-Body PPF</h4><p>BMW M340i · C-Scheme</p></div>
+      </div>
+
+      <div class="build-card" data-slides='["Headlamp Retrofit","Beam Test","Housing Reseal"]'>
+        <div class="bc-media">
+          <span class="bc-tag">Lighting</span>
+          <div class="bc-progress"><i class="active"></i><i></i><i></i></div>
+          <div class="bc-slides">
+            <div class="bc-slide active"><svg viewBox="0 0 100 100" fill="none" stroke="#e8462a" stroke-width="1"><path d="M20 50 L60 32 L84 42 L84 58 L60 68 Z"/><circle cx="60" cy="50" r="9" stroke="#ff7350" stroke-width="0.7"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#ff7350" stroke-width="0.8"><path d="M22 50 L88 50" stroke-dasharray="1 5"/><path d="M22 40 L88 30" stroke-dasharray="1 5"/><path d="M22 60 L88 70" stroke-dasharray="1 5"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#e8462a" stroke-width="0.9"><rect x="20" y="34" width="60" height="32" rx="16"/><circle cx="50" cy="50" r="7" fill="rgba(232,70,42,0.1)"/></svg></div>
+          </div>
+          <div class="bc-scrim"></div>
+          <div class="bc-hover-info"><span class="bc-slide-caption">Headlamp Retrofit</span></div>
+        </div>
+        <div class="bc-body"><h4>Custom Headlamp Retrofit</h4><p>Audi Q7 · Malviya Nagar</p></div>
+      </div>
+
+      <div class="build-card" data-slides='["Paint Prep","Ceramic Applied","Hydrophobic Cure"]'>
+        <div class="bc-media">
+          <span class="bc-tag">Ceramic</span>
+          <div class="bc-progress"><i class="active"></i><i></i><i></i></div>
+          <div class="bc-slides">
+            <div class="bc-slide active"><svg viewBox="0 0 100 100" fill="none" stroke="#c17f3e" stroke-width="1"><path d="M50 16 C62 34 70 46 70 58 a20 20 0 01-40 0 C30 46 38 34 50 16Z"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#e0a565" stroke-width="0.8"><circle cx="50" cy="50" r="28"/><circle cx="50" cy="50" r="20" stroke-dasharray="2 2"/><circle cx="50" cy="50" r="12"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#c17f3e" stroke-width="0.9"><circle cx="35" cy="60" r="6"/><circle cx="55" cy="45" r="4"/><circle cx="68" cy="62" r="5"/><circle cx="48" cy="70" r="3"/></svg></div>
+          </div>
+          <div class="bc-scrim"></div>
+          <div class="bc-hover-info"><span class="bc-slide-caption">Paint Prep</span></div>
+        </div>
+        <div class="bc-body"><h4>9H Ceramic Coating</h4><p>Range Rover Velar · Jagatpura</p></div>
+      </div>
+
+      <div class="build-card" data-slides='["Fabrication","Tip Polish","Sound Tuned"]'>
+        <div class="bc-media">
+          <span class="bc-tag">Exhaust</span>
+          <div class="bc-progress"><i class="active"></i><i></i><i></i></div>
+          <div class="bc-slides">
+            <div class="bc-slide active"><svg viewBox="0 0 100 100" fill="none" stroke="#e8462a" stroke-width="1"><circle cx="50" cy="50" r="24"/><circle cx="50" cy="50" r="24" stroke-dasharray="4 4" stroke="#ff7350" stroke-width="0.6"/><circle cx="50" cy="50" r="6"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#ff7350" stroke-width="0.9"><circle cx="40" cy="50" r="16"/><circle cx="66" cy="50" r="10"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#e8462a" stroke-width="0.8"><path d="M18 50 Q35 35 50 50 T82 50"/><path d="M18 58 Q35 43 50 58 T82 58" stroke-width="0.5"/></svg></div>
+          </div>
+          <div class="bc-scrim"></div>
+          <div class="bc-hover-info"><span class="bc-slide-caption">Fabrication</span></div>
+        </div>
+        <div class="bc-body"><h4>Performance Exhaust</h4><p>Mustang GT · Tonk Road</p></div>
+      </div>
+
+      <div class="build-card" data-slides='["Paint Correction","Machine Polish","Final Buff"]'>
+        <div class="bc-media">
+          <span class="bc-tag">Detailing</span>
+          <div class="bc-progress"><i class="active"></i><i></i><i></i></div>
+          <div class="bc-slides">
+            <div class="bc-slide active"><svg viewBox="0 0 100 100" fill="none" stroke="#c17f3e" stroke-width="1"><path d="M20 65 Q50 20 80 65" /><path d="M20 72 Q50 30 80 72" stroke-width="0.6" stroke="#e0a565"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#e0a565" stroke-width="0.9"><circle cx="50" cy="50" r="22"/><path d="M50 28v-6M50 78v-6M72 50h6M22 50h6" stroke-width="0.7"/></svg></div>
+            <div class="bc-slide"><svg viewBox="0 0 100 100" fill="none" stroke="#c17f3e" stroke-width="0.9"><rect x="22" y="38" width="56" height="24" rx="12"/><path d="M30 50h40" stroke="#e0a565" stroke-width="0.6"/></svg></div>
+          </div>
+          <div class="bc-scrim"></div>
+          <div class="bc-hover-info"><span class="bc-slide-caption">Paint Correction</span></div>
+        </div>
+        <div class="bc-body"><h4>Full Paint Correction</h4><p>Mercedes GLE · Ajmer Road</p></div>
+      </div>
+
+      <div class="build-card build-end">
+        <div><div class="eyebrow ignite" style="margin-bottom:14px;">Yours next?</div><p>Want your build featured in this gallery?</p></div>
+        <a href="#booking" class="btn btn-liquid magnetic">
+          <span class="goo-layer"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span></span>
+          <span class="txt">Book a Build</span>
+          <span class="txt-fill"><span>Book a Build</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BEFORE / AFTER
+     ============================================================ -->
+<section id="compare" class="pad">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">See the difference</div>
+      <h2>Drag to reveal the result.</h2>
+      <p>An interactive look at what protection actually changes — drag the divider, or use the buttons below.</p>
+    </div>
+    <div class="compare-frame reveal" id="compareFrame">
+      <div class="compare-layer compare-after">
+        <div class="compare-media">
+          <svg class="compare-set-icon" viewBox="0 0 100 100" fill="none" stroke="#e0a565" stroke-width="0.8"><path d="M15 60 C15 45 30 40 45 38 L55 22 C60 16 68 12 76 12 L84 12 C90 20 92 30 92 40 L92 60 Z"/><circle cx="30" cy="60" r="8" fill="none" stroke="#e0a565"/><circle cx="80" cy="60" r="8" fill="none" stroke="#e0a565"/></svg>
+        </div>
+      </div>
+      <div class="compare-before-clip" id="compareClip">
+        <div class="compare-layer compare-before">
+          <div class="compare-media">
+            <svg class="compare-set-icon" viewBox="0 0 100 100" fill="none" stroke="rgba(242,241,238,0.35)" stroke-width="0.8"><path d="M15 60 C15 45 30 40 45 38 L55 22 C60 16 68 12 76 12 L84 12 C90 20 92 30 92 40 L92 60 Z"/><circle cx="30" cy="60" r="8" fill="none" stroke="rgba(242,241,238,0.35)"/><circle cx="80" cy="60" r="8" fill="none" stroke="rgba(242,241,238,0.35)"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="compare-label l-before">Before</div>
+      <div class="compare-label l-after">After Rev Nation</div>
+      <div class="compare-handle" id="compareHandle"><div class="grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 8L4 12L8 16M16 8L20 12L16 16"/></svg></div></div>
+    </div>
+    <div class="compare-toggle reveal">
+      <button id="showBefore">Show before</button>
+      <button id="showAfter" class="active">Show after</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESS
+     ============================================================ -->
+<section id="process" class="pad">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">How it's built</div>
+      <h2>Craftsmanship, made visible.</h2>
+      <p>Every vehicle moves through the same eight-stage process — no shortcuts, regardless of the model on the lift.</p>
+    </div>
+    <div class="process-tabs reveal" id="processTabs">
+      <button class="process-tab active" data-step="0">01</button>
+      <button class="process-tab" data-step="1">02</button>
+      <button class="process-tab" data-step="2">03</button>
+      <button class="process-tab" data-step="3">04</button>
+      <button class="process-tab" data-step="4">05</button>
+      <button class="process-tab" data-step="5">06</button>
+      <button class="process-tab" data-step="6">07</button>
+      <button class="process-tab" data-step="7">08</button>
+    </div>
+    <div class="process-panel reveal" id="processPanel">
+      <div class="step-eyebrow" id="processStepLabel">Step 01 / 08</div>
+      <h4 id="processTitle">Vehicle inspection</h4>
+      <p id="processDesc">Full condition assessment before any work begins.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section id="testimonials" class="pad">
+  <div class="container testi-wrap">
+    <div class="eyebrow reveal">In their words</div>
+    <p class="testi-quote reveal" id="testiQuote">"The wrap and wheel swap turned heads I didn't expect. Cleanest install I've seen in Jaipur."</p>
+    <div class="testi-meta reveal">
+      <div class="testi-avatar" id="testiAvatar">A</div>
+      <div><div class="testi-name" id="testiName">Aditya R.</div><div class="testi-sub" id="testiSub">Mahindra Thar · Wrap + Alloys · Jaipur</div></div>
+    </div>
+    <div class="testi-nav reveal">
+      <button id="testiPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button id="testiNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOKING FINALE
+     ============================================================ -->
+<section id="booking" class="pad">
+  <div class="booking-glow"></div>
+  <div class="container booking-grid">
+    <div class="reveal">
+      <div class="eyebrow">Book an inspection</div>
+      <h2>Build the car you've been picturing.</h2>
+      <p>Tell us about your vehicle and what you're after — mods, protection, or both. Our team responds within one business day with availability and a plan.</p>
+      <div style="margin-top:34px;">
+        <a href="#" class="btn btn-liquid magnetic" id="waFormLink">
+          <span class="goo-layer"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span></span>
+          <span class="txt">Chat on WhatsApp instead</span>
+          <span class="txt-fill"><span>Chat on WhatsApp instead</span></span>
+        </a>
+      </div>
+    </div>
+    <div class="booking-form-wrap reveal">
+      <form id="bookingForm">
+        <div class="field-row">
+          <div class="field"><input type="text" name="name" placeholder=" " required><label>Full name</label></div>
+          <div class="field"><input type="tel" name="phone" placeholder=" " required><label>Phone number</label></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><input type="text" name="city" placeholder=" " required><label>City</label></div>
+          <div class="field"><input type="text" name="car" placeholder=" " required><label>Vehicle make &amp; model</label></div>
+        </div>
+        <div class="field">
+          <select required id="serviceSelect" name="service"><option value="" disabled selected hidden> </option>
+            <option>Custom Modifications</option><option>Paint Protection Film</option><option>Ceramic Coating</option><option>Detailing</option><option>Not sure yet</option>
+          </select>
+          <label class="filled">Service required</label>
+        </div>
+        <div class="field"><textarea name="message" placeholder=" "></textarea><label>Message (optional)</label></div>
+        <button type="submit" class="btn btn-liquid" style="width:100%;justify-content:center;margin-top:8px;">
+          <span class="goo-layer"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span></span>
+          <span class="txt">Request Inspection</span>
+          <span class="txt-fill"><span>Request Inspection</span></span>
+        </button>
+      </form>
+      <div class="confirm-card" id="confirmCard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg>
+        <h4>Request received.</h4>
+        <p>Expect a response within one business day. We'll confirm bay availability and your inspection slot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="siteFooter">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-word">REV NATION</div>
+      <div class="foot-cols">
+        <div class="foot-col"><h5>Studio</h5><p>Vaishali Nagar, Jaipur</p><p>Rajasthan, India</p></div>
+        <div class="foot-col"><h5>Contact</h5><a href="tel:+910000000000">+91 00000 00000</a><a href="mailto:studio@revnation.example">studio@revnation.example</a></div>
+        <div class="foot-col"><h5>Studio Links</h5><a href="#services">Services</a><a href="#builds">Builds</a><a href="#booking">Booking</a></div>
+        <div class="foot-col"><h5>Follow</h5><a href="#">Instagram</a><a href="#">YouTube</a></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Rev Nation Jaipur. All rights reserved.</p>
+      <button class="back-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+    </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/917727852619" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="#fff" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1a12.6 12.6 0 0 0 6.3 1.7c7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3zm0 23.1c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.2 1.2-3.9-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.3 9.9 10.1 5.1 16 5.1c5.9 0 10.7 4.8 10.7 10.6 0 5.9-4.8 10.6-10.7 10.6zm5.9-7.9c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.6-2-1.9-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.5.2-.2.2-.3.3-.6.1-.2 0-.5 0-.6-.1-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1.8.4 1.5.6 2 .7.8.2 1.6.2 2.1.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+<!-- WhatsApp floating liquid button -->
+<a href="https://wa.me/910000000000" target="_blank" id="wa-float" aria-label="Chat on WhatsApp">
+  <span class="pulse"></span>
+  <span class="goo-layer"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span></span>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.35 5.08L2 22l5.2-1.36c1.45.79 3.11 1.24 4.84 1.24 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.78 14.02c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.2 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.13.57.17.29.75 1.24 1.61 2 1.11.99 2.04 1.3 2.33 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.39-.24.65-.14.27.1 1.7.8 1.99.95.29.14.48.22.55.34.07.13.07.72-.17 1.4z"/></svg>
 </a>
 
-<!-- ================= STICKY MOBILE CTA BAR ================= -->
-<div class="sticky-cta" id="stickyCta">
-  <a href="tel:+917727852619" class="sticky-cta__btn sticky-cta__btn--call">
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.2 2.2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-    <span data-i18n="hero_cta2">Call Now</span>
-  </a>
-  <a href="https://wa.me/917727852619" target="_blank" rel="noopener" class="sticky-cta__btn sticky-cta__btn--wa">
-    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1a12.6 12.6 0 0 0 6.3 1.7c7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3z" opacity="0"/><path stroke="currentColor" stroke-width="0" d="M0 0h32v32H0z"/><path fill="currentColor" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1a12.6 12.6 0 0 0 6.3 1.7c7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3zm0 23.1c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.2 1.2-3.9-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.3 9.9 10.1 5.1 16 5.1c5.9 0 10.7 4.8 10.7 10.6 0 5.9-4.8 10.6-10.7 10.6z"/></svg>
-    <span>WhatsApp</span>
-  </a>
-</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script>
+/* ============================================================
+   Supabase wiring — reads content dynamically once config.js has
+   real credentials. Falls back to the static markup already in
+   this page if unconfigured or a request fails, so the site
+   never breaks while Phase 2 is being set up.
+   ============================================================ */
+var db = null;
+(function initSupabase(){
+  try{
+    var cfg = window.REV_NATION_CONFIG;
+    if(cfg && cfg.SUPABASE_URL && cfg.SUPABASE_ANON_KEY &&
+       cfg.SUPABASE_URL.indexOf('YOUR_') === -1 && cfg.SUPABASE_ANON_KEY.indexOf('YOUR_') === -1){
+      db = supabase.createClient(cfg.SUPABASE_URL, cfg.SUPABASE_ANON_KEY);
+    }
+  }catch(e){ console.warn('Supabase not configured yet, using static content.', e); }
+})();
 
+async function loadDynamicContent(){
+  if(!db) return;
 
+  try{
+    var { data: stats } = await db.from('stats').select('*').order('sort_order');
+    if(stats && stats.length){
+      var nodes = document.querySelectorAll('.stat');
+      stats.forEach(function(s, i){
+        if(!nodes[i]) return;
+        var odo = nodes[i].querySelector('.odo');
+        var suf = nodes[i].querySelector('.suffix');
+        var lbl = nodes[i].querySelector('.stat-label');
+        if(odo) odo.setAttribute('data-count', String(s.value));
+        if(suf) suf.textContent = s.suffix || '';
+        if(lbl) lbl.textContent = s.label;
+      });
+    }
+  }catch(e){ console.warn('stats load failed, keeping static values', e); }
 
-<!--
-  Analytics — free, privacy-friendly, no cookies, no consent banner needed.
-  To activate: go to the Cloudflare dashboard → Analytics & Logs → Web Analytics →
-  Add a site → copy your token → paste it below in place of YOUR_CF_TOKEN.
-  Until you do that, this script simply does nothing (safe to leave in place).
--->
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CF_TOKEN"}'></script>
+  try{
+    var { data: testi } = await db.from('testimonials').select('*').eq('published', true).order('sort_order');
+    if(testi && testi.length){
+      window.__testimonialsFromDB = testi.map(function(t){
+        return { q:'"'+t.quote+'"', name:t.name, sub:[t.car, t.city].filter(Boolean).join(' · '), initial:t.name.charAt(0).toUpperCase() };
+      });
+    }
+  }catch(e){ console.warn('testimonials load failed, keeping static values', e); }
 
-<script src="script.js"></script>
+  try{
+    var { data: projects } = await db.from('projects').select('*').eq('published', true).order('sort_order');
+    if(projects && projects.length){
+      var track = document.getElementById('buildsTrack');
+      var endCard = track.querySelector('.build-end');
+      track.querySelectorAll('.build-card:not(.build-end)').forEach(function(c){ c.remove(); });
+      projects.forEach(function(p){
+        var card = document.createElement('div');
+        card.className = 'build-card';
+        card.innerHTML =
+          '<div class="bc-media">' +
+            (p.service_type ? '<span class="bc-tag">'+p.service_type+'</span>' : '') +
+            (p.cover_image ? '<img src="'+p.cover_image+'" alt="'+p.title+'" style="width:100%;height:100%;object-fit:cover;">' : '') +
+          '</div>' +
+          '<div class="bc-body"><h4>'+p.title+'</h4><p>'+[p.car_make,p.car_model].filter(Boolean).join(' ')+'</p></div>';
+        track.insertBefore(card, endCard);
+      });
+    }
+  }catch(e){ console.warn('projects load failed, keeping static cards', e); }
+
+  try{
+    var { data: media } = await db.from('site_media').select('*');
+    var m = {};
+    (media||[]).forEach(function(row){ if(row.url) m[row.key] = row.url; });
+    window.__siteMedia = m;
+
+    if(m.hero_video){
+      var video = document.getElementById('heroVideo');
+      var source = video.querySelector('source');
+      source.src = m.hero_video;
+      video.load();
+    }
+    if(m.hero_poster){
+      document.getElementById('heroVideo').setAttribute('poster', m.hero_poster);
+    }
+    if(m.compare_before){
+      var beforeLayer = document.querySelector('.compare-before');
+      var beforeMedia = beforeLayer.querySelector('.compare-media');
+      beforeMedia.style.backgroundImage = 'url('+m.compare_before+')';
+      beforeLayer.classList.add('has-photo');
+      beforeMedia.querySelector('svg').style.display = 'none';
+    }
+    if(m.compare_after){
+      var afterMedia = document.querySelector('.compare-after .compare-media');
+      afterMedia.style.backgroundImage = 'url('+m.compare_after+')';
+      afterMedia.querySelector('svg').style.display = 'none';
+    }
+    for(var si=0; si<6; si++){
+      var key = 'service_'+si;
+      if(m[key]){
+        var panel = document.querySelector('.service-media .panel[data-panel="'+si+'"]');
+        if(panel){
+          var badge = panel.querySelector('.panel-badge');
+          panel.innerHTML = '<img src="'+m[key]+'" alt="" style="width:100%;height:100%;object-fit:cover;">';
+          if(badge) panel.appendChild(badge);
+        }
+      }
+    }
+  }catch(e){ console.warn('site media load failed, keeping static assets', e); }
+
+  try{
+    var { data: frames } = await db.from('frame_sequences').select('*').order('created_at', {ascending:false});
+    window.__frameSequences = frames || [];
+  }catch(e){ console.warn('frame sequences load failed', e); window.__frameSequences = []; }
+}
+
+async function submitLead(payload){
+  if(!db) return { ok:false, reason:'not-configured' };
+  try{
+    var { error } = await db.from('leads').insert([payload]);
+    if(error) throw error;
+    return { ok:true };
+  }catch(e){ console.warn('lead submit failed', e); return { ok:false, reason:e.message }; }
+}
+
+/* ============================================================
+   Canvas frame-sequence player
+   Reads whatever was uploaded via admin.html → Frame Sequences.
+   'hero' sequences autoplay as a loop in place of the video.
+   'ppf' sequences scroll-scrub in sync with the existing pinned scene.
+   ============================================================ */
+function preloadImages(urls){
+  return Promise.all(urls.map(function(u){
+    return new Promise(function(resolve){
+      var img = new Image();
+      img.onload = function(){ resolve(img); };
+      img.onerror = function(){ resolve(null); };
+      img.src = u;
+    });
+  }));
+}
+
+function drawCover(ctx, canvas, img, alpha){
+  var cw = canvas.width, ch = canvas.height;
+  if(!cw || !ch || !img) return;
+  var ir = img.width/img.height, cr = cw/ch, dw, dh, dx, dy;
+  if(ir > cr){ dh = ch; dw = ch*ir; dx = (cw-dw)/2; dy = 0; }
+  else { dw = cw; dh = cw/ir; dx = 0; dy = (ch-dh)/2; }
+  if(alpha === undefined){ ctx.clearRect(0,0,cw,ch); ctx.drawImage(img, dx, dy, dw, dh); }
+  else { ctx.save(); ctx.globalAlpha = alpha; ctx.drawImage(img, dx, dy, dw, dh); ctx.restore(); }
+}
+
+// Draws a true cross-dissolve between two adjacent frames based on the fractional
+// position between them — this is what makes a limited frame count read as continuous
+// video rather than a slideshow, regardless of scroll speed.
+function drawBlend(ctx, canvas, imgA, imgB, t){
+  drawCover(ctx, canvas, imgA);
+  if(t > 0.004 && imgB) drawCover(ctx, canvas, imgB, t);
+}
+
+function sizeCanvasCrisp(canvas){
+  var dpr = Math.min(window.devicePixelRatio || 1, 2.5); // cap for perf on very high-DPR big screens
+  canvas.width = Math.round(canvas.clientWidth * dpr);
+  canvas.height = Math.round(canvas.clientHeight * dpr);
+}
+
+async function setupHeroFrameLoop(urls, reduceMotion){
+  var images = (await preloadImages(urls)).filter(Boolean);
+  if(!images.length) return;
+  var heroMedia = document.querySelector('.hero-media');
+  var video = document.getElementById('heroVideo');
+  var canvas = document.createElement('canvas');
+  canvas.id = 'heroCanvas';
+  canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;opacity:0.55;';
+  heroMedia.appendChild(canvas);
+  video.style.display = 'none';
+  try{ video.pause(); }catch(e){}
+  var ctx = canvas.getContext('2d');
+  function resize(){ sizeCanvasCrisp(canvas); drawCover(ctx, canvas, images[0]); }
+  window.addEventListener('resize', resize);
+  resize();
+  if(reduceMotion){ drawCover(ctx, canvas, images[0]); return; }
+  var frame = 0, last = 0, fps = 24;
+  function loop(t){
+    if(t - last > 1000/fps){ drawCover(ctx, canvas, images[frame]); frame = (frame+1) % images.length; last = t; }
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+}
+
+async function initFrameSequences(reduceMotion){
+  var sequences = window.__frameSequences || [];
+  var heroSeq = sequences.find(function(s){ return s.section_key === 'hero' && s.frame_urls && s.frame_urls.length; });
+  if(heroSeq) await setupHeroFrameLoop(heroSeq.frame_urls, reduceMotion);
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', async function(){
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(window.gsap && window.ScrollTrigger){ gsap.registerPlugin(ScrollTrigger); }
+
+  /* ---------- Lenis smooth scroll ---------- */
+  var lenis = null;
+  if(window.Lenis && !reduceMotion){
+    lenis = new Lenis({ anchors: true });
+    lenis.on('scroll', function(){ if(window.ScrollTrigger) ScrollTrigger.update(); });
+    function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+    gsap.ticker.lagSmoothing(0);
+  }
+
+  /* ---------- Preloader (rev-counter dial) ---------- */
+  var ring = document.getElementById('plRing');
+  var needle = document.getElementById('plNeedle');
+  var pctEl = document.getElementById('plPct');
+  var preloader = document.getElementById('preloader');
+  var CIRC = 402; // 2*PI*64
+  var progress = 0;
+  var loadTimer = setInterval(function(){
+    progress += Math.random()*14 + 6;
+    if(progress >= 100){ progress = 100; clearInterval(loadTimer); finishLoad(); }
+    pctEl.textContent = Math.floor(progress);
+    ring.style.strokeDashoffset = CIRC - (CIRC*progress/100);
+    var deg = -110 + (progress/100)*220; // sweep from -110deg to +110deg
+    needle.style.transform = 'rotate(' + deg + 'deg)';
+  }, 140);
+  function finishLoad(){
+    setTimeout(function(){ preloader.classList.add('done'); document.getElementById('hero').classList.add('revealed'); }, 280);
+  }
+  setTimeout(function(){ if(!preloader.classList.contains('done')){ progress=100; clearInterval(loadTimer); finishLoad(); } }, 3200);
+
+  /* ---------- Nav scroll state ---------- */
+  var header = document.getElementById('siteHeader');
+  var backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY;
+    header.classList.toggle('scrolled', y > 60);
+    backTop.classList.toggle('show', y > 900);
+  }, {passive:true});
+
+  /* ---------- Mobile drawer ---------- */
+  var menuTrigger = document.getElementById('menuTrigger');
+  var drawer = document.getElementById('mobile-drawer');
+  menuTrigger.addEventListener('click', function(){
+    var open = drawer.classList.toggle('open');
+    document.body.classList.toggle('menu-open', open);
+    menuTrigger.setAttribute('aria-expanded', open);
+  });
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ drawer.classList.remove('open'); document.body.classList.remove('menu-open'); });
+  });
+
+  /* ---------- Generic reveal-on-scroll ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* ---------- Magnetic buttons ---------- */
+  document.querySelectorAll('.magnetic').forEach(function(btn){
+    if(reduceMotion) return;
+    btn.addEventListener('mousemove', function(e){
+      var r = btn.getBoundingClientRect();
+      var x = e.clientX - r.left - r.width/2;
+      var y = e.clientY - r.top - r.height/2;
+      gsap.to(btn, {x:x*0.3, y:y*0.3, duration:0.4, ease:'power3.out'});
+    });
+    btn.addEventListener('mouseleave', function(){
+      gsap.to(btn, {x:0, y:0, duration:0.6, ease:'elastic.out(1,0.5)'});
+    });
+  });
+
+  /* ---------- Pull live content from Supabase (no-op if not configured yet) ---------- */
+  await loadDynamicContent();
+  await initFrameSequences(reduceMotion);
+
+  /* ---------- Odometer stat counters ---------- */
+  function buildOdometer(el){
+    var target = el.getAttribute('data-count');
+    var digits = target.split('');
+    el.innerHTML = '';
+    var cols = [];
+    digits.forEach(function(d){
+      var col = document.createElement('span');
+      col.className = 'odo-digit';
+      var strip = document.createElement('span');
+      strip.className = 'odo-strip';
+      for(var n=0;n<10;n++){ var s=document.createElement('span'); s.textContent=n; strip.appendChild(s); }
+      col.appendChild(strip);
+      el.appendChild(col);
+      cols.push({strip:strip, digit:parseInt(d,10)});
+    });
+    return cols;
+  }
+  var odoEls = document.querySelectorAll('.odo');
+  odoEls.forEach(function(el){ el.__odoCols = buildOdometer(el); });
+
+  function animateOdoIn(sectionEl){
+    var els = sectionEl.querySelectorAll('.odo');
+    els.forEach(function(el){
+      (el.__odoCols || []).forEach(function(c, i){
+        gsap.to(c.strip, {yPercent: -(c.digit*10), duration:1.3+i*0.12, ease:'power3.out', delay:i*0.05});
+      });
+    });
+  }
+  ['authority','studio-experience'].forEach(function(id){
+    var section = document.getElementById(id);
+    if(!section) return;
+    var done = false;
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting && !done){ done = true; animateOdoIn(section); }
+      });
+    }, {threshold:0.3});
+    obs.observe(section);
+  });
+
+  /* ---------- Process interactive tabs ---------- */
+  var processSteps = [
+    {title:'Vehicle inspection', desc:'Full condition assessment before any work begins.'},
+    {title:'Decontamination', desc:'Chemical and mechanical decontamination of the paint surface.'},
+    {title:'Paint correction', desc:'Swirls and oxidation removed to restore true clarity.'},
+    {title:'Design & pattern prep', desc:'Wrap patterns and panel-specific film cut digitally for precision fit.'},
+    {title:'Installation', desc:'Wet installation and mod fitment in a climate-controlled bay.'},
+    {title:'Edge & finish work', desc:'Edges wrapped and trimmed for a factory-clean line.'},
+    {title:'Quality inspection', desc:'Panel-by-panel review under controlled lighting.'},
+    {title:'Delivery and aftercare', desc:'Care guidance and warranty registration on handover.'}
+  ];
+  var processTabs = document.querySelectorAll('.process-tab');
+  var processTitleEl = document.getElementById('processTitle');
+  var processDescEl = document.getElementById('processDesc');
+  var processLabelEl = document.getElementById('processStepLabel');
+  function setProcessStep(i){
+    processTabs.forEach(function(t){ t.classList.toggle('active', parseInt(t.dataset.step,10) === i); });
+    var s = processSteps[i];
+    processLabelEl.textContent = 'Step ' + String(i+1).padStart(2,'0') + ' / 08';
+    if(window.gsap){
+      gsap.to([processTitleEl, processDescEl], {opacity:0, y:6, duration:.2, onComplete:function(){
+        processTitleEl.textContent = s.title; processDescEl.textContent = s.desc;
+        gsap.fromTo([processTitleEl, processDescEl], {opacity:0, y:6}, {opacity:1, y:0, duration:.35});
+      }});
+    } else {
+      processTitleEl.textContent = s.title; processDescEl.textContent = s.desc;
+    }
+  }
+  processTabs.forEach(function(tab){
+    tab.addEventListener('click', function(){ setProcessStep(parseInt(tab.dataset.step,10)); });
+  });
+
+  /* ---------- Services panel switching ---------- */
+  var serviceItems = document.querySelectorAll('.service-item');
+  var panels = document.querySelectorAll('.service-media .panel');
+  var serviceMediaEl = document.querySelector('.service-media');
+  serviceItems.forEach(function(item){
+    item.addEventListener('click', function(){
+      serviceItems.forEach(function(i){ i.classList.remove('active'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      item.classList.add('active');
+      document.querySelector('.panel[data-panel="'+item.dataset.panel+'"]').classList.add('active');
+      if(serviceMediaEl) serviceMediaEl.classList.toggle('ignite-active', item.dataset.panel === '0');
+    });
+    item.addEventListener('mouseenter', function(){ if(window.innerWidth>900) item.click(); });
+  });
+
+  /* ---------- Horizontal builds gallery ---------- */
+  var buildsTrack = document.getElementById('buildsTrack');
+  var buildsViewport = document.getElementById('buildsViewport');
+  if(buildsTrack && window.innerWidth > 900 && !reduceMotion){
+    requestAnimationFrame(function(){
+      var distance = buildsTrack.scrollWidth - buildsViewport.clientWidth;
+      if(distance > 0){
+        gsap.to(buildsTrack, {
+          x: -distance, ease:'none',
+          scrollTrigger:{ trigger:'#builds', start:'top top', end:'+='+(distance+300), scrub:1, pin:true, invalidateOnRefresh:true }
+        });
+      }
+    });
+  }
+
+  /* ---------- Tilt cards ---------- */
+  document.querySelectorAll('.build-card:not(.build-end)').forEach(function(card){
+    if(reduceMotion) return;
+    card.addEventListener('mousemove', function(e){
+      var r = card.getBoundingClientRect();
+      var px = (e.clientX - r.left)/r.width - 0.5;
+      var py = (e.clientY - r.top)/r.height - 0.5;
+      gsap.to(card, {rotateY:px*8, rotateX:-py*8, duration:0.5, ease:'power2.out', transformPerspective:700});
+    });
+    card.addEventListener('mouseleave', function(){
+      gsap.to(card, {rotateY:0, rotateX:0, duration:0.6, ease:'power3.out'});
+    });
+  });
+
+  /* ---------- Build card hover slideshow ---------- */
+  document.querySelectorAll('.build-card:not(.build-end)').forEach(function(card){
+    var captions = [];
+    try{ captions = JSON.parse(card.dataset.slides || '[]'); }catch(e){}
+    var slides = card.querySelectorAll('.bc-slide');
+    var dots = card.querySelectorAll('.bc-progress i');
+    var captionEl = card.querySelector('.bc-slide-caption');
+    if(!slides.length) return;
+    var idx = 0, timer = null;
+    function show(i){
+      idx = i;
+      slides.forEach(function(s,n){ s.classList.toggle('active', n===idx); });
+      dots.forEach(function(d,n){ d.classList.toggle('active', n===idx); });
+      if(captionEl && captions[idx]) captionEl.textContent = captions[idx];
+    }
+    card.addEventListener('mouseenter', function(){
+      if(reduceMotion) return;
+      timer = setInterval(function(){ show((idx+1) % slides.length); }, 1600);
+    });
+    card.addEventListener('mouseleave', function(){
+      clearInterval(timer);
+      show(0);
+    });
+  });
+
+  /* ---------- Before / After slider ---------- */
+  var frame = document.getElementById('compareFrame');
+  var clip = document.getElementById('compareClip');
+  var handle = document.getElementById('compareHandle');
+  var dragging = false;
+  function setSplit(pct){ pct = Math.max(0, Math.min(100, pct)); clip.style.clipPath = 'inset(0 ' + (100-pct) + '% 0 0)'; handle.style.left = pct + '%'; }
+  function posFromEvent(e){ var rect = frame.getBoundingClientRect(); var x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left; return (x/rect.width)*100; }
+  handle.addEventListener('mousedown', function(){ dragging = true; });
+  window.addEventListener('mouseup', function(){ dragging = false; });
+  window.addEventListener('mousemove', function(e){ if(dragging) setSplit(posFromEvent(e)); });
+  handle.addEventListener('touchstart', function(){ dragging = true; }, {passive:true});
+  window.addEventListener('touchend', function(){ dragging = false; });
+  window.addEventListener('touchmove', function(e){ if(dragging) setSplit(posFromEvent(e)); }, {passive:true});
+  document.getElementById('showBefore').addEventListener('click', function(){ setSplit(100); this.classList.add('active'); document.getElementById('showAfter').classList.remove('active'); });
+  document.getElementById('showAfter').addEventListener('click', function(){ setSplit(0); this.classList.add('active'); document.getElementById('showBefore').classList.remove('active'); });
+  var compareIo = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        setSplit(50);
+        setTimeout(function(){ setSplit(62); }, 350);
+        setTimeout(function(){ setSplit(50); }, 850);
+        compareIo.unobserve(frame);
+      }
+    });
+  }, {threshold:0.4});
+  compareIo.observe(frame);
+
+  /* ---------- Testimonials ---------- */
+  var testimonials = window.__testimonialsFromDB && window.__testimonialsFromDB.length ? window.__testimonialsFromDB : [
+    {q:"\"The wrap and wheel swap turned heads I didn't expect. Cleanest install I've seen in Jaipur.\"", name:'Aditya R.', sub:'Mahindra Thar · Wrap + Alloys · Jaipur', initial:'A'},
+    {q:'"Booked an inspection expecting a week-long wait. Was in the bay in three days, and the edge work is cleaner than the factory finish."', name:'Meher K.', sub:'Audi Q8 · PPF + Ceramic · Udaipur', initial:'M'},
+    {q:'"Two years in Rajasthan heat and dust, and the coating still beads water like day one. Worth every rupee."', name:'Karan V.', sub:'Mercedes GLE · Detailing + Coating · Jodhpur', initial:'K'}
+  ];
+  var tIdx = 0;
+  var qEl = document.getElementById('testiQuote');
+  var nEl = document.getElementById('testiName');
+  var sEl = document.getElementById('testiSub');
+  var aEl = document.getElementById('testiAvatar');
+  function renderTesti(i){
+    gsap.to([qEl], {opacity:0, y:8, duration:.25, onComplete:function(){
+      qEl.textContent = testimonials[i].q;
+      nEl.textContent = testimonials[i].name;
+      sEl.textContent = testimonials[i].sub;
+      aEl.textContent = testimonials[i].initial;
+      gsap.fromTo([qEl], {opacity:0, y:8}, {opacity:1, y:0, duration:.4});
+    }});
+  }
+  document.getElementById('testiNext').addEventListener('click', function(){ tIdx=(tIdx+1)%testimonials.length; renderTesti(tIdx); });
+  document.getElementById('testiPrev').addEventListener('click', function(){ tIdx=(tIdx-1+testimonials.length)%testimonials.length; renderTesti(tIdx); });
+
+  /* ---------- Booking form ---------- */
+  var form = document.getElementById('bookingForm');
+  var confirm = document.getElementById('confirmCard');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var fd = new FormData(form);
+    var payload = {
+      name: fd.get('name'), phone: fd.get('phone'), city: fd.get('city'),
+      car: fd.get('car'), service: fd.get('service'), message: fd.get('message') || null
+    };
+    submitLead(payload); // no-ops gracefully if Supabase isn't configured yet
+    confirm.classList.add('show');
+  });
+  document.getElementById('waFormLink').addEventListener('click', function(e){ e.preventDefault(); window.open('https://wa.me/910000000000', '_blank'); });
+
+  /* ---------- Back to top ---------- */
+  backTop.addEventListener('click', function(){ if(lenis){ lenis.scrollTo(0); } else { window.scrollTo({top:0, behavior:'smooth'}); } });
+
+  /* ---------- Hero fallback if video fails ---------- */
+  document.getElementById('heroVideo').addEventListener('error', function(){
+    document.getElementById('hero').style.background = 'radial-gradient(ellipse at 50% 30%, #1a1a1d 0%, #0a0a0b 70%)';
+  });
+
+  /* refresh ScrollTrigger after full load (fonts/video) so pin distances are accurate */
+  window.addEventListener('load', function(){ if(window.ScrollTrigger) ScrollTrigger.refresh(); });
+});
+</script>
 </body>
 </html>
