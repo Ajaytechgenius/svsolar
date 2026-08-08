@@ -612,3 +612,53 @@ img,svg{-webkit-user-drag:none;user-drag:none;}
   .process-step{flex-direction:column;gap:10px;}
   .footer__bottom{flex-direction:column;}
 }
+
+/* ====== NEW PREMIUM ANIMATIONS ====== */
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.scroll-anim.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-anim.delay-1 { transition-delay: 0.1s; }
+.scroll-anim.delay-2 { transition-delay: 0.2s; }
+.scroll-anim.delay-3 { transition-delay: 0.3s; }
+.scroll-anim.delay-4 { transition-delay: 0.4s; }
+
+/* Graffiti-inspired hover effects for interactive elements */
+.graffiti-hover {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.graffiti-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(217, 169, 76, 0.3), transparent);
+  transition: left 0.6s ease-in-out;
+  z-index: -1;
+}
+
+.graffiti-hover:hover::before {
+  left: 100%;
+}
+
+.pop-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.pop-in.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
