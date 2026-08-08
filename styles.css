@@ -396,7 +396,7 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.1;margin:
   box-shadow:0 10px 26px rgba(37,211,102,.45);
   transition:transform .3s var(--ease);
 }
-.wa-float:hover{transform:scale(1.08);}
+.wa-float-old-hover-removed {}
 
 /* ---------- Language toggle ---------- */
 .lang-toggle{
@@ -661,4 +661,92 @@ img,svg{-webkit-user-drag:none;user-drag:none;}
 .pop-in.is-visible {
   opacity: 1;
   transform: scale(1);
+}
+
+/* ====== WHATSAPP LIQUID FILL ANIMATION ====== */
+.wa-float {
+  overflow: hidden;
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #128C7E; /* Base color, slightly darker green */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.45);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-decoration: none;
+}
+
+.wa-float span {
+  position: relative;
+  z-index: 2; /* Ensure SVG is above the liquid */
+}
+
+/* The liquid wave */
+.wa-float::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: #25D366; /* Bright WhatsApp green */
+  border-radius: 40%; /* Creates the wave shape */
+  transition: top 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1;
+}
+
+.wa-float:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6);
+}
+
+.wa-float:hover::before {
+  top: -10%; /* Fill up */
+  animation: wave-spin 3s linear infinite; /* Spin the wave */
+}
+
+@keyframes wave-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Remove old hover so it doesn't conflict */
+/* We already redefined it above but let's make sure it overrides */
+
+/* =========================================== */
+
+/* ====== LIQUID FILL FOR OTHER BUTTONS ====== */
+.liquid-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.liquid-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.liquid-btn::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent fill */
+  border-radius: 40%;
+  transition: top 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 0;
+}
+
+.liquid-btn:hover::before {
+  top: -20%;
+  animation: wave-spin 3s linear infinite;
 }
