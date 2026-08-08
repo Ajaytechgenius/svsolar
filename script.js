@@ -58,6 +58,9 @@ const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add('is-visible');
+    if (entry.target.classList.contains('scroll-anim') || entry.target.classList.contains('pop-in')) {
+      entry.target.classList.add('is-visible');
+    }
     entry.target.querySelectorAll('[data-count]').forEach(animateCount);
     io.unobserve(entry.target);
   });
@@ -495,3 +498,9 @@ if (stickyCta) {
   );
   if (heroEl) io2.observe(heroEl);
 }
+
+
+// Observe new animation classes
+document.querySelectorAll('.scroll-anim, .pop-in').forEach(el => {
+  io.observe(el);
+});
